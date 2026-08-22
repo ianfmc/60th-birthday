@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Roboto:wght@300;400;500&display=swap');
-@import "tailwindcss";
 
 :root { --ink:#17334a; --deep:#072d50; --paper:#f2eee5; --highlight:#c9efff; --azure:#087fbd; --cerulean:#1b9bc9; }
 * { box-sizing:border-box; }

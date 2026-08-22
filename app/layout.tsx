@@ -8,13 +8,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Celebrating Sixty",
     description: "Five beautiful ways to celebrate you.",
-    images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Celebrating Sixty",
     description: "Five beautiful ways to celebrate you.",
-    images: ["/og.png"],
   },
 };
 
