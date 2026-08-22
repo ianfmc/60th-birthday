@@ -61,6 +61,29 @@ const journeys = [
   },
 ];
 
+const destinations = [
+  {
+    id: "puerto-vallarta", number: "01", name: "Puerto Vallarta", place: "México", image: "/places/casa-suhana.webp",
+    alt: "Infinity pool terrace at Casa Suhana in Puerto Vallarta", date: "20–27 October · Seven nights", idea: "Familiar warmth, made extraordinary.", journeyIndexes: [0],
+    travel: "Domestic First from Palm Springs, then a short transfer into the hills above Old Town.",
+  },
+  {
+    id: "cabo", number: "02", name: "Los Cabos", place: "México", image: "/places/casa-rayrae.webp",
+    alt: "Casa Rayrae terrace above the Sea of Cortez", date: "13–20 October · Seven nights", idea: "Private, polished and wonderfully easy.", journeyIndexes: [1],
+    travel: "Domestic First from Palm Springs and a private transfer to the Sea of Cortez.",
+  },
+  {
+    id: "hawaii", number: "03", name: "Hawaiʻi", place: "The Big Island", image: "/places/hale-naia.jpg",
+    alt: "Infinity pool overlooking the Pacific at Hale Naia", date: "20–27 October · Seven nights", idea: "Island days gathered around the sunset.", journeyIndexes: [2],
+    travel: "United First from Palm Springs: two seats, one easy connection, then island time.", cabinImage: "/places/united-first.jpg", cabinAlt: "A pair of United First seats", cabinName: "United First",
+  },
+  {
+    id: "moorea", number: "04", name: "Moʻorea", place: "French Polynesia", image: "/places/moorea-villa.jpg",
+    alt: "A private villa opening onto the lagoon in Moorea", date: "21–27 October · Six nights", idea: "Two ways to live at the edge of the lagoon.", journeyIndexes: [3, 4],
+    travel: "Mānava Premium to Tahiti, one gentle overnight, then the morning ferry reveals Moʻorea in daylight.", cabinImage: "/places/atn-manava-premium.jpg", cabinAlt: "Air Tahiti Nui Manava Premium seats", cabinName: "Mānava Premium",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -87,86 +110,63 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="getting-there" aria-labelledby="getting-there-title">
-        <div className="getting-there-heading">
-          <p className="section-label">The journey</p>
-          <div>
-            <h2 id="getting-there-title">Comfort begins before we arrive.</h2>
-            <p>Mexico begins in domestic First from Palm Springs. For the farther horizons, two very different premium cabins set the tone.</p>
-          </div>
+      <section className="destination-index" id="destinations" aria-labelledby="destination-index-title">
+        <div className="destination-index-heading">
+          <p className="section-label">Four horizons</p>
+          <div><h2 id="destination-index-title">Where should we go?</h2><p>Choose a destination, then step inside the stay, the journey and two evenings worth remembering.</p></div>
         </div>
-        <div className="flight-grid">
-          <article className="flight-card">
-            <div className="flight-image flight-image-united">
-              <img src="/places/united-first.jpg" alt="A pair of United First seats" />
-            </div>
-            <div className="flight-copy">
-              <p className="section-label">Palm Springs → Hawaiʻi</p>
-              <h3>United First</h3>
-              <p>A comfortable two-seat start, one easy connection, and island time waiting on the other side.</p>
-            </div>
-          </article>
-          <article className="flight-card">
-            <div className="flight-image">
-              <img src="/places/atn-manava-premium.jpg" alt="Air Tahiti Nui Mānava Premium seats in lagoon blue" />
-            </div>
-            <div className="flight-copy">
-              <p className="section-label">Los Angeles → Tahiti</p>
-              <h3>Mānava Premium</h3>
-              <p>Wider lagoon-blue seats, generous legroom and a direct overnight flight aboard the Tahitian Dreamliner.</p>
-            </div>
-          </article>
+        <div className="destination-grid">
+          {destinations.map((destination) => (
+            <a className="destination-card" href={`#${destination.id}`} key={destination.id}>
+              <span className="destination-card-image"><img src={destination.image} alt={destination.alt} /></span>
+              <span className="destination-card-number">{destination.number}</span>
+              <span className="destination-card-copy">
+                <span className="destination-place">{destination.place}</span>
+                <strong>{destination.name}</strong>
+                <span>{destination.idea}</span>
+                <small>{destination.date}<b aria-hidden="true">↗</b></small>
+              </span>
+            </a>
+          ))}
         </div>
       </section>
 
-      <section className="journeys" aria-label="Five trip possibilities">
-        {journeys.map((journey) => (
-          <article className="journey" key={journey.name}>
-            <div className="journey-image-wrap">
-              <img className="journey-image" src={journey.image} alt={journey.alt} />
-              <span className="journey-number">{journey.number}</span>
-              <span className="journey-place">{journey.place}</span>
-            </div>
-            <div className="journey-copy">
-              <p className="section-label">{journey.idea}</p>
-              <h3>{journey.name}</h3>
-              <p className="journey-date">{journey.date}</p>
-              <p className="description">{journey.copy}</p>
-              <ul>{journey.moments.map((moment) => <li key={moment}>{moment}</li>)}</ul>
-              <div className="rhythm"><span>The rhythm</span><p>{journey.rhythm}</p></div>
-              <div className="restaurant-edit">
-                <p className="restaurant-kicker">Two evenings</p>
-                <div className="restaurant-pair">
-                  {journey.restaurants.map((restaurant) => (
-                    <a className="restaurant" href={restaurant.href} key={restaurant.name} target="_blank" rel="noreferrer">
-                      <span className="restaurant-image-wrap"><img src={restaurant.image} alt={restaurant.alt} /></span>
-                      <span className="restaurant-name">{restaurant.name}<b aria-hidden="true">↗</b></span>
-                      <span className="restaurant-note">{restaurant.note}</span>
-                    </a>
-                  ))}
-                </div>
-                <p className="dining-verdict"><span>Dining note</span>{journey.diningVerdict}</p>
-              </div>
-            </div>
-          </article>
-        ))}
-      </section>
-
-      <section className="recommendation" aria-labelledby="recommendation-title">
-        <div className="recommendation-heading">
-          <p className="section-label">Four beautiful rhythms</p>
-          <div>
-            <h2 id="recommendation-title">Each one feels complete.</h2>
-            <p>Different settings, different rhythms, and four lovely ways to make the celebration entirely our own.</p>
+      {destinations.map((destination) => (
+        <section className="destination-detail" id={destination.id} key={destination.id} aria-labelledby={`${destination.id}-title`}>
+          <nav className="detail-nav" aria-label={`${destination.name} navigation`}>
+            <a className="wordmark" href="#destinations">Celebrating Sixty</a>
+            <a className="back-link" href="#destinations"><span>←</span> All destinations</a>
+          </nav>
+          <header className="detail-hero">
+            <img src={destination.image} alt={destination.alt} />
+            <div className="detail-hero-copy"><p>{destination.number} · {destination.place}</p><h2 id={`${destination.id}-title`}>{destination.name}</h2><span>{destination.idea}</span></div>
+          </header>
+          <div className="detail-intro">
+            <p className="section-label">The journey</p>
+            <div><h3>Comfort begins before we arrive.</h3><p>{destination.travel}</p></div>
+            {destination.cabinImage && <figure><img src={destination.cabinImage} alt={destination.cabinAlt} /><figcaption>{destination.cabinName}</figcaption></figure>}
           </div>
-        </div>
-        <ol className="recommendation-list">
-          <li><span>01</span><div><h3>Puerto Vallarta</h3><p>20–27 October · Seven nights</p></div><p>The most effortless expression of villa luxury: a beautiful house, gracious staff and a place we already love.</p></li>
-          <li><span>02</span><div><h3>Cabo</h3><p>13–20 October · Seven nights</p></div><p>Polished resort ease, private ocean views and the loveliest part of October stretching ahead.</p></li>
-          <li><span>03</span><div><h3>Hawaiʻi</h3><p>20–27 October · Seven nights</p></div><p>A spectacular private home, unhurried island days and evenings gathered around the Pacific sunset.</p></li>
-          <li><span>04</span><div><h3>Tahiti & Moʻorea</h3><p>21–27 October · Six nights</p></div><p>The most transporting choice: a beautifully concentrated escape into lagoon light and South Pacific stillness.</p></li>
-        </ol>
-      </section>
+          <div className="journeys" aria-label={`${destination.name} stay options`}>
+            {destination.journeyIndexes.map((index) => {
+              const journey = journeys[index];
+              return (
+                <article className="journey" key={journey.name}>
+                  <div className="journey-image-wrap"><img className="journey-image" src={journey.image} alt={journey.alt} /><span className="journey-number">{journey.number}</span><span className="journey-place">{journey.place}</span></div>
+                  <div className="journey-copy">
+                    <p className="section-label">{journey.idea}</p><h3>{journey.name}</h3><p className="journey-date">{journey.date}</p><p className="description">{journey.copy}</p>
+                    <ul>{journey.moments.map((moment) => <li key={moment}>{moment}</li>)}</ul>
+                    <div className="rhythm"><span>The rhythm</span><p>{journey.rhythm}</p></div>
+                    <div className="restaurant-edit"><p className="restaurant-kicker">Two evenings</p><div className="restaurant-pair">
+                      {journey.restaurants.map((restaurant) => <a className="restaurant" href={restaurant.href} key={restaurant.name} target="_blank" rel="noreferrer"><span className="restaurant-image-wrap"><img src={restaurant.image} alt={restaurant.alt} /></span><span className="restaurant-name">{restaurant.name}<b aria-hidden="true">↗</b></span><span className="restaurant-note">{restaurant.note}</span></a>)}
+                    </div><p className="dining-verdict"><span>Dining note</span>{journey.diningVerdict}</p></div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+          <div className="detail-ending"><p>Seen enough?</p><a href="#destinations">Choose another horizon <span>→</span></a></div>
+        </section>
+      ))}
 
       <section className="closing">
         <p className="section-label">The only decision</p>
