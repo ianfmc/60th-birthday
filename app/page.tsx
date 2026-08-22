@@ -5,6 +5,11 @@ const journeys = [
     copy: "A fully staffed hillside villa just south of Old Town. Familiar enough to feel effortless, different enough to feel new—with the warmth of Puerto Vallarta, extraordinary views and meals prepared just for us.",
     moments: ["Two chef-prepared meals each day", "Daily housekeeping", "Seven minutes from Old Town"],
     rhythm: "The most looked-after week: arrive, exhale, and let the house take care of the rest.",
+    restaurants: [
+      { name: "Tintoque", image: "/restaurants/tintoque.jpg", alt: "Tintoque's riverfront dining room beside the Río Cuale", href: "https://tintoquerestaurant.com/", note: "The sophisticated birthday dinner · request a fully vegan tasting menu" },
+      { name: "Mezcal & Sal", image: "/restaurants/mezcal-sal.png", alt: "The colorful dining room at Mezcal and Sal", href: "https://www.instagram.com/mezclaysal/", note: "Cocktails, creative tacos and a playful second evening" },
+    ],
+    diningVerdict: "The strongest overall vegan dining—one ceremonial evening, one wonderfully colorful night.",
   },
   {
     number: "02", place: "Los Cabos · México", name: "Casa Rayrae", image: "/places/casa-rayrae.webp",
@@ -12,6 +17,11 @@ const journeys = [
     copy: "Private, ocean-facing and wonderfully easy. Casa Rayrae combines the intimacy of a home with the polish of a resort—and keeps a swimmable beach, San José and several remarkable dinners close at hand.",
     moments: ["Infinity pool & Jacuzzi", "Private beach access", "Flowers waiting in the primary suite"],
     rhythm: "First class from Palm Springs, a short private transfer, then nowhere we have to be.",
+    restaurants: [
+      { name: "Acre", image: "/restaurants/acre.jpg", alt: "Chef in Acre's farm-to-table open kitchen", href: "https://acreresort.com/restaurant/", note: "The polished birthday dinner · request the vegan tasting menu" },
+      { name: "Flora Farms", image: "/restaurants/flora-farms.webp", alt: "Flora Farms Field Kitchen at dusk", href: "https://www.flora-farms.com/floras-field-kitchen", note: "A long lunch or early dinner among the gardens" },
+    ],
+    diningVerdict: "The most beautiful settings: Acre for the birthday, Flora Farms for a leisurely afternoon.",
   },
   {
     number: "03", place: "The Big Island · Hawaiʻi", name: "Hale Naiʻa", image: "/places/hale-naia.jpg",
@@ -19,6 +29,11 @@ const journeys = [
     copy: "A sculptural, quietly spectacular home in Keauhou Estates. Mornings open slowly; afternoons belong to the infinity pool; every evening ends with the sun dropping into the Pacific.",
     moments: ["Private heated pool & spa", "Panoramic Kona sunsets", "A beautiful home entirely to ourselves"],
     rhythm: "Fly from Palm Springs, settle in once, and let the house become the destination.",
+    restaurants: [
+      { name: "‘Ulu", image: "/restaurants/ulu.jpg", alt: "Oceanfront terrace at Ulu at Four Seasons Hualalai", href: "https://www.fourseasons.com/hualalai/dining/restaurants/ulu/", note: "A genuinely luxurious oceanfront dinner · dedicated vegan menu" },
+      { name: "Journey Café", image: "/restaurants/journey-cafe.jpg", alt: "Plant-filled interior of Journey Cafe in Kailua-Kona", href: "https://journeycafebigisland.com/", note: "Plant-based ease for lunch, crêpes and macadamia desserts" },
+    ],
+    diningVerdict: "‘Ulu delivers the guaranteed splurge; Journey makes the rest of the week effortless.",
   },
   {
     number: "04", place: "Moʻorea · French Polynesia", name: "The Lagoon House", image: "/places/moorea-villa.jpg",
@@ -26,6 +41,11 @@ const journeys = [
     copy: "A private villa at the water’s edge in Maharepa. Step from the terrace into the pool, from the little beach into the lagoon, and paddle out together before breakfast.",
     moments: ["Direct lagoon access", "Private infinity pool", "Kayaks, paddleboard & village nearby"],
     rhythm: "Premium economy to Tahiti, one gentle overnight, then the morning ferry reveals Moʻorea in daylight.",
+    restaurants: [
+      { name: "K Restaurant", image: "/restaurants/k-restaurant.jpg", alt: "Romantic sand-floor dining at K Restaurant overlooking the Moorea lagoon", href: "https://www.sofitel-moorea-kiaora.com/dining/k/", note: "The romantic birthday night · reserve and arrange vegan courses ahead" },
+      { name: "Ke‘iki", image: "/restaurants/keiki.webp", alt: "The relaxed open-air dining room at Keiki in Maharepa", href: "https://www.tripadvisor.com/Restaurant_Review-g303860-d24000155-Reviews-Ke_iki-Maharepa_Moorea_Society_Islands.html", note: "A small, local evening with a changing island menu" },
+    ],
+    diningVerdict: "Potentially lovely, with the vegan arrangements made part of the booking rather than improvised.",
   },
   {
     number: "05", place: "Moʻorea · French Polynesia", name: "Over the Water", image: "/places/sofitel-overwater.jpg",
@@ -33,6 +53,11 @@ const journeys = [
     copy: "A horizon overwater villa at Sofitel Kia Ora: turquoise beneath the floor, Tahiti across the lagoon and a private platform leading directly into some of Moorea’s clearest water.",
     moments: ["Unobstructed lagoon horizon", "Exceptional snorkeling", "Breakfast, beach & full resort service"],
     rhythm: "The journey begins aboard Air Tahiti Nui and ends each day with our feet over the lagoon.",
+    restaurants: [
+      { name: "K Restaurant", image: "/restaurants/k-restaurant.jpg", alt: "Romantic sand-floor dining at K Restaurant overlooking the Moorea lagoon", href: "https://www.sofitel-moorea-kiaora.com/dining/k/", note: "The natural birthday-night choice · reserve and arrange vegan courses" },
+      { name: "Ke‘iki", image: "/restaurants/keiki.webp", alt: "The relaxed open-air dining room at Keiki in Maharepa", href: "https://www.tripadvisor.com/Restaurant_Review-g303860-d24000155-Reviews-Ke_iki-Maharepa_Moorea_Society_Islands.html", note: "A more local, authentically Moʻorea evening" },
+    ],
+    diningVerdict: "K is the celebration; Ke‘iki brings a relaxed local counterpoint beyond the resort.",
   },
 ];
 
@@ -109,6 +134,19 @@ export default function Home() {
               <p className="description">{journey.copy}</p>
               <ul>{journey.moments.map((moment) => <li key={moment}>{moment}</li>)}</ul>
               <div className="rhythm"><span>The rhythm</span><p>{journey.rhythm}</p></div>
+              <div className="restaurant-edit">
+                <p className="restaurant-kicker">Two evenings</p>
+                <div className="restaurant-pair">
+                  {journey.restaurants.map((restaurant) => (
+                    <a className="restaurant" href={restaurant.href} key={restaurant.name} target="_blank" rel="noreferrer">
+                      <span className="restaurant-image-wrap"><img src={restaurant.image} alt={restaurant.alt} /></span>
+                      <span className="restaurant-name">{restaurant.name}<b aria-hidden="true">↗</b></span>
+                      <span className="restaurant-note">{restaurant.note}</span>
+                    </a>
+                  ))}
+                </div>
+                <p className="dining-verdict"><span>Dining note</span>{journey.diningVerdict}</p>
+              </div>
             </div>
           </article>
         ))}
@@ -139,7 +177,7 @@ export default function Home() {
 
       <footer>
         <p>Celebrating Sixty</p>
-        <p className="credits">Private planning preview. Imagery courtesy of the respective villa, resort and airline sources.</p>
+        <p className="credits">Private planning preview. Imagery courtesy of the respective villa, resort, airline and restaurant sources.</p>
       </footer>
     </main>
   );

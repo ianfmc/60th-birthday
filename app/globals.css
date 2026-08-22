@@ -60,6 +60,18 @@ h1 em { color:var(--highlight); font-weight:400; }
 .rhythm { margin-top:38px; display:grid; grid-template-columns:90px 1fr; gap:18px; }
 .rhythm span { text-transform:uppercase; letter-spacing:.15em; font-size:10px; color:#8d755b; }
 .rhythm p { margin:0; font-family:"Newsreader",serif; font-size:19px; line-height:1.45; }
+.restaurant-edit { margin-top:44px; padding-top:30px; border-top:1px solid rgba(23,53,47,.18); }
+.restaurant-kicker { margin:0 0 16px; color:#8d755b; text-transform:uppercase; letter-spacing:.18em; font-size:10px; font-weight:500; }
+.restaurant-pair { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.restaurant { min-width:0; }
+.restaurant-image-wrap { display:block; aspect-ratio:1.35; overflow:hidden; background:#d3cbbb; }
+.restaurant img { width:100%; height:100%; object-fit:cover; transition:transform .8s ease,filter .3s ease; }
+.restaurant:hover img { transform:scale(1.025); filter:saturate(1.05); }
+.restaurant-name { display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-top:13px; color:var(--deep); font-family:"Newsreader",serif; font-size:clamp(21px,2vw,29px); line-height:1; }
+.restaurant-name b { color:#0f79ae; font-family:"Roboto",sans-serif; font-size:13px; font-weight:400; }
+.restaurant-note { display:block; margin-top:8px; color:#66716b; font-size:11px; line-height:1.5; }
+.dining-verdict { margin:24px 0 0; color:#4f5f58; font-family:"Newsreader",serif; font-size:16px; line-height:1.5; }
+.dining-verdict span { display:block; margin-bottom:6px; color:#8d755b; font-family:"Roboto",sans-serif; font-size:9px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; }
 .recommendation { padding:clamp(100px,13vw,180px) clamp(24px,8vw,130px); }
 .recommendation-heading { display:grid; grid-template-columns:1fr 3fr; gap:5vw; margin-bottom:70px; }
 .recommendation-heading h2 { font-size:clamp(48px,7vw,96px); line-height:.98; letter-spacing:-.025em; }
@@ -81,4 +93,5 @@ footer p { margin:0; }
 footer p:first-child { font-family:"Newsreader",serif; font-size:18px; color:white; }
 .credits { color:rgba(255,255,255,.35); font-size:10px; }
 @media (max-width:820px) { .nav{height:82px}.nav-link{display:none}.hero-content{padding-top:100px}.hero-note{left:24px;right:auto}.intro,.getting-there-heading,.recommendation-heading{grid-template-columns:1fr}.flight-grid{grid-template-columns:1fr}.flight-image{height:56vh}.journey,.journey:nth-child(even){grid-template-columns:1fr}.journey:nth-child(even) .journey-image-wrap{order:0}.journey-image-wrap{min-height:58vh}.journey-copy{padding:54px 28px 64px}.recommendation-list li{grid-template-columns:44px 1fr}.recommendation-list li>p{grid-column:2} }
+@media (max-width:460px) { .restaurant-pair{grid-template-columns:1fr}.restaurant+.restaurant{margin-top:14px}.restaurant-image-wrap{aspect-ratio:1.55} }
 @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto}.journey-image,.round-link{transition:none} }

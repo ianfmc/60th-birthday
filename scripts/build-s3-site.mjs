@@ -31,7 +31,7 @@ for (const match of stylesheets) {
 }
 
 const imageUrls = new Set(
-  [...html.matchAll(/(?:src|href|content)="(\/(?:places\/[^"?#]+|favicon\.svg|og\.png))"/g)].map((match) => match[1]),
+  [...html.matchAll(/(?:src|href|content)="(\/(?:places\/[^"?#]+|restaurants\/[^"?#]+|favicon\.svg|og\.png))"/g)].map((match) => match[1]),
 );
 for (const url of imageUrls) html = html.replaceAll(url, await asDataUrl(url));
 
