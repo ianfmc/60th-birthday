@@ -11,6 +11,9 @@ test("builds a complete self-contained S3 page", async () => {
   assert.match(html, /Journey Café/);
   assert.match(html, /id="puerto-vallarta"/);
   assert.match(html, /All destinations/);
+  assert.match(html, /Sixty is a special birthday/);
+  assert.match(html, /That part belongs to you/);
+  assert.match(html, /id="start"/);
   assert.match(html, /data:image\/(?:jpeg|webp);base64,/);
   assert.doesNotMatch(html, /<script\b/i);
   assert.doesNotMatch(html, /(?:src|href)="\//i);

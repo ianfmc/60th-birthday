@@ -87,22 +87,46 @@ const destinations = [
 export default function Home() {
   return (
     <main>
-      <section className="hero">
+      <nav className="global-header" aria-label="Site navigation">
+        <a className="wordmark" href="#start">Celebrating Sixty</a>
+        <span className="header-dedication">For Diane</span>
+      </nav>
+
+      <section className="dedication" id="start" aria-labelledby="dedication-title">
+        <div className="dedication-glow" />
+        <a className="dedication-link" href="#letter">
+          <span className="dedication-label">For your special day</span>
+          <h1 id="dedication-title">“I want to do something special for your special day—and celebrate the beautiful, extraordinary life you’ve created.”</h1>
+          <span className="dedication-signature">For Diane, with all my love.</span>
+          <span className="dedication-begin">Begin</span>
+        </a>
+      </section>
+
+      <section className="letter" id="letter" aria-labelledby="letter-title">
+        <div className="letter-layout">
+          <p className="section-label">A little time set apart</p>
+          <div className="letter-copy">
+            <h2 id="letter-title">Sixty is a special birthday.</h2>
+            <p>It deserves time set apart: somewhere beautiful, with nothing more important to do than be together.</p>
+            <p>So I imagined a few different ways we might celebrate you. Places where the days could unfold slowly, dinner could become an occasion, and we could make a memory worthy of everything this birthday represents.</p>
+            <p className="letter-choice">I haven’t chosen the destination. <em>That part belongs to you.</em></p>
+            <a className="letter-next" href="#top">Discover the possibilities</a>
+          </div>
+        </div>
+        <p className="letter-page">01 / 02</p>
+      </section>
+
+      <section className="hero site-section" id="top">
         <div className="hero-glow" />
-        <nav className="nav" aria-label="Page navigation">
-          <a className="wordmark" href="#top">Celebrating Sixty</a>
-          <a className="nav-link" href="#possibilities">The possibilities <span>↓</span></a>
-        </nav>
-        <div className="hero-content" id="top">
+        <div className="hero-content">
           <p className="eyebrow">October 2026 · Four destinations · Five beautiful ways</p>
           <h1>Five beautiful ways<br />to celebrate <em>you.</em></h1>
           <p className="hero-copy">Not simply a trip. Time set apart—somewhere beautiful, with nowhere more important to be than together.</p>
-          <a className="round-link" href="#possibilities" aria-label="Explore the five possibilities">Explore <span>↘</span></a>
+          <a className="round-link" href="#possibilities" aria-label="Explore the five possibilities">Explore</a>
         </div>
-        <p className="hero-note">For Diane, with all my love.</p>
       </section>
 
-      <section className="intro" id="possibilities">
+      <section className="intro site-section" id="possibilities">
         <p className="section-label">The invitation</p>
         <div>
           <h2>The destination is yours.</h2>
@@ -110,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="destination-index" id="destinations" aria-labelledby="destination-index-title">
+      <section className="destination-index site-section" id="destinations" aria-labelledby="destination-index-title">
         <div className="destination-index-heading">
           <p className="section-label">Four horizons</p>
           <div><h2 id="destination-index-title">Where should we go?</h2><p>Choose a destination, then step inside the stay, the journey and two evenings worth remembering.</p></div>
@@ -124,7 +148,7 @@ export default function Home() {
                 <span className="destination-place">{destination.place}</span>
                 <strong>{destination.name}</strong>
                 <span>{destination.idea}</span>
-                <small>{destination.date}<b aria-hidden="true">↗</b></small>
+                <small>{destination.date}<b>Discover</b></small>
               </span>
             </a>
           ))}
@@ -132,12 +156,9 @@ export default function Home() {
       </section>
 
       {destinations.map((destination) => (
-        <section className="destination-detail" id={destination.id} key={destination.id} aria-labelledby={`${destination.id}-title`}>
-          <nav className="detail-nav" aria-label={`${destination.name} navigation`}>
-            <a className="wordmark" href="#destinations">Celebrating Sixty</a>
-            <a className="back-link" href="#destinations"><span>←</span> All destinations</a>
-          </nav>
+        <section className="destination-detail site-section" id={destination.id} key={destination.id} aria-labelledby={`${destination.id}-title`}>
           <header className="detail-hero">
+            <a className="back-link pill-light detail-back" href="#destinations">All destinations</a>
             <img src={destination.image} alt={destination.alt} />
             <div className="detail-hero-copy"><p>{destination.number} · {destination.place}</p><h2 id={`${destination.id}-title`}>{destination.name}</h2><span>{destination.idea}</span></div>
           </header>
@@ -157,25 +178,25 @@ export default function Home() {
                     <ul>{journey.moments.map((moment) => <li key={moment}>{moment}</li>)}</ul>
                     <div className="rhythm"><span>The rhythm</span><p>{journey.rhythm}</p></div>
                     <div className="restaurant-edit"><p className="restaurant-kicker">Two evenings</p><div className="restaurant-pair">
-                      {journey.restaurants.map((restaurant) => <a className="restaurant" href={restaurant.href} key={restaurant.name} target="_blank" rel="noreferrer"><span className="restaurant-image-wrap"><img src={restaurant.image} alt={restaurant.alt} /></span><span className="restaurant-name">{restaurant.name}<b aria-hidden="true">↗</b></span><span className="restaurant-note">{restaurant.note}</span></a>)}
+                      {journey.restaurants.map((restaurant) => <a className="restaurant" href={restaurant.href} key={restaurant.name} target="_blank" rel="noreferrer"><span className="restaurant-image-wrap"><img src={restaurant.image} alt={restaurant.alt} /></span><span className="restaurant-name">{restaurant.name}</span><span className="restaurant-note">{restaurant.note}</span></a>)}
                     </div><p className="dining-verdict"><span>Dining note</span>{journey.diningVerdict}</p></div>
                   </div>
                 </article>
               );
             })}
           </div>
-          <div className="detail-ending"><p>Seen enough?</p><a href="#destinations">Choose another horizon <span>→</span></a></div>
+          <div className="detail-ending"><p>Seen enough?</p><a href="#destinations">Choose another horizon</a></div>
         </section>
       ))}
 
-      <section className="closing">
+      <section className="closing site-section">
         <p className="section-label">The only decision</p>
         <h2>Which horizon<br />calls to you?</h2>
         <p>The rest is already taken care of.</p>
         <div className="dates">OCTOBER 2026 <span>·</span> SIX OR SEVEN NIGHTS</div>
       </section>
 
-      <footer>
+      <footer className="site-footer">
         <p>Celebrating Sixty</p>
         <p className="credits">Private planning preview. Imagery courtesy of the respective villa, resort, airline and restaurant sources.</p>
       </footer>
