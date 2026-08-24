@@ -47,6 +47,8 @@ test("builds the Beautiful Week planning collection separately", async () => {
   assert.match(html, /hard ceiling/);
   assert.match(html, /needs verification/);
   assert.match(html, /private-owner inventory/);
+  assert.match(html, /Baseline established/);
+  assert.match(html, /Previous valid total/);
   assert.match(html, /Flight assumption/);
   assert.match(html, /vegan/i);
   assert.doesNotMatch(html, /<script\b/i);

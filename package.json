@@ -12,7 +12,8 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
     "typecheck": "tsc --noEmit",
-    "deploy": "bash scripts/deploy-s3.sh"
+    "deploy": "bash scripts/deploy-s3.sh",
+    "deploy:control": "bash scripts/deploy-control.sh"
   },
   "dependencies": {
     "next": "16.2.6",
