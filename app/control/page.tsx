@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { beautifulWeek, extraordinary } from "../data/beautiful-week";
 import "./control.css";
 
-export const metadata: Metadata = { title: "Trip Planning · Celebrating Sixty", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Trip Planning · Calimac Productions", robots: { index: false, follow: false } };
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 export default function ControlPlane() {
   return <main className="control-shell">
-    <header className="control-header"><div><p>Celebrating Sixty</p><h1>Trip planning</h1></div><span>Private · Ian only</span></header>
+    <header className="control-header"><div><p>Calimac Productions</p><h1>Trip planning</h1></div><span>Private · Ian only</span></header>
     <section className="collection-strip" aria-label="Planning collections">
       <article><p>Collection 01</p><h2>{extraordinary.label}</h2><strong>{extraordinary.target}</strong><span>{extraordinary.note}</span></article>
       <article className="active"><p>Collection 02</p><h2>{beautifulWeek.label}</h2><strong>{money.format(beautifulWeek.target.low)}–{money.format(beautifulWeek.target.high)}</strong><span>All-in target for two · hard ceiling {money.format(beautifulWeek.target.high)}</span></article>

@@ -153,7 +153,7 @@ main:has(.destination-detail:target)>section:not(.destination-detail:target) { d
 .book-it:hover { background:#f7f3e9; color:var(--deep); }
 footer { display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; padding:52px clamp(24px,5vw,78px); background:#041f38; color:rgba(255,255,255,.65); font-size:12px; }
 footer p { margin:0; }
-footer p:first-child { font-family:"Newsreader",serif; font-size:18px; color:white; }
+footer p:first-child { font-family:"Roboto",sans-serif; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:white; }
 .credits { color:rgba(255,255,255,.35); font-size:10px; }
 .site-section,.site-footer { display:none; }
 main:has(#letter:target)>.dedication { display:none; }

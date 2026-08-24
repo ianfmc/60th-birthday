@@ -3,14 +3,14 @@ import { beautifulWeek } from "../data/beautiful-week";
 import "./more.css";
 
 export const metadata: Metadata = {
-  title: "More Possibilities · Celebrating Sixty",
+  title: "More Possibilities · Calimac Productions",
   description: "Three more beautiful ways to celebrate together.",
   robots: { index: false, follow: false },
 };
 
 export default function MorePossibilities() {
   return <main className="more-experience">
-    <nav className="more-header"><a href="#begin">Celebrating Sixty</a><span>For Diane</span></nav>
+    <nav className="more-header"><a href="#begin">Calimac Productions</a><span>For Diane</span></nav>
     <section className="more-reveal" id="begin" aria-labelledby="more-opening">
       <div className="more-orbit" />
       <div className="reveal-copy">
@@ -37,6 +37,6 @@ export default function MorePossibilities() {
     </section>)}
 
     <section className="more-closing" id="where-to"><p className="more-label">Just one question</p><h2>So… where to?</h2><p>Whichever horizon we choose, the best part is already decided.</p><a className="more-book-it" href="/control/">Book it</a></section>
-    <footer className="more-footer"><p>Celebrating Sixty</p><span>More possibilities, for Diane.</span></footer>
+    <footer className="more-footer"><p>Calimac Productions</p><span>More possibilities, for Diane.</span></footer>
   </main>;
 }

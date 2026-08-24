@@ -88,7 +88,7 @@ export default function Home() {
   return (
     <main>
       <nav className="global-header" aria-label="Site navigation">
-        <a className="wordmark" href="#start">Celebrating Sixty</a>
+        <a className="wordmark" href="#start">Calimac Productions</a>
         <a className="header-dedication" href="/more/">For Diane</a>
       </nav>
 
@@ -119,8 +119,8 @@ export default function Home() {
       <section className="hero site-section" id="top">
         <div className="hero-glow" />
         <div className="hero-content">
-          <p className="eyebrow">October 2026 · Four destinations · Five beautiful ways</p>
-          <h1>Five beautiful ways<br />to celebrate <em>you.</em></h1>
+          <p className="eyebrow">October 2026 · Four destinations · Four beautiful ways</p>
+          <h1>Four beautiful ways<br />to celebrate <em>you.</em></h1>
           <p className="hero-copy">Not simply a trip. Time set apart—somewhere beautiful, with nowhere more important to be than together.</p>
           <a className="round-link" href="#possibilities" aria-label="Explore the five possibilities">Explore</a>
         </div>
@@ -198,7 +198,7 @@ export default function Home() {
       </section>
 
       <footer className="site-footer">
-        <p>Celebrating Sixty</p>
+        <p>Calimac Productions</p>
         <p className="credits">Private planning preview. Imagery courtesy of the respective villa, resort, airline and restaurant sources.</p>
       </footer>
     </main>

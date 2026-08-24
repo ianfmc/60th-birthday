@@ -5,7 +5,8 @@ import test from "node:test";
 test("builds a complete self-contained S3 page", async () => {
   const html = await readFile(new URL("../dist/celebrating-sixty.html", import.meta.url), "utf8");
 
-  assert.match(html, /Five beautiful ways/);
+  assert.match(html, /Four beautiful ways/);
+  assert.match(html, /Calimac Productions/);
   assert.match(html, /Casa Suhana/);
   assert.match(html, /Flora Farms/);
   assert.match(html, /Journey Café/);
