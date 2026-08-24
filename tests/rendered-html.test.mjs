@@ -7,6 +7,9 @@ test("builds a complete self-contained S3 page", async () => {
 
   assert.match(html, /Four beautiful ways/);
   assert.match(html, /Calimac Productions/);
+  assert.match(html, /celebrate the beautiful person you are/);
+  assert.match(html, /For Diane with all my love\./);
+  assert.doesNotMatch(html, /beautiful, extraordinary life you’ve created/);
   assert.match(html, /Casa Suhana/);
   assert.match(html, /Flora Farms/);
   assert.match(html, /Journey Café/);

@@ -96,8 +96,8 @@ export default function Home() {
         <div className="dedication-glow" />
         <a className="dedication-link" href="#letter">
           <span className="dedication-label">For your special day</span>
-          <h1 id="dedication-title">“I want to do something special for your special day—and celebrate the beautiful, extraordinary life you’ve created.”</h1>
-          <span className="dedication-signature">For Diane, with all my love.</span>
+          <h1 id="dedication-title">“I want to do something special for your special day—and celebrate the beautiful person you are.”</h1>
+          <span className="dedication-signature">For Diane with all my love.</span>
           <span className="dedication-begin">Begin</span>
         </a>
       </section>
