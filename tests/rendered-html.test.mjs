@@ -54,5 +54,9 @@ test("builds the Beautiful Week planning collection separately", async () => {
   assert.match(html, /Previous valid total/);
   assert.match(html, /Flight assumption/);
   assert.match(html, /vegan/i);
+  assert.match(html, /Latest monitoring check/);
+  assert.match(html, /Hotel El Ganzo/);
+  assert.match(html, /Cabo Surf Hotel/);
+  assert.doesNotMatch(html, /Grand Miramar|Pueblo Bonito Pacifica|Pueblo Bonito Sunset Beach/);
   assert.doesNotMatch(html, /<script\b/i);
 });
