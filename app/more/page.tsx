@@ -36,7 +36,7 @@ export default function MorePossibilities() {
       <a className="place-next" href={index === beautifulWeek.destinations.length - 1 ? "#where-to" : `#${beautifulWeek.destinations[index + 1].id}`}>{index === beautifulWeek.destinations.length - 1 ? "One last thought" : "Next possibility"}</a>
     </section>)}
 
-    <section className="more-closing" id="where-to"><p className="more-label">Just one question</p><h2>So… where to?</h2><p>Whichever horizon we choose, the best part is already decided.</p></section>
+    <section className="more-closing" id="where-to"><p className="more-label">Just one question</p><h2>So… where to?</h2><p>Whichever horizon we choose, the best part is already decided.</p><a className="more-book-it" href="/control/">Book it</a></section>
     <footer className="more-footer"><p>Celebrating Sixty</p><span>More possibilities, for Diane.</span></footer>
   </main>;
 }

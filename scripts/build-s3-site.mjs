@@ -31,6 +31,10 @@ for (const [source, output] of pages) {
     const moreUrl = (process.env.MORE_URL || "#").replaceAll("&", "&amp;");
     html = html.replace('href="/more/"', `href="${moreUrl}"`);
   }
+  if (source === "out/index.html" || source === "out/more/index.html") {
+    const controlUrl = (process.env.CONTROL_URL || "#").replaceAll("&", "&amp;");
+    html = html.replace('href="/control/"', `href="${controlUrl}"`);
+  }
   const stylesheets = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"[^>]*>/g)];
   for (const match of stylesheets) {
     const css = await readFile(localPath(match[1]), "utf8");

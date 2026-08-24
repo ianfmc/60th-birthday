@@ -9,7 +9,8 @@ EXPIRES_IN="${EXPIRES_IN:-604800}"
 BASE_KEY="${KEY%/*}"
 if [ "$BASE_KEY" = "$KEY" ]; then BASE_KEY=""; else BASE_KEY="${BASE_KEY}/"; fi
 MORE_URL="$(aws s3 presign "s3://${BUCKET}/${BASE_KEY}more/index.html" --expires-in "$EXPIRES_IN" --region "$REGION")"
-export MORE_URL
+CONTROL_URL="$(aws s3 presign "s3://${BUCKET}/${BASE_KEY}control/index.html" --expires-in "$EXPIRES_IN" --region "$REGION")"
+export MORE_URL CONTROL_URL
 
 npm run build
 aws s3 cp "dist/celebrating-sixty.html" "s3://${BUCKET}/${KEY}" \
@@ -23,4 +24,4 @@ aws s3 presign "s3://${BUCKET}/${KEY}" --expires-in "$EXPIRES_IN" --region "$REG
 echo "More possibilities:"
 echo "$MORE_URL"
 echo "Planning view:"
-aws s3 presign "s3://${BUCKET}/${BASE_KEY}control/index.html" --expires-in "$EXPIRES_IN" --region "$REGION"
+echo "$CONTROL_URL"

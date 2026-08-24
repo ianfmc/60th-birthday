@@ -194,6 +194,7 @@ export default function Home() {
         <h2>Which horizon<br />calls to you?</h2>
         <p>The rest is already taken care of.</p>
         <div className="dates">OCTOBER 2026 <span>·</span> SIX OR SEVEN NIGHTS</div>
+        <a className="book-it" href="/control/">Book it</a>
       </section>
 
       <footer className="site-footer">

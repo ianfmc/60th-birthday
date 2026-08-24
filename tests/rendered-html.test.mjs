@@ -15,6 +15,7 @@ test("builds a complete self-contained S3 page", async () => {
   assert.match(html, /That part belongs to you/);
   assert.match(html, /id="start"/);
   assert.match(html, /class="header-dedication" href="#">For Diane<\/a>/);
+  assert.match(html, /class="book-it" href="#">Book it<\/a>/);
   assert.match(html, /data:image\/(?:jpeg|webp);base64,/);
   assert.doesNotMatch(html, /<script\b/i);
   assert.doesNotMatch(html, /(?:src|href)="\//i);
@@ -29,6 +30,7 @@ test("builds a private, self-contained More Possibilities chapter", async () => 
   assert.match(html, /Puerto Vallarta/);
   assert.match(html, /Waikoloa Beach Villas/);
   assert.match(html, /So… where to/);
+  assert.match(html, /class="more-book-it" href="#">Book it<\/a>/);
   assert.doesNotMatch(html, /\$6K|budget|fallback|control plane|price confidence/i);
   assert.match(html, /data:image\/(?:jpeg|webp);base64,/);
   assert.doesNotMatch(html, /<script\b/i);
