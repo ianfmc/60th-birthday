@@ -1,10 +1,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { extname, resolve } from "node:path";
+import { dirname, extname, resolve } from "node:path";
 
 const root = process.cwd();
-const sourcePath = resolve(root, "out/index.html");
-const outputPath = resolve(root, "dist/celebrating-sixty.html");
-
 const mimeTypes = {
   ".css": "text/css",
   ".jpg": "image/jpeg",
@@ -22,26 +19,31 @@ const asDataUrl = async (url) => {
   return `data:${mime};base64,${(await readFile(file)).toString("base64")}`;
 };
 
-let html = await readFile(sourcePath, "utf8");
+const pages = [
+  ["out/index.html", "dist/celebrating-sixty.html"],
+  ["out/more/index.html", "dist/more/index.html"],
+  ["out/control/index.html", "dist/control/index.html"],
+];
 
-const stylesheets = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"[^>]*>/g)];
-for (const match of stylesheets) {
-  const css = await readFile(localPath(match[1]), "utf8");
-  html = html.replace(match[0], `<style>${css}</style>`);
+for (const [source, output] of pages) {
+  let html = await readFile(resolve(root, source), "utf8");
+  const stylesheets = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"[^>]*>/g)];
+  for (const match of stylesheets) {
+    const css = await readFile(localPath(match[1]), "utf8");
+    html = html.replace(match[0], `<style>${css}</style>`);
+  }
+  const imageUrls = new Set(
+    [...html.matchAll(/(?:src|href|content)="(\/(?:places\/[^"?#]+|restaurants\/[^"?#]+|favicon\.svg|og\.png))"/g)].map((match) => match[1]),
+  );
+  for (const url of imageUrls) html = html.replaceAll(url, await asDataUrl(url));
+  html = html
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "")
+    .replace(/<link rel="preload"[^>]+as="script"[^>]*>/g, "")
+    .replace(/<link rel="preload"[^>]+href="\/_next\/[^>]*>/g, "")
+    .replace(/<link rel="modulepreload"[^>]*>/g, "")
+    .replace(/<!--\$-->|<!--\/\$-->/g, "");
+  const outputPath = resolve(root, output);
+  await mkdir(dirname(outputPath), { recursive: true });
+  await writeFile(outputPath, html);
+  console.log(`Built ${outputPath}`);
 }
-
-const imageUrls = new Set(
-  [...html.matchAll(/(?:src|href|content)="(\/(?:places\/[^"?#]+|restaurants\/[^"?#]+|favicon\.svg|og\.png))"/g)].map((match) => match[1]),
-);
-for (const url of imageUrls) html = html.replaceAll(url, await asDataUrl(url));
-
-html = html
-  .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "")
-  .replace(/<link rel="preload"[^>]+as="script"[^>]*>/g, "")
-  .replace(/<link rel="preload"[^>]+href="\/_next\/[^>]*>/g, "")
-  .replace(/<link rel="modulepreload"[^>]*>/g, "")
-  .replace(/<!--\$-->|<!--\/\$-->/g, "");
-
-await mkdir(resolve(root, "dist"), { recursive: true });
-await writeFile(outputPath, html);
-console.log(`Built ${outputPath}`);

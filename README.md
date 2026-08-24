@@ -2,6 +2,17 @@
 
 A private, cinematic collection of five beautiful ways to celebrate Diane's sixtieth birthday.
 
+## Approved experience boundary
+
+The original Celebrating Sixty experience at `/` is approved and immutable. New functionality must be additive unless Ian explicitly authorizes changes to it. Do not alter its copy, imagery, styling, navigation, layout, typography, animations, or reveal sequence.
+
+Hidden routes:
+
+- `/more/` — Diane-facing second chapter, “More Possibilities”
+- `/control/` — Ian-only planning view for the Extraordinary and Beautiful Week collections
+
+Presentation copy and volatile planning data are kept separate. Beautiful Week assumptions live in `app/data/beautiful-week.ts`; every estimate must retain an explicit confidence state.
+
 ## Local development
 
 Requires Node.js 22.13 or newer.
@@ -21,7 +32,7 @@ npm run typecheck
 npm run build
 ```
 
-The regular static export is written to `out/`. The S3-ready, self-contained page is written to `dist/celebrating-sixty.html`; its imagery and styling are embedded so it works through one private S3 URL.
+The regular static export is written to `out/`. S3-ready, self-contained pages are written to `dist/`; imagery and styling are embedded so each works through a private S3 URL.
 
 ## Private AWS publishing
 

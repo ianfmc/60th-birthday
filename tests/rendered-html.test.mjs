@@ -19,3 +19,29 @@ test("builds a complete self-contained S3 page", async () => {
   assert.doesNotMatch(html, /(?:src|href)="\//i);
   assert.doesNotMatch(html, /http:\/\/localhost/i);
 });
+
+test("builds a private, self-contained More Possibilities chapter", async () => {
+  const html = await readFile(new URL("../dist/more/index.html", import.meta.url), "utf8");
+  assert.match(html, /I had a feeling/);
+  assert.match(html, /It’s about going somewhere together/);
+  assert.match(html, /Montecristo Estates/);
+  assert.match(html, /Puerto Vallarta/);
+  assert.match(html, /Waikoloa Beach Villas/);
+  assert.match(html, /So… where to/);
+  assert.doesNotMatch(html, /\$6K|budget|fallback|control plane|price confidence/i);
+  assert.match(html, /data:image\/(?:jpeg|webp);base64,/);
+  assert.doesNotMatch(html, /<script\b/i);
+  assert.doesNotMatch(html, /(?:src|href)="\//i);
+});
+
+test("builds the Beautiful Week planning collection separately", async () => {
+  const html = await readFile(new URL("../dist/control/index.html", import.meta.url), "utf8");
+  assert.match(html, /Extraordinary/);
+  assert.match(html, /Beautiful Week/);
+  assert.match(html, /hard ceiling/);
+  assert.match(html, /needs verification/);
+  assert.match(html, /private-owner inventory/);
+  assert.match(html, /Flight assumption/);
+  assert.match(html, /vegan/i);
+  assert.doesNotMatch(html, /<script\b/i);
+});
