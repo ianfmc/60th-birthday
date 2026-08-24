@@ -37,6 +37,11 @@ test("builds a private, self-contained More Possibilities chapter", async () => 
 test("builds the Beautiful Week planning collection separately", async () => {
   const html = await readFile(new URL("../dist/control/index.html", import.meta.url), "utf8");
   assert.match(html, /Extraordinary/);
+  assert.match(html, /Casa Suhana/);
+  assert.match(html, /Casa Rayrae/);
+  assert.match(html, /Hale Naiʻa/);
+  assert.match(html, /The Lagoon House/);
+  assert.match(html, /Horizon Overwater Villa/);
   assert.match(html, /Beautiful Week/);
   assert.match(html, /hard ceiling/);
   assert.match(html, /needs verification/);

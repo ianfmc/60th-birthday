@@ -65,6 +65,13 @@ export const beautifulWeek = {
 } as const;
 
 export const extraordinary = {
-  id: "extraordinary", label: "Extraordinary", target: "$10K–$12K", preserved: true,
-  note: "Existing approved collection. Its properties, public presentation and behavior remain unchanged.",
-};
+  id: "extraordinary", label: "Extraordinary", target: "$10K–$12K", preserved: true, updatedAt: "2026-08-24",
+  note: "Existing approved collection. Its public presentation and behavior remain unchanged.",
+  properties: [
+    { destination: "Puerto Vallarta", name: "Casa Suhana", dates: "2026-10-20/2026-10-27", lodging: 7200, airfare: 1200, transport: 250, meals: 1450, experiences: 550, contingency: 500, total: 11150, confidence: "needs verification" as Confidence, inventory: "private villa inventory", dining: "strong vegan support" as VeganSupport, source: "https://www.casasuhana.com/", note: "Verify seven-night villa quote, staffing, meal inclusions, taxes, service charge, deposit and cancellation terms." },
+    { destination: "Los Cabos", name: "Casa Rayrae", dates: "2026-10-13/2026-10-20", lodging: 7000, airfare: 1200, transport: 350, meals: 1500, experiences: 500, contingency: 500, total: 11050, confidence: "needs verification" as Confidence, inventory: "private villa inventory", dining: "adequate vegan support" as VeganSupport, source: "https://www.casarayrae.com/", note: "Verify canonical listing, occupancy terms, mandatory service charges, taxes and cancellation terms." },
+    { destination: "Hawaiʻi — Big Island", name: "Hale Naiʻa", dates: "2026-10-20/2026-10-27", lodging: 7200, airfare: 1500, transport: 700, meals: 1100, experiences: 450, contingency: 500, total: 11450, confidence: "needs verification" as Confidence, inventory: "private-home inventory", dining: "adequate vegan support" as VeganSupport, source: "https://www.luxurybigisland.com/", note: "Verify exact home and canonical manager, Hawaiʻi taxes, cleaning and management fees, damage terms and cancellation policy." },
+    { destination: "Moʻorea", name: "The Lagoon House", dates: "2026-10-21/2026-10-27", lodging: 5200, airfare: 3600, transport: 650, meals: 900, experiences: 450, contingency: 600, total: 11400, confidence: "needs verification" as Confidence, inventory: "private-villa inventory", dining: "requires planning" as VeganSupport, source: "https://www.airbnb.com/", note: "Confirm exact Maharepa listing, host identity, total fees, ferry logistics and cancellation terms. Never treat unverified inventory as authoritative." },
+    { destination: "Moʻorea", name: "Sofitel Kia Ora · Horizon Overwater Villa", dates: "2026-10-21/2026-10-27", lodging: 6200, airfare: 3600, transport: 650, meals: 500, experiences: 300, contingency: 600, total: 11850, confidence: "needs verification" as Confidence, inventory: "canonical resort inventory", dining: "requires planning" as VeganSupport, source: "https://www.sofitel-moorea-kiaora.com/", note: "Verify Horizon room category, meal-plan inclusions, taxes, resort charges, transfers and cancellation terms directly with Sofitel." },
+  ],
+} as const;

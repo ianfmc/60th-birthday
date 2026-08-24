@@ -13,6 +13,16 @@ export default function ControlPlane() {
       <article className="active"><p>Collection 02</p><h2>{beautifulWeek.label}</h2><strong>{money.format(beautifulWeek.target.low)}–{money.format(beautifulWeek.target.high)}</strong><span>All-in target for two · hard ceiling {money.format(beautifulWeek.target.high)}</span></article>
     </section>
     <section className="control-note"><strong>Estimate discipline</strong><p>{beautifulWeek.assumptions.note}</p><span>Planning snapshot · {beautifulWeek.updatedAt}</span></section>
+    <section className="collection-detail" aria-labelledby="extraordinary-title">
+      <div className="collection-heading"><div><p>Collection 01 · Existing</p><h2 id="extraordinary-title">Extraordinary</h2></div><span>Original collection · public experience preserved</span></div>
+      <div className="extraordinary-grid">{extraordinary.properties.map(property => <article className="extraordinary-card" key={property.name}>
+        <header><div><p>{property.destination} · {property.dates}</p><h3>{property.name}</h3></div><span className={`status ${property.confidence.replaceAll(" ", "-")}`}>{property.confidence}</span></header>
+        <div className="extraordinary-total"><span>Modeled all-in total</span><strong>{money.format(property.total)}</strong></div>
+        <dl className="mini-costs"><div><dt>Lodging</dt><dd>{money.format(property.lodging)}</dd></div><div><dt>Airfare</dt><dd>{money.format(property.airfare)}</dd></div><div><dt>Transport</dt><dd>{money.format(property.transport)}</dd></div><div><dt>Meals</dt><dd>{money.format(property.meals)}</dd></div><div><dt>Experiences</dt><dd>{money.format(property.experiences)}</dd></div><div><dt>Contingency</dt><dd>{money.format(property.contingency)}</dd></div></dl>
+        <p className="inventory-label">{property.inventory} · {property.dining}</p><p className="property-note">{property.note}</p><a className="source-link" href={property.source} target="_blank" rel="noreferrer">Open source</a>
+      </article>)}</div>
+    </section>
+    <div className="collection-heading beautiful-heading"><div><p>Collection 02 · New</p><h2>Beautiful Week</h2></div><span>All-in target for two · {money.format(beautifulWeek.target.low)}–{money.format(beautifulWeek.target.high)}</span></div>
     <section className="scenario-grid">
       {beautifulWeek.destinations.map(destination => <article className="scenario" key={destination.id}>
         <header><div><p>{destination.dates}</p><h2>{destination.name}</h2></div><span className={`status ${destination.cost.confidence.replaceAll(" ", "-")}`}>{destination.cost.confidence}</span></header>
