@@ -27,6 +27,10 @@ const pages = [
 
 for (const [source, output] of pages) {
   let html = await readFile(resolve(root, source), "utf8");
+  if (source === "out/index.html") {
+    const moreUrl = (process.env.MORE_URL || "#").replaceAll("&", "&amp;");
+    html = html.replace('href="/more/"', `href="${moreUrl}"`);
+  }
   const stylesheets = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"[^>]*>/g)];
   for (const match of stylesheets) {
     const css = await readFile(localPath(match[1]), "utf8");

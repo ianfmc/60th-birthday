@@ -89,7 +89,7 @@ export default function Home() {
     <main>
       <nav className="global-header" aria-label="Site navigation">
         <a className="wordmark" href="#start">Celebrating Sixty</a>
-        <span className="header-dedication">For Diane</span>
+        <a className="header-dedication" href="/more/">For Diane</a>
       </nav>
 
       <section className="dedication" id="start" aria-labelledby="dedication-title">
