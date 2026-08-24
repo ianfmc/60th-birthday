@@ -37,6 +37,6 @@ export default function MorePossibilities() {
     </section>)}
 
     <section className="more-closing" id="where-to"><p className="more-label">Just one question</p><h2>So… where to?</h2><p>Whichever horizon we choose, the best part is already decided.</p><a className="more-book-it" href="/control/">Book it</a></section>
-    <footer className="more-footer"><p>Calimac Productions</p><span>More possibilities, for Diane.</span></footer>
+    <footer className="more-footer"><p>Calimac Productions</p><p className="credits">Private planning preview. Imagery courtesy of the respective villa, resort, airline and restaurant sources.</p></footer>
   </main>;
 }
