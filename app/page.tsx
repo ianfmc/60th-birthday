@@ -130,7 +130,7 @@ export default function Home() {
         <p className="section-label">The invitation</p>
         <div>
           <h2>The destination is yours.</h2>
-          <p>Each of these would be wonderful. Each tells a different story: a private home, a familiar place made extraordinary, or a bungalow poised above a South Pacific lagoon. There is no wrong answer—only the one that feels most like us.</p>
+          <p>Each of these would be wonderful. Each tells a different story: a private home, a familiar place made extraordinary, or a bungalow poised above a South Pacific lagoon. There is no wrong answer—only the one that feels right.</p>
         </div>
       </section>
 

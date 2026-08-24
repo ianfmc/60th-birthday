@@ -17,6 +17,8 @@ test("builds a complete self-contained S3 page", async () => {
   assert.match(html, /All destinations/);
   assert.match(html, /Sixty is a special birthday/);
   assert.match(html, /That part belongs to you/);
+  assert.match(html, /only the one that feels right/);
+  assert.doesNotMatch(html, /feels most like us/);
   assert.match(html, /id="start"/);
   assert.match(html, /class="header-dedication" href="#">For Diane<\/a>/);
   assert.match(html, /class="book-it" href="#">Book it<\/a>/);
