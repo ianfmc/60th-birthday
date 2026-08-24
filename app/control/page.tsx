@@ -17,7 +17,8 @@ export default function ControlPlane() {
       <div className="collection-heading"><div><p>Collection 01 · Existing</p><h2 id="extraordinary-title">Extraordinary</h2></div><span>Original collection · public experience preserved</span></div>
       <div className="extraordinary-grid">{extraordinary.properties.map(property => <article className="extraordinary-card" key={property.name}>
         <header><div><p>{property.destination} · {property.dates}</p><h3>{property.name}</h3></div><span className={`status ${property.confidence.replaceAll(" ", "-")}`}>{property.confidence}</span></header>
-        <div className="extraordinary-total"><span>Modeled all-in total</span><strong>{money.format(property.total)}</strong></div>
+          <div className="extraordinary-total"><span>Modeled all-in total</span><strong>{money.format(property.total)}</strong></div>
+          <div className="extraordinary-monitor"><strong>Baseline established</strong><span>{property.monitoring.summary}</span><small>Checked August 24, 2026 · 4:20 PM PDT</small></div>
         <dl className="mini-costs"><div><dt>Lodging</dt><dd>{money.format(property.lodging)}</dd></div><div><dt>Airfare</dt><dd>{money.format(property.airfare)}</dd></div><div><dt>Transport</dt><dd>{money.format(property.transport)}</dd></div><div><dt>Meals</dt><dd>{money.format(property.meals)}</dd></div><div><dt>Experiences</dt><dd>{money.format(property.experiences)}</dd></div><div><dt>Contingency</dt><dd>{money.format(property.contingency)}</dd></div></dl>
         <p className="inventory-label">{property.inventory} · {property.dining}</p><p className="property-note">{property.note}</p><a className="source-link" href={property.source} target="_blank" rel="noreferrer">Open source</a>
       </article>)}</div>
