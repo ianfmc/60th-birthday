@@ -16,7 +16,7 @@ function LiveFlight({ id }: { id: string }) {
 export default function ControlPlane() {
   return <main className="control-shell">
     <header className="control-header"><div><p>Calimac Productions</p><h1>Trip planning</h1></div><span>Private · Ian only</span></header>
-    <div className="page-freshness"><span>Latest monitoring check</span><strong>August 24, 2026 · 4:20 PM Pacific</strong><small>Baseline established · daily checks scheduled for 6:00 AM Pacific</small></div>
+    <div className="page-freshness"><span>Latest monitoring check</span><strong>{flightMonitor.checkedAt ? new Date(flightMonitor.checkedAt).toLocaleString("en-US", { timeZone: "America/Los_Angeles", month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }) : "Awaiting first live check"}</strong><small>Live airfare updated · daily checks scheduled for 6:00 AM Pacific</small></div>
     <section className="collection-strip" aria-label="Planning collections">
       <article><p>Collection 01</p><h2>{extraordinary.label}</h2><strong>{extraordinary.target}</strong><span>{extraordinary.note}</span></article>
       <article className="active"><p>Collection 02</p><h2>{beautifulWeek.label}</h2><strong>{money.format(beautifulWeek.target.low)}–{money.format(beautifulWeek.target.high)}</strong><span>All-in target for two · hard ceiling {money.format(beautifulWeek.target.high)}</span></article>
