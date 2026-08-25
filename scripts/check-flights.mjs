@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 const key = execFileSync("aws", ["ssm", "get-parameter", "--name", "/60th-birthday/serpapi-api-key", "--with-decryption", "--query", "Parameter.Value", "--output", "text", "--region", "us-east-1"], { encoding: "utf8" }).trim();
 const shifts = [-2, -1, 0, 1, 2];
@@ -25,6 +25,9 @@ async function query(config, shift, cabin) {
   return { shift, cabin: cabin[1], outboundDate: addDays(config.out, shift), returnDate: addDays(config.back, shift), price: best.price, airline: [...new Set(best.flights.map(f => f.airline))].join(" + "), flights: best.flights.map(f => f.flight_number).join(" / "), origin: best.flights[0].departure_airport.id, destination: config.to, durationMinutes: best.total_duration ?? null, bookingToken: best.booking_token ?? null };
 }
 
+let previous = { results: [] };
+try { previous = JSON.parse(await readFile(new URL("../app/data/flight-monitor.json", import.meta.url), "utf8")); } catch {}
+const previousById = Object.fromEntries((previous.results || []).map(result => [result.id, result]));
 const results = [];
 for (const config of searches) {
   const offers = [];
@@ -33,7 +36,10 @@ for (const config of searches) {
     if (offer) offers.push(offer);
   }
   offers.sort((a, b) => a.price - b.price);
-  results.push({ id: config.id, label: config.label, status: offers.length ? "current" : "unavailable", best: offers[0] ?? null, alternatives: offers.slice(1, 5) });
+  const prior = previousById[config.id]?.best ?? null;
+  const best = offers[0] ?? prior;
+  const deltaPercent = offers[0] && prior ? Number((((offers[0].price - prior.price) / prior.price) * 100).toFixed(1)) : null;
+  results.push({ id: config.id, label: config.label, status: offers.length ? "current" : prior ? "stale" : "unavailable", best, previousPrice: prior?.price ?? null, deltaPercent, alert: deltaPercent !== null && Math.abs(deltaPercent) > 10, alternatives: offers.slice(1, 5) });
 }
 const output = { checkedAt: new Date().toISOString(), source: "Google Flights via SerpApi", travelers: 2, datePolicy: "Planned dates plus whole-trip shifts of ±1 and ±2 days", results };
 await writeFile(new URL("../app/data/flight-monitor.json", import.meta.url), `${JSON.stringify(output, null, 2)}\n`);

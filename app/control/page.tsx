@@ -10,7 +10,7 @@ function LiveFlight({ id }: { id: string }) {
   const result = flightById[id];
   if (!result?.best) return <section className="control-section"><h3>Live airfare</h3><p>No qualifying itinerary returned.</p><span>{flightMonitor.source}</span></section>;
   const fare = result.best;
-  return <section className="control-section"><h3>Live airfare · two travelers</h3><p><b>{money.format(fare.price)} · {fare.airline}</b>{fare.origin} → {fare.destination} · {fare.cabin} · {fare.outboundDate}–{fare.returnDate}</p><span>{fare.flights} · checked {new Date(flightMonitor.checkedAt!).toLocaleString("en-US", { timeZone: "America/Los_Angeles", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" })} · {flightMonitor.source}</span></section>;
+  return <section className="control-section"><h3>Live airfare · two travelers</h3><p><b>{money.format(fare.price)} · {fare.airline}</b>{fare.origin} → {fare.destination} · {fare.cabin} · {fare.outboundDate}–{fare.returnDate}</p><span>{result.alert ? `ALERT · ${result.deltaPercent! > 0 ? "+" : ""}${result.deltaPercent}% · ` : ""}{fare.flights} · checked {new Date(flightMonitor.checkedAt!).toLocaleString("en-US", { timeZone: "America/Los_Angeles", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" })} · {flightMonitor.source}</span></section>;
 }
 
 export default function ControlPlane() {

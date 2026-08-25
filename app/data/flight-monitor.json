@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-25T01:34:54.384Z",
+  "checkedAt": "2026-08-25T01:39:14.395Z",
   "source": "Google Flights via SerpApi",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
@@ -21,6 +21,9 @@
         "durationMinutes": 1122,
         "bookingToken": null
       },
+      "previousPrice": 2621,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": [
         {
           "shift": 0,
@@ -93,6 +96,9 @@
         "durationMinutes": 1122,
         "bookingToken": null
       },
+      "previousPrice": 2621,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": [
         {
           "shift": 0,
@@ -165,6 +171,9 @@
         "durationMinutes": 884,
         "bookingToken": null
       },
+      "previousPrice": 2526,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": [
         {
           "shift": 2,
@@ -237,6 +246,9 @@
         "durationMinutes": 353,
         "bookingToken": null
       },
+      "previousPrice": 3043,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": [
         {
           "shift": 1,
@@ -309,6 +321,9 @@
         "durationMinutes": 346,
         "bookingToken": null
       },
+      "previousPrice": 3581,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": [
         {
           "shift": 0,
@@ -381,6 +396,9 @@
         "durationMinutes": 490,
         "bookingToken": null
       },
+      "previousPrice": 10794,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": []
     }
   ]
