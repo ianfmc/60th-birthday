@@ -12,6 +12,7 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
     "typecheck": "tsc --noEmit",
+    "flights:check": "node scripts/check-flights.mjs",
     "deploy": "bash scripts/deploy-s3.sh",
     "deploy:control": "bash scripts/deploy-control.sh"
   },
