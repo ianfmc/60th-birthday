@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build && node scripts/build-s3-site.mjs",
     "start": "next start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
     "typecheck": "tsc --noEmit",
     "flights:check": "node scripts/check-flights.mjs",
