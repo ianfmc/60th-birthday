@@ -5,7 +5,7 @@ import { calculateBudgetVariance, normalizeStatus as normalizeStatusValue } from
 export type StatusKind = "current" | "estimated" | "verify" | "stale" | "unavailable";
 export type CostBreakdown = { lodging:number; airfare:number; transport:number; meals:number; experiences:number; contingency:number };
 export type PropertyDetails = { name:string; role:string; inventory:string; source:string; confidence:StatusKind; vegan:string; note:string };
-export type LiveFare = { price:number; airline:string; origin:string; destination:string; cabin:string; outboundDate:string; returnDate:string; flights:string; source:string; checkedAt:string|null; deltaPercent:number|null; alert:boolean } | null;
+export type LiveFare = { price:number; airline:string; origin:string; destination:string; cabin:string; outboundDate:string; returnDate:string; flights:string; source:string; checkedAt:string|null; deltaPercent:number|null; alert:boolean; status:StatusKind } | null;
 export type DestinationViewModel = {
   id:string; collectionId:"extraordinary"|"beautiful-week"; name:string; destination:string; dates:string; total:number; targetHigh:number; budgetVariance:number;
   confidence:StatusKind; availability:string; refundability:string; costs:CostBreakdown;
@@ -23,7 +23,7 @@ const beautifulFlightIds:Record<string,string> = { cabo:"more-cabo", "puerto-val
 function normalizeStatus(confidence:string):StatusKind { return normalizeStatusValue(confidence) as StatusKind; }
 function getLiveFare(id:string):LiveFare {
   const result=flightById[id]; if(!result?.best) return null;
-  return {...result.best,source:flightMonitor.source,checkedAt:flightMonitor.checkedAt,deltaPercent:result.deltaPercent,alert:result.alert};
+  return {...result.best,source:flightMonitor.source,checkedAt:flightMonitor.checkedAt,deltaPercent:result.deltaPercent,alert:result.alert,status:normalizeStatus(result.status)};
 }
 const extraordinaryTargetHigh=12_000;
 const extraordinaryDestinations:DestinationViewModel[]=extraordinary.properties.map((property,index)=>({

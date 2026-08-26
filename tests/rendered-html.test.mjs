@@ -56,10 +56,11 @@ test("builds the Beautiful Week planning collection separately", async () => {
   assert.match(html, /Budget variance/);
   assert.match(html, /850 under/);
   assert.match(html, />Verify</);
-  assert.match(html, /Baseline established/);
+  assert.match(html, /modeled total is unchanged/);
   assert.match(html, /Previous valid total/);
   assert.match(html, />Flights</);
-  assert.match(html, /Live airfare/);
+  assert.match(html, /Prior valid airfare/);
+  assert.match(html, /refresh failed/);
   assert.match(html, /Google Flights via SerpApi/);
   assert.match(html, /vegan/i);
   assert.match(html, /Last refreshed/);

@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-08-25T01:39:14.395Z",
-  "source": "Google Flights via SerpApi",
+  "checkedAt": "2026-08-26T13:44:55.931Z",
+  "source": "Google Flights via SerpApi · live refresh failed; prior valid fares preserved",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
   "results": [
     {
       "id": "more-cabo",
       "label": "Los Cabos · More Possibilities",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 2,
         "cabin": "First",
@@ -82,7 +82,7 @@
     {
       "id": "original-cabo",
       "label": "Los Cabos · Original",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 2,
         "cabin": "First",
@@ -157,13 +157,13 @@
     {
       "id": "puerto-vallarta",
       "label": "Puerto Vallarta",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": -2,
         "cabin": "First",
         "outboundDate": "2026-10-18",
         "returnDate": "2026-10-25",
-        "price": 2526,
+        "price": 2234,
         "airline": "American",
         "flights": "AA 2266 / AA 2639",
         "origin": "SAN",
@@ -172,8 +172,8 @@
         "bookingToken": null
       },
       "previousPrice": 2526,
-      "deltaPercent": 0,
-      "alert": false,
+      "deltaPercent": -11.6,
+      "alert": true,
       "alternatives": [
         {
           "shift": 2,
@@ -189,16 +189,29 @@
           "bookingToken": null
         },
         {
+          "shift": 1,
+          "cabin": "First",
+          "outboundDate": "2026-10-21",
+          "returnDate": "2026-10-28",
+          "price": 3038,
+          "airline": "United",
+          "flights": "UA 2025 / UA 1622",
+          "origin": "SAN",
+          "destination": "PVR",
+          "durationMinutes": 1044,
+          "bookingToken": null
+        },
+        {
           "shift": -1,
           "cabin": "First",
           "outboundDate": "2026-10-19",
           "returnDate": "2026-10-26",
           "price": 3116,
           "airline": "American",
-          "flights": "AA 2266 / AA 1215",
+          "flights": "AA 2266 / AA 2639",
           "origin": "SAN",
           "destination": "PVR",
-          "durationMinutes": 1003,
+          "durationMinutes": 884,
           "bookingToken": null
         },
         {
@@ -213,32 +226,19 @@
           "destination": "PVR",
           "durationMinutes": 884,
           "bookingToken": null
-        },
-        {
-          "shift": 1,
-          "cabin": "First",
-          "outboundDate": "2026-10-21",
-          "returnDate": "2026-10-28",
-          "price": 4346,
-          "airline": "United",
-          "flights": "UA 2025 / UA 1622",
-          "origin": "SAN",
-          "destination": "PVR",
-          "durationMinutes": 1044,
-          "bookingToken": null
         }
       ]
     },
     {
       "id": "kauai",
       "label": "Kauaʻi · More Possibilities",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 2,
         "cabin": "First",
         "outboundDate": "2026-10-22",
         "returnDate": "2026-10-29",
-        "price": 3043,
+        "price": 3037,
         "airline": "Alaska",
         "flights": "AS 963",
         "origin": "LAX",
@@ -247,7 +247,7 @@
         "bookingToken": null
       },
       "previousPrice": 3043,
-      "deltaPercent": 0,
+      "deltaPercent": -0.2,
       "alert": false,
       "alternatives": [
         {
@@ -268,7 +268,7 @@
           "cabin": "First",
           "outboundDate": "2026-10-19",
           "returnDate": "2026-10-26",
-          "price": 3437,
+          "price": 3357,
           "airline": "Alaska",
           "flights": "AS 963",
           "origin": "LAX",
@@ -307,7 +307,7 @@
     {
       "id": "big-island",
       "label": "Big Island · Original",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 2,
         "cabin": "First",
@@ -326,24 +326,24 @@
       "alert": false,
       "alternatives": [
         {
+          "shift": -1,
+          "cabin": "First",
+          "outboundDate": "2026-10-19",
+          "returnDate": "2026-10-26",
+          "price": 4411,
+          "airline": "American",
+          "flights": "AA 59",
+          "origin": "LAX",
+          "destination": "KOA",
+          "durationMinutes": 345,
+          "bookingToken": null
+        },
+        {
           "shift": 0,
           "cabin": "First",
           "outboundDate": "2026-10-20",
           "returnDate": "2026-10-27",
           "price": 4549,
-          "airline": "United",
-          "flights": "UA 2373",
-          "origin": "LAX",
-          "destination": "KOA",
-          "durationMinutes": 346,
-          "bookingToken": null
-        },
-        {
-          "shift": -1,
-          "cabin": "First",
-          "outboundDate": "2026-10-19",
-          "returnDate": "2026-10-26",
-          "price": 4553,
           "airline": "United",
           "flights": "UA 2373",
           "origin": "LAX",
@@ -382,13 +382,13 @@
     {
       "id": "tahiti",
       "label": "Tahiti · Original",
-      "status": "current",
+      "status": "stale",
       "best": {
-        "shift": 1,
+        "shift": -2,
         "cabin": "Premium Economy",
-        "outboundDate": "2026-10-22",
-        "returnDate": "2026-10-28",
-        "price": 10794,
+        "outboundDate": "2026-10-19",
+        "returnDate": "2026-10-25",
+        "price": 8852,
         "airline": "Air Tahiti Nui",
         "flights": "TN 7",
         "origin": "LAX",
@@ -397,9 +397,23 @@
         "bookingToken": null
       },
       "previousPrice": 10794,
-      "deltaPercent": 0,
-      "alert": false,
-      "alternatives": []
+      "deltaPercent": -18,
+      "alert": true,
+      "alternatives": [
+        {
+          "shift": 1,
+          "cabin": "Premium Economy",
+          "outboundDate": "2026-10-22",
+          "returnDate": "2026-10-28",
+          "price": 10794,
+          "airline": "Air Tahiti Nui",
+          "flights": "TN 7",
+          "origin": "LAX",
+          "destination": "PPT",
+          "durationMinutes": 490,
+          "bookingToken": null
+        }
+      ]
     }
   ]
 }
