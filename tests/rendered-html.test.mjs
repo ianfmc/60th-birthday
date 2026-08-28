@@ -62,6 +62,8 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /More Possibilities/);
   assert.match(html, /\$7,000–\$8,000/);
   assert.match(html, /October 11–18 alternative: \$4,417 total/);
+  assert.match(html, /Alt dates · \$4,417/);
+  assert.match(html, /not used in the planned-week trip total/);
   assert.match(html, /monitored flight dates remain unchanged at October 13–20/);
   assert.match(html, /Trip planner/);
   assert.match(html, /Budget variance/);

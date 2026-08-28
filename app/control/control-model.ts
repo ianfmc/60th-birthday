@@ -7,7 +7,7 @@ import { calculateBudgetVariance, normalizeStatus as normalizeStatusValue } from
 
 export type StatusKind = "current" | "estimated" | "verify" | "stale" | "unavailable";
 export type CostBreakdown = { lodging:number; airfare:number; transport:number; meals:number; experiences:number; contingency:number };
-export type PropertyDetails = { name:string; role:string; inventory:string; source:string; confidence:StatusKind; vegan:string; note:string; lodgingPrice?:{status:StatusKind;total:number|null;nightly:number|null;source:string|null;checkedAt:string;refundable:boolean|null;official:boolean;room:string|null;availability?:boolean|null;reason?:string|null} };
+export type PropertyDetails = { name:string; role:string; inventory:string; source:string; confidence:StatusKind; vegan:string; note:string; alternativeQuote?:{total:number;dates:string;label:string}; lodgingPrice?:{status:StatusKind;total:number|null;nightly:number|null;source:string|null;checkedAt:string;refundable:boolean|null;official:boolean;room:string|null;availability?:boolean|null;reason?:string|null} };
 export type LiveFare = { price:number; airline:string; origin:string; destination:string; cabin:string; outboundDate:string; returnDate:string; flights:string; source:string; checkedAt:string|null; deltaPercent:number|null; alert:boolean; status:StatusKind } | null;
 export type DestinationViewModel = {
   id:string; collectionId:"extraordinary"|"beautiful-week"; name:string; destination:string; dates:string; total:number; targetHigh:number; budgetVariance:number;
