@@ -47,8 +47,8 @@ const journeys = [
   {
     number: "05", place: "Kauaʻi · Hawaiʻi", name: "Koloa Landing Resort", image: "/places/waikoloa-beach-villas.jpg",
     alt: "A peaceful resort pool and palms in Hawaiʻi", idea: "The graceful fallback if Hāpuna slips away", date: "20–27 October · Seven nights",
-    copy: "A polished Poʻipū resort with space, gardens and an easy South Shore location. Not the first choice—but a genuinely good answer if the Westin rate or room disappears.",
-    moments: ["Poʻipū’s warm South Shore", "Resort pools & gardens", "A calm, comfortable base"],
+    copy: "A one-bedroom king villa at a polished Poʻipū resort we already know and love, with room to settle in, beautiful gardens and an easy South Shore location. Not the first choice—but a genuinely good answer if the Westin rate or room disappears.",
+    moments: ["One-bedroom king villa", "Poʻipū’s warm South Shore", "Resort pools & gardens"],
     rhythm: "Fly into Līhuʻe, take the short drive south, and keep the week focused on rest rather than logistics.",
     restaurants: [],
     diningVerdict: "Confirm vegan breakfast and a special birthday dinner directly with the resort.",
