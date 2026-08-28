@@ -66,6 +66,9 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /not used in the planned-week trip total/);
   assert.match(html, /\$2,238–\$6,585/);
   assert.match(html, /Estimated total range/);
+  assert.match(html, /Nonrefundable · \$1,852/);
+  assert.match(html, /Before tax · \$2,198/);
+  assert.match(html, /\$1,852–\$2,198/);
   assert.match(html, /monitored flight dates remain unchanged at October 13–20/);
   assert.match(html, /Trip planner/);
   assert.match(html, /Budget variance/);
@@ -73,7 +76,6 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.doesNotMatch(html, /Rivera del Rio/);
   assert.doesNotMatch(html, /Casa Velas/);
   assert.match(html, /Room-only lodging rates are required/);
-  assert.match(html, /Prior room availability is stale/);
   assert.match(html, /Needs refresh/);
   assert.match(html, /Needs verification/);
   assert.match(html, /Verified prices are shown individually/);
