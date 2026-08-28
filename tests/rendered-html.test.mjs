@@ -61,8 +61,8 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.doesNotMatch(html, /Manava Moʻorea · Overwater Bungalow/);
   assert.match(html, /More Possibilities/);
   assert.match(html, /\$7,000–\$8,000/);
-  assert.match(html, /Six displayed nights would be \$3,786/);
-  assert.match(html, /flight dates remain October 13–20/);
+  assert.match(html, /October 11–18 alternative: \$4,417 total/);
+  assert.match(html, /monitored flight dates remain unchanged at October 13–20/);
   assert.match(html, /Trip planner/);
   assert.match(html, /Budget variance/);
   assert.match(html, /La Puesta Sayulita/);
