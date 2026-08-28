@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Calimac Productions · Celebrating Sixty",
+  title: "Calimac Productions - Original Experience",
   description: "Four beautiful ways to celebrate Diane's sixtieth birthday.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: {

@@ -7,7 +7,7 @@ const addDays = (date, days) => new Date(`${date}T12:00:00Z`).toISOString().slic
   const d = new Date(`${value}T12:00:00Z`); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10);
 });
 const searches = [
-  { id: "more-cabo", label: "Los Cabos · More Possibilities", from: "PSP,SAN", to: "SJD", out: "2026-10-13", back: "2026-10-21", cabins: [[4, "First"]], airlines: "UA,AA,AM", stops: 2 },
+  { id: "more-cabo", label: "Los Cabos · More Possibilities", from: "PSP,SAN", to: "SJD", out: "2026-10-13", back: "2026-10-20", cabins: [[4, "First"]], airlines: "UA,AA,AM", stops: 2 },
   { id: "original-cabo", label: "Los Cabos · Original", from: "PSP,SAN", to: "SJD", out: "2026-10-13", back: "2026-10-20", cabins: [[4, "First"]], airlines: "UA,AA,AM", stops: 2 },
   { id: "puerto-vallarta", label: "Puerto Vallarta", from: "PSP,SAN", to: "PVR", out: "2026-10-20", back: "2026-10-27", cabins: [[4, "First"]], airlines: "UA,AA,AM", stops: 2 },
   { id: "kauai", label: "Kauaʻi · More Possibilities", from: "LAX", to: "LIH", out: "2026-10-20", back: "2026-10-27", cabins: [[3, "First"], [2, "Premium Economy"]], airlines: "AS,UA,AA,HA", stops: 1 },

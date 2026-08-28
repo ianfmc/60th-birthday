@@ -3,7 +3,7 @@ const journeys = [
     number: "01", place: "Puerto Vallarta · México", name: "Casa Suhana", image: "/places/casa-suhana.webp",
     alt: "Infinity pool terrace at Casa Suhana in Puerto Vallarta", idea: "A return to a place we already know we love", date: "20–27 October · Seven nights",
     copy: "A fully staffed hillside villa just south of Old Town. Familiar enough to feel effortless, different enough to feel new—with the warmth of Puerto Vallarta, extraordinary views and meals prepared just for us.",
-    moments: ["Two chef-prepared meals each day", "Daily housekeeping", "Seven minutes from Old Town"],
+    moments: ["Available for our October week", "Two chef-prepared meals each day", "Daily housekeeping"],
     rhythm: "The most looked-after week: arrive, exhale, and let the house take care of the rest.",
     restaurants: [
       { name: "Tintoque", image: "/restaurants/tintoque.jpg", alt: "Tintoque's riverfront dining room beside the Río Cuale", href: "https://tintoquerestaurant.com/", note: "The sophisticated birthday dinner · request a fully vegan tasting menu" },
@@ -15,7 +15,7 @@ const journeys = [
     number: "02", place: "Los Cabos · México", name: "Casa Rayrae", image: "/places/casa-rayrae.webp",
     alt: "Casa Rayrae terrace and infinity pool above the Sea of Cortez", idea: "A contemporary sanctuary above the Sea of Cortez", date: "13–20 October · Seven nights",
     copy: "Private, ocean-facing and wonderfully easy. Casa Rayrae combines the intimacy of a home with the polish of a resort—and keeps a swimmable beach, San José and several remarkable dinners close at hand.",
-    moments: ["Infinity pool & Jacuzzi", "Private beach access", "Flowers waiting in the primary suite"],
+    moments: ["Available for our October week", "Infinity pool & Jacuzzi", "Private beach access"],
     rhythm: "First class from Palm Springs, a short private transfer, then nowhere we have to be.",
     restaurants: [
       { name: "Acre", image: "/restaurants/acre.jpg", alt: "Chef in Acre's farm-to-table open kitchen", href: "https://acreresort.com/restaurant/", note: "The polished birthday dinner · request the vegan tasting menu" },
@@ -24,19 +24,7 @@ const journeys = [
     diningVerdict: "The most beautiful settings: Acre for the birthday, Flora Farms for a leisurely afternoon.",
   },
   {
-    number: "03", place: "The Big Island · Hawaiʻi", name: "Hale Naiʻa", image: "/places/hale-naia.jpg",
-    alt: "Infinity pool overlooking the Pacific at Hale Naiʻa", idea: "A private island home above the Pacific", date: "20–27 October · Seven nights",
-    copy: "A sculptural, quietly spectacular home in Keauhou Estates. Mornings open slowly; afternoons belong to the infinity pool; every evening ends with the sun dropping into the Pacific.",
-    moments: ["Private heated pool & spa", "Panoramic Kona sunsets", "A beautiful home entirely to ourselves"],
-    rhythm: "Fly from Palm Springs, settle in once, and let the house become the destination.",
-    restaurants: [
-      { name: "‘Ulu", image: "/restaurants/ulu.jpg", alt: "Oceanfront terrace at Ulu at Four Seasons Hualalai", href: "https://www.fourseasons.com/hualalai/dining/restaurants/ulu/", note: "A genuinely luxurious oceanfront dinner · dedicated vegan menu" },
-      { name: "Journey Café", image: "/restaurants/journey-cafe.jpg", alt: "Plant-filled interior of Journey Cafe in Kailua-Kona", href: "https://journeycafebigisland.com/", note: "Plant-based ease for lunch, crêpes and macadamia desserts" },
-    ],
-    diningVerdict: "‘Ulu delivers the guaranteed splurge; Journey makes the rest of the week effortless.",
-  },
-  {
-    number: "04", place: "Moʻorea · French Polynesia", name: "The Lagoon House", image: "/places/moorea-villa.jpg",
+    number: "03", place: "Moʻorea · French Polynesia", name: "The Lagoon House", image: "/places/moorea-villa.jpg",
     alt: "Private pool and lagoon at a Maharepa villa in Moorea", idea: "Our own front door into the lagoon", date: "21–27 October · Six nights",
     copy: "A private villa at the water’s edge in Maharepa. Step from the terrace into the pool, from the little beach into the lagoon, and paddle out together before breakfast.",
     moments: ["Direct lagoon access", "Private infinity pool", "Kayaks, paddleboard & village nearby"],
@@ -48,16 +36,33 @@ const journeys = [
     diningVerdict: "Potentially lovely, with the vegan arrangements made part of the booking rather than improvised.",
   },
   {
-    number: "05", place: "Moʻorea · French Polynesia", name: "Over the Water", image: "/places/sofitel-overwater.jpg",
-    alt: "Overwater bungalow at Sofitel Kia Ora Moorea", idea: "The once-in-a-lifetime version", date: "21–27 October · Six nights",
-    copy: "A horizon overwater villa at Sofitel Kia Ora: turquoise beneath the floor, Tahiti across the lagoon and a private platform leading directly into some of Moorea’s clearest water.",
-    moments: ["Unobstructed lagoon horizon", "Exceptional snorkeling", "Breakfast, beach & full resort service"],
+    number: "04", place: "Moʻorea · French Polynesia", name: "Manava Overwater", image: "/places/atn-manava-premium.jpg",
+    alt: "Overwater bungalow at Hotel Manava Beach Resort and Spa Moorea", idea: "The once-in-a-lifetime version", date: "21–27 October · Six nights",
+    copy: "An overwater bungalow at Manava Moʻorea: turquoise beneath the deck, a quiet reach of lagoon and full resort service close to Maharepa.",
+    moments: ["A private deck over the lagoon", "Snorkeling from the resort", "Breakfast, beach & full resort service"],
     rhythm: "The journey begins aboard Air Tahiti Nui and ends each day with our feet over the lagoon.",
     restaurants: [
-      { name: "K Restaurant", image: "/restaurants/k-restaurant.jpg", alt: "Romantic sand-floor dining at K Restaurant overlooking the Moorea lagoon", href: "https://www.sofitel-moorea-kiaora.com/dining/k/", note: "The natural birthday-night choice · reserve and arrange vegan courses" },
       { name: "Ke‘iki", image: "/restaurants/keiki.webp", alt: "The relaxed open-air dining room at Keiki in Maharepa", href: "https://www.tripadvisor.com/Restaurant_Review-g303860-d24000155-Reviews-Ke_iki-Maharepa_Moorea_Society_Islands.html", note: "A more local, authentically Moʻorea evening" },
     ],
-    diningVerdict: "K is the celebration; Ke‘iki brings a relaxed local counterpoint beyond the resort.",
+    diningVerdict: "Confirm a special vegan birthday dinner with Manava in advance, then let Ke‘iki provide a relaxed local counterpoint beyond the resort.",
+  },
+  {
+    number: "05", place: "Hawaiʻi Island · Hawaiʻi", name: "The Westin Hāpuna Beach Resort", image: "/places/waikoloa-beach-villas.jpg",
+    alt: "The sunlit Kohala Coast on Hawaiʻi Island", idea: "The ocean-view celebration, with room to breathe", date: "20–27 October · Seven nights",
+    copy: "A Premier Ocean King overlooking Hāpuna Beach: a beautiful room, a private balcony and a full-service resort without paying for more house than two people need.",
+    moments: ["Premier ocean view & king bed", "Breakfast included", "A wide, quiet beach below"],
+    rhythm: "Fly into Kona, settle beside one of the island’s loveliest beaches, and let the week stay wonderfully uncomplicated.",
+    restaurants: [],
+    diningVerdict: "Arrange the birthday dinner and vegan breakfast choices with the resort before arrival.",
+  },
+  {
+    number: "06", place: "Kauaʻi · Hawaiʻi", name: "Koloa Landing Resort", image: "/places/waikoloa-beach-villas.jpg",
+    alt: "A peaceful resort pool and palms in Hawaiʻi", idea: "The graceful fallback if Hāpuna slips away", date: "20–27 October · Seven nights",
+    copy: "A polished Poʻipū resort with space, gardens and an easy South Shore location. Not the first choice—but a genuinely good answer if the Westin rate or room disappears.",
+    moments: ["Poʻipū’s warm South Shore", "Resort pools & gardens", "A calm, comfortable base"],
+    rhythm: "Fly into Līhuʻe, take the short drive south, and keep the week focused on rest rather than logistics.",
+    restaurants: [],
+    diningVerdict: "Confirm vegan breakfast and a special birthday dinner directly with the resort.",
   },
 ];
 
@@ -73,14 +78,14 @@ const destinations = [
     travel: "Domestic First from Palm Springs and a private transfer to the Sea of Cortez.",
   },
   {
-    id: "hawaii", number: "03", name: "Hawaiʻi", place: "The Big Island", image: "/places/hale-naia.jpg",
-    alt: "Infinity pool overlooking the Pacific at Hale Naia", date: "20–27 October · Seven nights", idea: "Island days gathered around the sunset.", journeyIndexes: [2],
-    travel: "United First from Palm Springs: two seats, one easy connection, then island time.", cabinImage: "/places/united-first.jpg", cabinAlt: "A pair of United First seats", cabinName: "United First",
+    id: "moorea", number: "03", name: "Moʻorea", place: "French Polynesia", image: "/places/moorea-villa.jpg",
+    alt: "A private villa opening onto the lagoon in Moorea", date: "21–27 October · Six nights", idea: "Two ways to live at the edge of the lagoon.", journeyIndexes: [2, 3],
+    travel: "Mānava Premium to Tahiti, one gentle overnight, then the morning ferry reveals Moʻorea in daylight.", cabinImage: "/places/atn-manava-premium.jpg", cabinAlt: "Air Tahiti Nui Manava Premium seats", cabinName: "Mānava Premium",
   },
   {
-    id: "moorea", number: "04", name: "Moʻorea", place: "French Polynesia", image: "/places/moorea-villa.jpg",
-    alt: "A private villa opening onto the lagoon in Moorea", date: "21–27 October · Six nights", idea: "Two ways to live at the edge of the lagoon.", journeyIndexes: [3, 4],
-    travel: "Mānava Premium to Tahiti, one gentle overnight, then the morning ferry reveals Moʻorea in daylight.", cabinImage: "/places/atn-manava-premium.jpg", cabinAlt: "Air Tahiti Nui Manava Premium seats", cabinName: "Mānava Premium",
+    id: "hawaii", number: "04", name: "Hawaiʻi", place: "Hāpuna first · Koloa if needed", image: "/places/waikoloa-beach-villas.jpg",
+    alt: "A peaceful resort pool and palms in Hawaiʻi", date: "20–27 October · Seven nights", idea: "One preferred stay. One worthy fallback.", journeyIndexes: [4, 5],
+    travel: "Hāpuna is the first choice on Hawaiʻi Island; Koloa Landing on Kauaʻi is the fallback, with the flight repriced only if we need it.",
   },
 ];
 
@@ -119,10 +124,10 @@ export default function Home() {
       <section className="hero site-section" id="top">
         <div className="hero-glow" />
         <div className="hero-content">
-          <p className="eyebrow">October 2026 · Four destinations · Four beautiful ways</p>
-          <h1>Four beautiful ways<br />to celebrate <em>you.</em></h1>
+          <p className="eyebrow">October 2026 · Four destinations · Six beautiful ways</p>
+          <h1>Six beautiful ways<br />to celebrate <em>you.</em></h1>
           <p className="hero-copy">Not simply a trip. Time set apart—somewhere beautiful, with nowhere more important to be than together.</p>
-          <a className="round-link" href="#possibilities" aria-label="Explore the five possibilities">Explore</a>
+          <a className="round-link" href="#possibilities" aria-label="Explore the six possibilities">Explore</a>
         </div>
       </section>
 

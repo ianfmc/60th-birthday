@@ -1,88 +1,13 @@
 {
-  "checkedAt": "2026-08-26T13:44:55.931Z",
-  "source": "Google Flights via SerpApi · live refresh failed; prior valid fares preserved",
+  "checkedAt": "2026-08-28T22:16:13.323Z",
+  "source": "Google Flights via SerpApi",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
   "results": [
     {
       "id": "more-cabo",
       "label": "Los Cabos · More Possibilities",
-      "status": "stale",
-      "best": {
-        "shift": 2,
-        "cabin": "First",
-        "outboundDate": "2026-10-15",
-        "returnDate": "2026-10-23",
-        "price": 2621,
-        "airline": "American",
-        "flights": "AA 2266 / AA 1385",
-        "origin": "SAN",
-        "destination": "SJD",
-        "durationMinutes": 1122,
-        "bookingToken": null
-      },
-      "previousPrice": 2621,
-      "deltaPercent": 0,
-      "alert": false,
-      "alternatives": [
-        {
-          "shift": 0,
-          "cabin": "First",
-          "outboundDate": "2026-10-13",
-          "returnDate": "2026-10-21",
-          "price": 2986,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        },
-        {
-          "shift": -2,
-          "cabin": "First",
-          "outboundDate": "2026-10-11",
-          "returnDate": "2026-10-19",
-          "price": 3076,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        },
-        {
-          "shift": -1,
-          "cabin": "First",
-          "outboundDate": "2026-10-12",
-          "returnDate": "2026-10-20",
-          "price": 3146,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        },
-        {
-          "shift": 1,
-          "cabin": "First",
-          "outboundDate": "2026-10-14",
-          "returnDate": "2026-10-22",
-          "price": 4166,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        }
-      ]
-    },
-    {
-      "id": "original-cabo",
-      "label": "Los Cabos · Original",
-      "status": "stale",
+      "status": "current",
       "best": {
         "shift": 2,
         "cabin": "First",
@@ -105,20 +30,7 @@
           "cabin": "First",
           "outboundDate": "2026-10-13",
           "returnDate": "2026-10-20",
-          "price": 3146,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        },
-        {
-          "shift": -1,
-          "cabin": "First",
-          "outboundDate": "2026-10-12",
-          "returnDate": "2026-10-19",
-          "price": 3616,
+          "price": 3526,
           "airline": "American",
           "flights": "AA 2266 / AA 1304",
           "origin": "SAN",
@@ -151,19 +63,107 @@
           "destination": "SJD",
           "durationMinutes": 907,
           "bookingToken": null
+        },
+        {
+          "shift": -1,
+          "cabin": "First",
+          "outboundDate": "2026-10-12",
+          "returnDate": "2026-10-19",
+          "price": 4356,
+          "airline": "American",
+          "flights": "AA 373 / AA 2372",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 427,
+          "bookingToken": null
+        }
+      ]
+    },
+    {
+      "id": "original-cabo",
+      "label": "Los Cabos · Original",
+      "status": "current",
+      "best": {
+        "shift": 2,
+        "cabin": "First",
+        "outboundDate": "2026-10-15",
+        "returnDate": "2026-10-22",
+        "price": 2621,
+        "airline": "American",
+        "flights": "AA 2266 / AA 1385",
+        "origin": "SAN",
+        "destination": "SJD",
+        "durationMinutes": 1122,
+        "bookingToken": null
+      },
+      "previousPrice": 2621,
+      "deltaPercent": 0,
+      "alert": false,
+      "alternatives": [
+        {
+          "shift": 0,
+          "cabin": "First",
+          "outboundDate": "2026-10-13",
+          "returnDate": "2026-10-20",
+          "price": 3526,
+          "airline": "American",
+          "flights": "AA 2266 / AA 1304",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 907,
+          "bookingToken": null
+        },
+        {
+          "shift": -2,
+          "cabin": "First",
+          "outboundDate": "2026-10-11",
+          "returnDate": "2026-10-18",
+          "price": 3806,
+          "airline": "American",
+          "flights": "AA 2266 / AA 1304",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 907,
+          "bookingToken": null
+        },
+        {
+          "shift": 1,
+          "cabin": "First",
+          "outboundDate": "2026-10-14",
+          "returnDate": "2026-10-21",
+          "price": 4166,
+          "airline": "American",
+          "flights": "AA 2266 / AA 1304",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 907,
+          "bookingToken": null
+        },
+        {
+          "shift": -1,
+          "cabin": "First",
+          "outboundDate": "2026-10-12",
+          "returnDate": "2026-10-19",
+          "price": 4356,
+          "airline": "American",
+          "flights": "AA 373 / AA 2372",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 427,
+          "bookingToken": null
         }
       ]
     },
     {
       "id": "puerto-vallarta",
       "label": "Puerto Vallarta",
-      "status": "stale",
+      "status": "current",
       "best": {
-        "shift": -2,
+        "shift": 2,
         "cabin": "First",
-        "outboundDate": "2026-10-18",
-        "returnDate": "2026-10-25",
-        "price": 2234,
+        "outboundDate": "2026-10-22",
+        "returnDate": "2026-10-29",
+        "price": 2144,
         "airline": "American",
         "flights": "AA 2266 / AA 2639",
         "origin": "SAN",
@@ -171,34 +171,21 @@
         "durationMinutes": 884,
         "bookingToken": null
       },
-      "previousPrice": 2526,
-      "deltaPercent": -11.6,
-      "alert": true,
+      "previousPrice": 2144,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": [
         {
-          "shift": 2,
+          "shift": -2,
           "cabin": "First",
-          "outboundDate": "2026-10-22",
-          "returnDate": "2026-10-29",
-          "price": 2548,
+          "outboundDate": "2026-10-18",
+          "returnDate": "2026-10-25",
+          "price": 2234,
           "airline": "American",
           "flights": "AA 2266 / AA 2639",
           "origin": "SAN",
           "destination": "PVR",
           "durationMinutes": 884,
-          "bookingToken": null
-        },
-        {
-          "shift": 1,
-          "cabin": "First",
-          "outboundDate": "2026-10-21",
-          "returnDate": "2026-10-28",
-          "price": 3038,
-          "airline": "United",
-          "flights": "UA 2025 / UA 1622",
-          "origin": "SAN",
-          "destination": "PVR",
-          "durationMinutes": 1044,
           "bookingToken": null
         },
         {
@@ -219,12 +206,25 @@
           "cabin": "First",
           "outboundDate": "2026-10-20",
           "returnDate": "2026-10-27",
-          "price": 3501,
-          "airline": "American",
-          "flights": "AA 2266 / AA 2639",
+          "price": 3914,
+          "airline": "United",
+          "flights": "UA 2025 / UA 1622",
           "origin": "SAN",
           "destination": "PVR",
-          "durationMinutes": 884,
+          "durationMinutes": 1044,
+          "bookingToken": null
+        },
+        {
+          "shift": 1,
+          "cabin": "First",
+          "outboundDate": "2026-10-21",
+          "returnDate": "2026-10-28",
+          "price": 5330,
+          "airline": "United",
+          "flights": "UA 2025 / UA 1622",
+          "origin": "SAN",
+          "destination": "PVR",
+          "durationMinutes": 1044,
           "bookingToken": null
         }
       ]
@@ -232,35 +232,35 @@
     {
       "id": "kauai",
       "label": "Kauaʻi · More Possibilities",
-      "status": "stale",
+      "status": "current",
       "best": {
-        "shift": 2,
+        "shift": 1,
         "cabin": "First",
-        "outboundDate": "2026-10-22",
-        "returnDate": "2026-10-29",
-        "price": 3037,
-        "airline": "Alaska",
-        "flights": "AS 963",
+        "outboundDate": "2026-10-21",
+        "returnDate": "2026-10-28",
+        "price": 2533,
+        "airline": "United",
+        "flights": "UA 1295",
         "origin": "LAX",
         "destination": "LIH",
-        "durationMinutes": 353,
+        "durationMinutes": 365,
         "bookingToken": null
       },
-      "previousPrice": 3043,
-      "deltaPercent": -0.2,
+      "previousPrice": 2533,
+      "deltaPercent": 0,
       "alert": false,
       "alternatives": [
         {
-          "shift": 1,
+          "shift": 2,
           "cabin": "First",
-          "outboundDate": "2026-10-21",
-          "returnDate": "2026-10-28",
-          "price": 3055,
-          "airline": "United",
-          "flights": "UA 1295",
+          "outboundDate": "2026-10-22",
+          "returnDate": "2026-10-29",
+          "price": 2957,
+          "airline": "Alaska",
+          "flights": "AS 963",
           "origin": "LAX",
           "destination": "LIH",
-          "durationMinutes": 365,
+          "durationMinutes": 353,
           "bookingToken": null
         },
         {
@@ -268,7 +268,7 @@
           "cabin": "First",
           "outboundDate": "2026-10-19",
           "returnDate": "2026-10-26",
-          "price": 3357,
+          "price": 3757,
           "airline": "Alaska",
           "flights": "AS 963",
           "origin": "LAX",
@@ -307,13 +307,13 @@
     {
       "id": "big-island",
       "label": "Big Island · Original",
-      "status": "stale",
+      "status": "current",
       "best": {
-        "shift": 2,
+        "shift": 0,
         "cabin": "First",
-        "outboundDate": "2026-10-22",
-        "returnDate": "2026-10-29",
-        "price": 3581,
+        "outboundDate": "2026-10-20",
+        "returnDate": "2026-10-27",
+        "price": 3577,
         "airline": "United",
         "flights": "UA 2373",
         "origin": "LAX",
@@ -321,10 +321,23 @@
         "durationMinutes": 346,
         "bookingToken": null
       },
-      "previousPrice": 3581,
+      "previousPrice": 3577,
       "deltaPercent": 0,
       "alert": false,
       "alternatives": [
+        {
+          "shift": 2,
+          "cabin": "First",
+          "outboundDate": "2026-10-22",
+          "returnDate": "2026-10-29",
+          "price": 3583,
+          "airline": "United",
+          "flights": "UA 2373",
+          "origin": "LAX",
+          "destination": "KOA",
+          "durationMinutes": 346,
+          "bookingToken": null
+        },
         {
           "shift": -1,
           "cabin": "First",
@@ -336,19 +349,6 @@
           "origin": "LAX",
           "destination": "KOA",
           "durationMinutes": 345,
-          "bookingToken": null
-        },
-        {
-          "shift": 0,
-          "cabin": "First",
-          "outboundDate": "2026-10-20",
-          "returnDate": "2026-10-27",
-          "price": 4549,
-          "airline": "United",
-          "flights": "UA 2373",
-          "origin": "LAX",
-          "destination": "KOA",
-          "durationMinutes": 346,
           "bookingToken": null
         },
         {
@@ -369,7 +369,7 @@
           "cabin": "First",
           "outboundDate": "2026-10-18",
           "returnDate": "2026-10-25",
-          "price": 14449,
+          "price": 9911,
           "airline": "United",
           "flights": "UA 2373",
           "origin": "LAX",
@@ -388,7 +388,7 @@
         "cabin": "Premium Economy",
         "outboundDate": "2026-10-19",
         "returnDate": "2026-10-25",
-        "price": 8852,
+        "price": 8441,
         "airline": "Air Tahiti Nui",
         "flights": "TN 7",
         "origin": "LAX",
@@ -396,24 +396,10 @@
         "durationMinutes": 490,
         "bookingToken": null
       },
-      "previousPrice": 10794,
-      "deltaPercent": -18,
-      "alert": true,
-      "alternatives": [
-        {
-          "shift": 1,
-          "cabin": "Premium Economy",
-          "outboundDate": "2026-10-22",
-          "returnDate": "2026-10-28",
-          "price": 10794,
-          "airline": "Air Tahiti Nui",
-          "flights": "TN 7",
-          "origin": "LAX",
-          "destination": "PPT",
-          "durationMinutes": 490,
-          "bookingToken": null
-        }
-      ]
+      "previousPrice": 8441,
+      "deltaPercent": null,
+      "alert": false,
+      "alternatives": []
     }
   ]
 }

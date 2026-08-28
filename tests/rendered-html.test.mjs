@@ -11,8 +11,10 @@ test("builds a complete self-contained S3 page", async () => {
   assert.match(html, /For Diane with all my love\./);
   assert.doesNotMatch(html, /beautiful, extraordinary life you’ve created/);
   assert.match(html, /Casa Suhana/);
+  assert.match(html, /Casa Rayrae/);
   assert.match(html, /Flora Farms/);
-  assert.match(html, /Journey Café/);
+  assert.match(html, /Manava Overwater/);
+  assert.doesNotMatch(html, /Hale Naiʻa/);
   assert.match(html, /id="puerto-vallarta"/);
   assert.match(html, /All destinations/);
   assert.match(html, /Sixty is a special birthday/);
@@ -34,7 +36,7 @@ test("builds a private, self-contained More Possibilities chapter", async () => 
   assert.match(html, /It’s about going somewhere together/);
   assert.match(html, /Montecristo Estates/);
   assert.match(html, /Puerto Vallarta/);
-  assert.match(html, /Waikoloa Beach Villas/);
+  assert.doesNotMatch(html, /Waikoloa Beach Villas/);
   assert.match(html, /So… where to/);
   assert.match(html, /class="more-book-it" href="#">Book it<\/a>/);
   assert.doesNotMatch(html, /\$6K|budget|fallback|control plane|price confidence/i);
@@ -43,24 +45,26 @@ test("builds a private, self-contained More Possibilities chapter", async () => 
   assert.doesNotMatch(html, /(?:src|href)="\//i);
 });
 
-test("builds the Beautiful Week planning collection separately", async () => {
+test("builds both planning collections in one continuous dashboard", async () => {
   const html = await readFile(new URL("../dist/control/index.html", import.meta.url), "utf8");
-  assert.match(html, /Extraordinary/);
+  assert.match(html, /Original Experience/);
   assert.match(html, /Casa Suhana/);
   assert.match(html, /Casa Rayrae/);
-  assert.match(html, /Hale Naiʻa/);
+  assert.doesNotMatch(html, /Hale Naiʻa/);
   assert.match(html, /The Lagoon House/);
-  assert.match(html, /Horizon Overwater Villa/);
-  assert.match(html, /Beautiful Week/);
+  assert.match(html, /Manava Moʻorea · Overwater Bungalow/);
+  assert.match(html, /More Possibilities/);
   assert.match(html, /Trip planner/);
   assert.match(html, /Budget variance/);
-  assert.match(html, /850 under/);
-  assert.match(html, />Verify</);
-  assert.match(html, /modeled total is unchanged/);
+  assert.match(html, /La Puesta Sayulita/);
+  assert.match(html, /King Room/);
+  assert.match(html, /Nonrefundable/);
+  assert.match(html, /Needs verification/);
+  assert.match(html, /Verified prices are shown individually/);
   assert.match(html, /Previous valid total/);
   assert.match(html, />Flights</);
-  assert.match(html, /Prior valid airfare/);
-  assert.match(html, /refresh failed/);
+  assert.match(html, /Flexible-date airfare/);
+  assert.match(html, /Last lodging check/);
   assert.match(html, /Google Flights via SerpApi/);
   assert.match(html, /vegan/i);
   assert.match(html, /Last refreshed/);

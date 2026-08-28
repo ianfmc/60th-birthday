@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-08-27T16:13:19-07:00",
+  "source": "Property booking pages and room-specific Google Hotels offers manually verified",
+  "results": [
+    {
+      "id": "la-puesta-sayulita",
+      "destinationId": "puerto-vallarta",
+      "name": "La Puesta Sayulita",
+      "status": "verify",
+      "room": "King Room",
+      "preferredRoom": "Sunset Suite",
+      "fallbackRoom": "King Plush",
+      "total": 1859.07,
+      "nightly": 265.58,
+      "source": "La Puesta Sayulita direct via Cloudbeds",
+      "official": true,
+      "refundable": false,
+      "cancellationUntil": null,
+      "bookingLink": "https://us2.cloudbeds.com/en/reservation/qs6leV/?currency=usd&checkin=2026-10-20&checkout=2026-10-27",
+      "reason": "Sunset Suite and King Plush sold out. Within 60 days, full payment is nonrefundable. Credit-card payments add 3%."
+    },
+    {
+      "id": "westin-hapuna",
+      "destinationId": "extraordinary-5",
+      "name": "The Westin Hāpuna Beach Resort",
+      "status": "current",
+      "room": "Premier Ocean, 1 King, Ocean View, Balcony",
+      "total": 5950,
+      "nightly": 850,
+      "source": "Google Hotels via Travelocity; complete room-specific total",
+      "official": false,
+      "refundable": true,
+      "cancellationUntil": "2026-10-17",
+      "bookingLink": "https://www.marriott.com/en-us/hotels/koawi-the-westin-hapuna-beach-resort/overview/",
+      "reason": "Preferred Hawaiʻi stay. Breakfast included; reconfirm the total and cancellation terms at checkout."
+    }
+  ]
+}

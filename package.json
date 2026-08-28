@@ -13,6 +13,9 @@
     "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
     "typecheck": "tsc --noEmit",
     "flights:check": "node scripts/check-flights.mjs",
+    "lodging:check": "node scripts/check-lodging.mjs",
+    "lodging:direct": "node scripts/check-direct-lodging.mjs",
+    "prices:check": "npm run flights:check && npm run lodging:check && npm run lodging:direct",
     "deploy": "bash scripts/deploy-s3.sh",
     "deploy:control": "bash scripts/deploy-control.sh"
   },

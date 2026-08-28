@@ -3,8 +3,8 @@ import { beautifulWeek } from "../data/beautiful-week";
 import "./more.css";
 
 export const metadata: Metadata = {
-  title: "More Possibilities · Calimac Productions",
-  description: "Three more beautiful ways to celebrate together.",
+  title: "Calimac Productions - More Possibilities",
+  description: "Two more beautiful ways to celebrate together.",
   robots: { index: false, follow: false },
 };
 
@@ -16,15 +16,15 @@ export default function MorePossibilities() {
       <div className="reveal-copy">
         <p className="reveal-beat beat-one" id="more-opening">I had a feeling<br />you might say that.</p>
         <div className="reveal-beat beat-two"><p>It was never about how much we spend.</p><strong>It’s about going somewhere together.</strong></div>
-        <div className="reveal-beat beat-three"><p>So… what if we did it differently?</p><strong>Three more possibilities.</strong><a href="#possibilities">Discover</a></div>
+        <div className="reveal-beat beat-three"><p>So… what if we did it differently?</p><strong>Two more possibilities.</strong><a href="#possibilities">Discover</a></div>
       </div>
     </section>
 
     <section className="more-invitation" id="possibilities">
-      <p className="more-label">Chapter two</p><div><h1>Three more ways<br />to celebrate <em>you.</em></h1><p>Different places. Different rhythms. The very same reason for going.</p></div>
+      <p className="more-label">Chapter two</p><div><h1>Two more ways<br />to celebrate <em>you.</em></h1><p>Different places. Different rhythms. The very same reason for going.</p></div>
     </section>
 
-    <section className="more-index" aria-label="Three more possibilities">
+    <section className="more-index" aria-label="Two more possibilities">
       {beautifulWeek.destinations.map((destination, index) => <a href={`#${destination.id}`} className="more-card" key={destination.id}>
         <img src={destination.hero} alt={destination.alt} /><span className="card-shade" /><span className="card-number">0{index + 1}</span><span className="card-copy"><small>{destination.eyebrow}</small><strong>{destination.title}</strong><span>{destination.moments[0]}</span><b>Step inside</b></span>
       </a>)}
