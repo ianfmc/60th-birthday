@@ -81,7 +81,13 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /Verified prices are shown individually/);
   assert.match(html, /Previous valid total/);
   assert.match(html, />Flights</);
-  assert.match(html, /Flexible-date airfare/);
+  assert.match(html, /Planned-date airfare · included in cost breakdown/);
+  assert.match(html, /Lower flexible-date alternative/);
+  assert.match(html, /Two travelers · matches cost breakdown/);
+  assert.match(html, /<dt>Airfare<\/dt><dd>\$3,526<\/dd>/);
+  assert.match(html, /included in cost breakdown · two travelers<\/span><strong>\$3,526/);
+  assert.match(html, /<dt>Airfare<\/dt><dd>\$3,914<\/dd>/);
+  assert.match(html, /included in cost breakdown · two travelers<\/span><strong>\$3,914/);
   assert.match(html, /Last lodging check/);
   assert.match(html, /Google Flights via SerpApi/);
   assert.match(html, /vegan/i);

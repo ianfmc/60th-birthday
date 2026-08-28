@@ -8,14 +8,14 @@ import { calculateBudgetVariance, normalizeStatus as normalizeStatusValue } from
 export type StatusKind = "current" | "estimated" | "verify" | "stale" | "unavailable";
 export type CostBreakdown = { lodging:number; airfare:number; transport:number; meals:number; experiences:number; contingency:number };
 export type PropertyDetails = { name:string; role:string; inventory:string; source:string; confidence:StatusKind; vegan:string; note:string; alternativeQuote?:{total:number;dates:string;label:string;detail:string}; lodgingPrice?:{status:StatusKind;total:number|null;nightly:number|null;source:string|null;checkedAt:string;refundable:boolean|null;official:boolean;room:string|null;availability?:boolean|null;reason?:string|null} };
-export type LiveFare = { price:number; airline:string; origin:string; destination:string; cabin:string; outboundDate:string; returnDate:string; flights:string; source:string; checkedAt:string|null; deltaPercent:number|null; alert:boolean; status:StatusKind } | null;
+export type LiveFare = { shift:number; price:number; airline:string; origin:string; destination:string; cabin:string; outboundDate:string; returnDate:string; flights:string; source:string; checkedAt:string|null; deltaPercent:number|null; alert:boolean; status:StatusKind } | null;
 export type DestinationViewModel = {
   id:string; collectionId:"extraordinary"|"beautiful-week"; name:string; destination:string; dates:string; total:number; targetHigh:number; budgetVariance:number;
   budgetVarianceRange:{min:number;max:number}|null;
   lodgingRange:{min:number;max:number}|null; totalRange:{min:number;max:number}|null;
   confidence:StatusKind; availability:string; refundability:string; costs:CostBreakdown;
   monitoring:{ checkedAt:string; previousTotal:number|null; deltaPercent:number|null; alert:boolean; summary:string };
-  flight:{ origin:string; destination:string; cabin:string; confidence:StatusKind }|null; liveFare:LiveFare; properties:PropertyDetails[];
+  flight:{ origin:string; destination:string; cabin:string; confidence:StatusKind }|null; plannedFare:LiveFare; liveFare:LiveFare; properties:PropertyDetails[];
   dining:string[]; experiences:string[]; inventory:string|null; note:string|null; source:string|null;
 };
 export type CollectionViewModel = { id:"extraordinary"|"beautiful-week"; label:string; targetLabel:string; description:string; destinations:DestinationViewModel[] };
@@ -36,6 +36,12 @@ function getLiveFare(id:string):LiveFare {
   const result=flightById[id]; if(!result?.best) return null;
   return {...result.best,source:flightMonitor.source,checkedAt:flightMonitor.checkedAt,deltaPercent:result.deltaPercent,alert:result.alert,status:normalizeStatus(result.status)};
 }
+function getPlannedFare(id:string):LiveFare {
+  const result=flightById[id];
+  const fare=[result?.best,...(result?.alternatives??[])].find((offer)=>offer?.shift===0);
+  if(!fare)return null;
+  return {...fare,source:flightMonitor.source,checkedAt:flightMonitor.checkedAt,deltaPercent:null,alert:false,status:normalizeStatus(result.status)};
+}
 function getSelectedDateAirfare(id:string,fallback:number){
   const result=flightById[id];
   const exact=[result?.best,...(result?.alternatives??[])].find((offer)=>offer?.shift===0);
@@ -49,16 +55,17 @@ function lodgingSummary(destinationId:string){
   return unavailable?`Lodging checked ${checked}; ${unavailable} ${unavailable===1?"property":"properties"} did not return a complete qualifying total. Verified prices are shown individually.`:`Lodging price verified ${checked}.`;
 }
 const extraordinaryTargetHigh=12_000;
-const extraordinaryDestinations:DestinationViewModel[]=extraordinary.properties.map((property,index)=>{const flightId=extraordinaryFlightIds[property.name];const liveFare=getLiveFare(flightId);const airfare=getSelectedDateAirfare(flightId,property.airfare);const liveLodging=lodgingById[lodgingIdByPropertyName[property.name]];const directAvailability=liveLodging&&"availability" in liveLodging?liveLodging.availability:null;const lodging=isQualifiedLodging(liveLodging)?liveLodging!.total!:property.lodging;const total=property.total-property.airfare-property.lodging+airfare+lodging;return ({
+const extraordinaryDestinations:DestinationViewModel[]=extraordinary.properties.map((property,index)=>{const flightId=extraordinaryFlightIds[property.name];const plannedFare=getPlannedFare(flightId);const liveFare=getLiveFare(flightId);const airfare=plannedFare?.price??getSelectedDateAirfare(flightId,property.airfare);const liveLodging=lodgingById[lodgingIdByPropertyName[property.name]];const directAvailability=liveLodging&&"availability" in liveLodging?liveLodging.availability:null;const lodging=isQualifiedLodging(liveLodging)?liveLodging!.total!:property.lodging;const total=property.total-property.airfare-property.lodging+airfare+lodging;return ({
   id:`extraordinary-${index+1}`,collectionId:"extraordinary",name:property.name,destination:property.destination,dates:property.dates,total,targetHigh:extraordinaryTargetHigh,lodgingRange:null,totalRange:null,
   budgetVariance:calculateBudgetVariance(extraordinaryTargetHigh,total),budgetVarianceRange:null,confidence:lodgingStatus(liveLodging,property.confidence),availability:directAvailability===true?"Available on direct booking engine":directAvailability===false?"Unavailable on direct booking engine":property.inventory,refundability:liveLodging?.refundable===true?"Refundable":liveLodging?.refundable===false?"Nonrefundable":"Cancellation terms not provided",
   costs:{lodging,airfare,transport:property.transport,meals:property.meals,experiences:property.experiences,contingency:property.contingency},monitoring:{...property.monitoring,checkedAt:directLodgingMonitor.checkedAt,summary:liveLodging?.reason??lodgingSummary(`extraordinary-${index+1}`)},
-  flight:null,liveFare,properties:[],dining:[property.dining],experiences:[],inventory:property.inventory,note:property.note,source:property.source,
+  flight:null,plannedFare,liveFare,properties:[],dining:[property.dining],experiences:[],inventory:property.inventory,note:property.note,source:property.source,
 })});
 const beautifulDestinations:DestinationViewModel[]=beautifulWeek.destinations.map((destination)=>{
   const flightId=beautifulFlightIds[destination.id];
+  const plannedFare=getPlannedFare(flightId);
   const liveFare=getLiveFare(flightId);
-  const airfare=getSelectedDateAirfare(flightId,destination.cost.airfare);
+  const airfare=plannedFare?.price??getSelectedDateAirfare(flightId,destination.cost.airfare);
   const currentTotal=destination.cost.total-destination.cost.airfare+airfare;
   const pricedLodging:number[]=destination.properties.flatMap((property)=>{if("alternativeQuote" in property)return [property.alternativeQuote.total];const result=lodgingById[lodgingIdByPropertyName[property.name]];return isQualifiedLodging(result)?[result!.total!]:[]});
   if(!pricedLodging.length)pricedLodging.push(destination.cost.lodging);
@@ -72,7 +79,7 @@ const beautifulDestinations:DestinationViewModel[]=beautifulWeek.destinations.ma
   id:destination.id,collectionId:"beautiful-week",name:destination.name,destination:destination.name,dates:destination.dates,total:currentTotal,targetHigh:beautifulWeek.target.high,lodgingRange,totalRange,
   budgetVariance:calculateBudgetVariance(beautifulWeek.target.high,currentTotal),budgetVarianceRange,confidence:normalizeStatus(destination.cost.confidence),availability:destination.monitoring.availability,refundability:destination.monitoring.refundability,
   costs:{...destination.cost,airfare},monitoring:{...destination.monitoring,checkedAt:[lodgingMonitor.checkedAt,manualLodging.checkedAt].sort().at(-1)??lodgingMonitor.checkedAt,summary:lodgingSummary(destination.id)},flight:{origin:destination.flight.origin,destination:destination.flight.destination,cabin:destination.flight.cabin,confidence:normalizeStatus(destination.flight.confidence)},
-  liveFare,properties:destination.properties.map((property)=>{const price=lodgingById[lodgingIdByPropertyName[property.name]];const checkedAt=price&&manualLodgingIds.has(price.id)?manualLodging.checkedAt:directLodgingMonitor.results.some(result=>result.id===price?.id)?directLodgingMonitor.checkedAt:lodgingMonitor.checkedAt;return {...property,confidence:normalizeStatus(property.confidence),lodgingPrice:price?{status:lodgingStatus(price,property.confidence),total:price.total,nightly:price.nightly,source:price.source,checkedAt,refundable:price.refundable,official:price.official,room:price.room??null,availability:"availability" in price?price.availability:null,reason:price.reason}:undefined}}),dining:[...destination.dining],experiences:[...destination.experiences],inventory:null,note:null,source:null,
+  plannedFare,liveFare,properties:destination.properties.map((property)=>{const price=lodgingById[lodgingIdByPropertyName[property.name]];const checkedAt=price&&manualLodgingIds.has(price.id)?manualLodging.checkedAt:directLodgingMonitor.results.some(result=>result.id===price?.id)?directLodgingMonitor.checkedAt:lodgingMonitor.checkedAt;return {...property,confidence:normalizeStatus(property.confidence),lodgingPrice:price?{status:lodgingStatus(price,property.confidence),total:price.total,nightly:price.nightly,source:price.source,checkedAt,refundable:price.refundable,official:price.official,room:price.room??null,availability:"availability" in price?price.availability:null,reason:price.reason}:undefined}}),dining:[...destination.dining],experiences:[...destination.experiences],inventory:null,note:null,source:null,
   };
 });
 export const controlCollections:CollectionViewModel[]=[
