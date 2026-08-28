@@ -188,7 +188,10 @@ export default function Home() {
         <h2>Which horizon<br />calls to you?</h2>
         <p>The rest is already taken care of.</p>
         <div className="dates">OCTOBER 2026 <span>·</span> SIX OR SEVEN NIGHTS</div>
-        <a className="book-it" href="/control/">Book it</a>
+        <div className="closing-actions">
+          <a className="more-chapter" href="/more/">Explore two more possibilities</a>
+          <a className="book-it" href="/control/">Book one of these</a>
+        </div>
       </section>
 
       <footer className="site-footer">

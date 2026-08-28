@@ -23,9 +23,9 @@ export default function MorePossibilities() {
     <section className="more-reveal" id="begin" aria-labelledby="more-opening">
       <div className="more-orbit" />
       <div className="reveal-copy">
-        <p className="reveal-beat beat-one" id="more-opening">I had a feeling<br />you might say that.</p>
-        <div className="reveal-beat beat-two"><p>It was never about how much we spend.</p><strong>It’s about going somewhere together.</strong></div>
-        <div className="reveal-beat beat-three"><p>So… what if we did it differently?</p><strong>Two more possibilities.</strong><a href="#possibilities">Discover</a></div>
+        <p className="reveal-beat beat-one" id="more-opening">One more thing<br />I wanted you to see.</p>
+        <div className="reveal-beat beat-two"><p>The best part was never just the place.</p><strong>It’s going somewhere together.</strong></div>
+        <div className="reveal-beat beat-three"><p>And I kept imagining…</p><strong>Two more possibilities.</strong><a href="#possibilities">Discover</a></div>
       </div>
     </section>
 

@@ -23,7 +23,8 @@ test("builds a complete self-contained S3 page", async () => {
   assert.doesNotMatch(html, /feels most like us/);
   assert.match(html, /id="start"/);
   assert.match(html, /class="header-dedication" href="#">For Diane<\/a>/);
-  assert.match(html, /class="book-it" href="#">Book it<\/a>/);
+  assert.match(html, /class="more-chapter" href="#">Explore two more possibilities<\/a>/);
+  assert.match(html, /class="book-it" href="#">Book one of these<\/a>/);
   assert.match(html, /20–27 October · Seven nights/);
   assert.match(html, /13–20 October · Seven nights/);
   assert.match(html, /21–27 October · Six nights/);
@@ -36,8 +37,8 @@ test("builds a complete self-contained S3 page", async () => {
 
 test("builds a private, self-contained More Possibilities chapter", async () => {
   const html = await readFile(new URL("../dist/more/index.html", import.meta.url), "utf8");
-  assert.match(html, /I had a feeling/);
-  assert.match(html, /It’s about going somewhere together/);
+  assert.match(html, /One more thing/);
+  assert.match(html, /It’s going somewhere together/);
   assert.match(html, /Montecristo Estates/);
   assert.match(html, /13–20 October · 7 nights/);
   assert.match(html, /20–27 October · 7 nights/);

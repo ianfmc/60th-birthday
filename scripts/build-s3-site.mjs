@@ -29,7 +29,7 @@ for (const [source, output] of pages) {
   let html = await readFile(resolve(root, source), "utf8");
   if (source === "out/index.html") {
     const moreUrl = (process.env.MORE_URL || "#").replaceAll("&", "&amp;");
-    html = html.replace('href="/more/"', `href="${moreUrl}"`);
+    html = html.replaceAll('href="/more/"', `href="${moreUrl}"`);
   }
   if (source === "out/index.html" || source === "out/more/index.html") {
     const controlUrl = (process.env.CONTROL_URL || "#").replaceAll("&", "&amp;");
