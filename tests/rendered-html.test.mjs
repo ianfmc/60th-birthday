@@ -24,6 +24,10 @@ test("builds a complete self-contained S3 page", async () => {
   assert.match(html, /id="start"/);
   assert.match(html, /class="header-dedication" href="#">For Diane<\/a>/);
   assert.match(html, /class="book-it" href="#">Book it<\/a>/);
+  assert.match(html, /20–27 October · Seven nights/);
+  assert.match(html, /13–20 October · Seven nights/);
+  assert.match(html, /21–27 October · Six nights/);
+  assert.match(html, /21–28 October · Seven nights/);
   assert.match(html, /data:image\/(?:jpeg|webp);base64,/);
   assert.doesNotMatch(html, /<script\b/i);
   assert.doesNotMatch(html, /(?:src|href)="\//i);
@@ -35,6 +39,8 @@ test("builds a private, self-contained More Possibilities chapter", async () => 
   assert.match(html, /I had a feeling/);
   assert.match(html, /It’s about going somewhere together/);
   assert.match(html, /Montecristo Estates/);
+  assert.match(html, /13–20 October · 7 nights/);
+  assert.match(html, /20–27 October · 7 nights/);
   assert.match(html, /Puerto Vallarta/);
   assert.doesNotMatch(html, /Waikoloa Beach Villas/);
   assert.match(html, /So… where to/);
@@ -54,6 +60,7 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /The Lagoon House/);
   assert.doesNotMatch(html, /Manava Moʻorea · Overwater Bungalow/);
   assert.match(html, /More Possibilities/);
+  assert.match(html, /\$7,000–\$8,000/);
   assert.match(html, /Six displayed nights would be \$3,786/);
   assert.match(html, /flight dates remain October 13–20/);
   assert.match(html, /Trip planner/);

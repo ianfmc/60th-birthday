@@ -4,7 +4,7 @@ export type VeganSupport = "strong vegan support" | "adequate vegan support" | "
 export const beautifulWeek = {
   id: "beautiful-week",
   label: "Beautiful Week",
-  target: { low: 5000, high: 6000, currency: "USD", travelers: 2, ceilingIsHard: true },
+  target: { low: 7000, high: 8000, currency: "USD", travelers: 2, ceilingIsHard: true },
   updatedAt: "2026-08-28",
   assumptions: {
     duration: "Approximately seven nights",

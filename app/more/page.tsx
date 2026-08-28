@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+function formatExperienceDates(value: string) {
+  const [startValue, endValue] = value.split("/");
+  const start = new Date(`${startValue}T12:00:00Z`);
+  const end = new Date(`${endValue}T12:00:00Z`);
+  const nights = Math.round((end.getTime() - start.getTime()) / 86_400_000);
+  const month = start.toLocaleDateString("en-US", { month: "long", timeZone: "UTC" });
+  return `${start.getUTCDate()}–${end.getUTCDate()} ${month} · ${nights} ${nights === 1 ? "night" : "nights"}`;
+}
+
 export default function MorePossibilities() {
   return <main className="more-experience">
     <nav className="more-header"><a href="#begin">Calimac Productions</a><span>For Diane</span></nav>
@@ -26,12 +35,12 @@ export default function MorePossibilities() {
 
     <section className="more-index" aria-label="Two more possibilities">
       {beautifulWeek.destinations.map((destination, index) => <a href={`#${destination.id}`} className="more-card" key={destination.id}>
-        <img src={destination.hero} alt={destination.alt} /><span className="card-shade" /><span className="card-number">0{index + 1}</span><span className="card-copy"><small>{destination.eyebrow}</small><strong>{destination.title}</strong><span>{destination.moments[0]}</span><b>Step inside</b></span>
+        <img src={destination.hero} alt={destination.alt} /><span className="card-shade" /><span className="card-number">0{index + 1}</span><span className="card-copy"><small>{destination.eyebrow}</small><strong>{destination.title}</strong><span>{formatExperienceDates(destination.dates)}</span><span>{destination.moments[0]}</span><b>Step inside</b></span>
       </a>)}
     </section>
 
     {beautifulWeek.destinations.map((destination, index) => <section className="more-place" id={destination.id} key={destination.id} aria-labelledby={`${destination.id}-title`}>
-      <header className="place-hero"><img src={destination.hero} alt={destination.alt} /><span className="place-shade" /><div><p>0{index + 1} · {destination.name}</p><h2 id={`${destination.id}-title`}>{destination.eyebrow}</h2></div></header>
+      <header className="place-hero"><img src={destination.hero} alt={destination.alt} /><span className="place-shade" /><div><p>0{index + 1} · {destination.name} · {formatExperienceDates(destination.dates)}</p><h2 id={`${destination.id}-title`}>{destination.eyebrow}</h2></div></header>
       <div className="place-story"><p className="more-label">The possibility</p><div><h3>{destination.stayName}</h3><p>{destination.publicCopy}</p><ul>{destination.moments.map(moment => <li key={moment}>{moment}</li>)}</ul></div></div>
       <a className="place-next" href={index === beautifulWeek.destinations.length - 1 ? "#where-to" : `#${beautifulWeek.destinations[index + 1].id}`}>{index === beautifulWeek.destinations.length - 1 ? "One last thought" : "Next possibility"}</a>
     </section>)}
