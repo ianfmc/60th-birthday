@@ -1,7 +1,7 @@
 const journeys = [
   {
     number: "01", place: "Puerto Vallarta · México", name: "Casa Suhana", image: "/places/casa-suhana.webp",
-    alt: "Infinity pool terrace at Casa Suhana in Puerto Vallarta", idea: "A return to a place we already know we love", date: "20–27 October · Seven nights",
+    alt: "Infinity pool terrace at Casa Suhana in Puerto Vallarta", idea: "A return to a place we already know we love", date: "22–29 October · Seven nights",
     copy: "A fully staffed hillside villa just south of Old Town. Familiar enough to feel effortless, different enough to feel new—with the warmth of Puerto Vallarta, extraordinary views and meals prepared just for us.",
     moments: ["Available for our October week", "Two chef-prepared meals each day", "Daily housekeeping"],
     rhythm: "The most looked-after week: arrive, exhale, and let the house take care of the rest.",
@@ -13,7 +13,7 @@ const journeys = [
   },
   {
     number: "02", place: "Los Cabos · México", name: "Casa Rayrae", image: "/places/casa-rayrae.webp",
-    alt: "Casa Rayrae terrace and infinity pool above the Sea of Cortez", idea: "A contemporary sanctuary above the Sea of Cortez", date: "13–20 October · Seven nights",
+    alt: "Casa Rayrae terrace and infinity pool above the Sea of Cortez", idea: "A contemporary sanctuary above the Sea of Cortez", date: "15–22 October · Seven nights",
     copy: "Private, ocean-facing and wonderfully easy. Casa Rayrae combines the intimacy of a home with the polish of a resort—and keeps a swimmable beach, San José and several remarkable dinners close at hand.",
     moments: ["Available for our October week", "Infinity pool & Jacuzzi", "Private beach access"],
     rhythm: "First class from Palm Springs, a short private transfer, then nowhere we have to be.",
@@ -58,12 +58,12 @@ const journeys = [
 const destinations = [
   {
     id: "puerto-vallarta", number: "01", name: "Puerto Vallarta", place: "México", image: "/places/casa-suhana.webp",
-    alt: "Infinity pool terrace at Casa Suhana in Puerto Vallarta", date: "20–27 October · Seven nights", idea: "Familiar warmth, made extraordinary.", journeyIndexes: [0],
+    alt: "Infinity pool terrace at Casa Suhana in Puerto Vallarta", date: "22–29 October · Seven nights", idea: "Familiar warmth, made extraordinary.", journeyIndexes: [0],
     travel: "Domestic First from Palm Springs, then a short transfer into the hills above Old Town.",
   },
   {
     id: "cabo", number: "02", name: "Los Cabos", place: "México", image: "/places/casa-rayrae.webp",
-    alt: "Casa Rayrae terrace above the Sea of Cortez", date: "13–20 October · Seven nights", idea: "Private, polished and wonderfully easy.", journeyIndexes: [1],
+    alt: "Casa Rayrae terrace above the Sea of Cortez", date: "15–22 October · Seven nights", idea: "Private, polished and wonderfully easy.", journeyIndexes: [1],
     travel: "Domestic First from Palm Springs and a private transfer to the Sea of Cortez.",
   },
   {

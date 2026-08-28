@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-28T22:12:41.575Z",
+  "checkedAt": "2026-08-28T23:17:42.092Z",
   "source": "Direct villa booking engines",
   "travelers": 2,
   "bookingPolicy": "Direct availability and complete totals when the property engine exposes them",
@@ -13,8 +13,8 @@
       "id": "casa-suhana",
       "destinationId": "extraordinary-1",
       "name": "Casa Suhana",
-      "checkIn": "2026-10-20",
-      "checkOut": "2026-10-27",
+      "checkIn": "2026-10-22",
+      "checkOut": "2026-10-29",
       "status": "current",
       "availability": true,
       "matchedProperty": "Casa Suhana",
@@ -34,8 +34,8 @@
       "id": "casa-rayrae",
       "destinationId": "extraordinary-2",
       "name": "Casa Rayrae",
-      "checkIn": "2026-10-13",
-      "checkOut": "2026-10-20",
+      "checkIn": "2026-10-15",
+      "checkOut": "2026-10-22",
       "status": "current",
       "availability": true,
       "matchedProperty": "Casa Rayrae",
@@ -43,7 +43,7 @@
       "total": 10264,
       "nightly": 1466.29,
       "source": "Sun Cabo direct booking engine; total includes taxes and mandatory fees",
-      "bookingLink": "https://www.suncabo.com/rentals/book-now?propertyID=231&checkin=10/13/2026&checkout=10/20/2026&adults=&children=",
+      "bookingLink": "https://www.suncabo.com/rentals/book-now?propertyID=231&checkin=10/15/2026&checkout=10/22/2026&adults=&children=",
       "reason": null
     },
     {

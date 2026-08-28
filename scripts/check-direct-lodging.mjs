@@ -7,8 +7,8 @@ const compactDate = value => new Date(`${value}T12:00:00Z`).toISOString().slice(
 const base = (value) => ({ collectionId: "extraordinary", official: true, refundable: null, room: null, cancellationUntil: null, ...value });
 
 async function checkCasaSuhana() {
-  const checkIn = "2026-10-20";
-  const checkOut = "2026-10-27";
+  const checkIn = "2026-10-22";
+  const checkOut = "2026-10-29";
   const pageUrl = "https://agavevillas.com/property/casa-suhana/";
   const calendarUrl = "https://syncvacationrental.com/v1/iCal/casa-suhana";
   const [page, calendar] = await Promise.all([(await fetch(pageUrl)).text(), (await fetch(calendarUrl)).text()]);
@@ -23,10 +23,10 @@ async function checkCasaSuhana() {
 }
 
 async function checkCasaRayrae() {
-  const checkIn = "2026-10-13";
-  const checkOut = "2026-10-20";
+  const checkIn = "2026-10-15";
+  const checkOut = "2026-10-22";
   const pageUrl = "https://www.suncabo.com/rentals/casa-rayrae";
-  const params = new URLSearchParams({ checkin: "10/13/2026", checkout: "10/20/2026", propertyID: "231", roomTypeID: "", propertyName: "Casa Rayrae", hash: "", adults: "2", children: "0" });
+  const params = new URLSearchParams({ checkin: "10/15/2026", checkout: "10/22/2026", propertyID: "231", roomTypeID: "", propertyName: "Casa Rayrae", hash: "", adults: "2", children: "0" });
   const response = await fetch("https://www.suncabo.com/ajax/quote", { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded; charset=UTF-8", "x-requested-with": "XMLHttpRequest" }, body: params });
   const html = await response.text();
   const total = Number(html.match(/pdp-quote-total[\s\S]*?data-price="([\d.]+)"/)?.[1]) || null;
