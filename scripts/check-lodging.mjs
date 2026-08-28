@@ -14,7 +14,6 @@ const stays = [
   { id: "solaz", collectionId: "beautiful-week", destinationId: "cabo", name: "Solaz, a Luxury Collection Resort, Los Cabos", query: "Solaz Luxury Collection Resort Los Cabos", checkIn: "2026-10-13", checkOut: "2026-10-20", roomPattern: /(king.*(ocean|sea|view)|(ocean|sea|view).*king)/i },
   { id: "casa-velas", collectionId: "beautiful-week", destinationId: "puerto-vallarta", name: "Casa Velas", query: "Casa Velas Puerto Vallarta", checkIn: "2026-10-20", checkOut: "2026-10-27", roomPattern: /(king.*(ocean|water|view)|(ocean|water|view).*king)/i },
   { id: "la-puesta-sayulita", collectionId: "beautiful-week", destinationId: "puerto-vallarta", name: "La Puesta Sayulita", query: "La Puesta Sayulita", checkIn: "2026-10-20", checkOut: "2026-10-27", roomPattern: /(king.*(ocean|water|view|sunset)|(ocean|water|view|sunset).*king)/i },
-  { id: "rivera-del-rio", collectionId: "beautiful-week", destinationId: "puerto-vallarta", name: "Rivera del Rio Boutique Hotel", query: "Rivera del Rio Boutique Hotel Puerto Vallarta", checkIn: "2026-10-20", checkOut: "2026-10-27", roomPattern: /(king.*(ocean|river|water|bay|view)|(ocean|river|water|bay|view).*king)/i },
   { id: "garza-blanca", collectionId: "beautiful-week", destinationId: "puerto-vallarta", name: "Garza Blanca Preserve Resort & Spa", query: "Garza Blanca Preserve Resort Puerto Vallarta", checkIn: "2026-10-20", checkOut: "2026-10-27", roomPattern: /(king.*(ocean|water|view)|(ocean|water|view).*king)/i },
 ];
 
