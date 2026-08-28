@@ -12,6 +12,7 @@ export type LiveFare = { price:number; airline:string; origin:string; destinatio
 export type DestinationViewModel = {
   id:string; collectionId:"extraordinary"|"beautiful-week"; name:string; destination:string; dates:string; total:number; targetHigh:number; budgetVariance:number;
   budgetVarianceRange:{min:number;max:number}|null;
+  lodgingRange:{min:number;max:number}|null; totalRange:{min:number;max:number}|null;
   confidence:StatusKind; availability:string; refundability:string; costs:CostBreakdown;
   monitoring:{ checkedAt:string; previousTotal:number|null; deltaPercent:number|null; alert:boolean; summary:string };
   flight:{ origin:string; destination:string; cabin:string; confidence:StatusKind }|null; liveFare:LiveFare; properties:PropertyDetails[];
@@ -49,7 +50,7 @@ function lodgingSummary(destinationId:string){
 }
 const extraordinaryTargetHigh=12_000;
 const extraordinaryDestinations:DestinationViewModel[]=extraordinary.properties.map((property,index)=>{const flightId=extraordinaryFlightIds[property.name];const liveFare=getLiveFare(flightId);const airfare=getSelectedDateAirfare(flightId,property.airfare);const liveLodging=lodgingById[lodgingIdByPropertyName[property.name]];const directAvailability=liveLodging&&"availability" in liveLodging?liveLodging.availability:null;const lodging=isQualifiedLodging(liveLodging)?liveLodging!.total!:property.lodging;const total=property.total-property.airfare-property.lodging+airfare+lodging;return ({
-  id:`extraordinary-${index+1}`,collectionId:"extraordinary",name:property.name,destination:property.destination,dates:property.dates,total,targetHigh:extraordinaryTargetHigh,
+  id:`extraordinary-${index+1}`,collectionId:"extraordinary",name:property.name,destination:property.destination,dates:property.dates,total,targetHigh:extraordinaryTargetHigh,lodgingRange:null,totalRange:null,
   budgetVariance:calculateBudgetVariance(extraordinaryTargetHigh,total),budgetVarianceRange:null,confidence:lodgingStatus(liveLodging,property.confidence),availability:directAvailability===true?"Available on direct booking engine":directAvailability===false?"Unavailable on direct booking engine":property.inventory,refundability:liveLodging?.refundable===true?"Refundable":liveLodging?.refundable===false?"Nonrefundable":"Cancellation terms not provided",
   costs:{lodging,airfare,transport:property.transport,meals:property.meals,experiences:property.experiences,contingency:property.contingency},monitoring:{...property.monitoring,checkedAt:directLodgingMonitor.checkedAt,summary:liveLodging?.reason??lodgingSummary(`extraordinary-${index+1}`)},
   flight:null,liveFare,properties:[],dining:[property.dining],experiences:[],inventory:property.inventory,note:property.note,source:property.source,
@@ -59,12 +60,16 @@ const beautifulDestinations:DestinationViewModel[]=beautifulWeek.destinations.ma
   const liveFare=getLiveFare(flightId);
   const airfare=getSelectedDateAirfare(flightId,destination.cost.airfare);
   const currentTotal=destination.cost.total-destination.cost.airfare+airfare;
-  const pricedLodging=[destination.cost.lodging,...destination.properties.map((property)=>lodgingById[lodgingIdByPropertyName[property.name]]).filter(isQualifiedLodging).map((result)=>result!.total!)];
+  const pricedLodging:number[]=destination.properties.flatMap((property)=>{if("alternativeQuote" in property)return [property.alternativeQuote.total];const result=lodgingById[lodgingIdByPropertyName[property.name]];return isQualifiedLodging(result)?[result!.total!]:[]});
+  if(!pricedLodging.length)pricedLodging.push(destination.cost.lodging);
   const distinctLodging=[...new Set(pricedLodging)];
+  const lodgingRange=distinctLodging.length>1?{min:Math.min(...distinctLodging),max:Math.max(...distinctLodging)}:null;
+  const fixedCosts=currentTotal-destination.cost.lodging;
+  const totalRange=lodgingRange?{min:fixedCosts+lodgingRange.min,max:fixedCosts+lodgingRange.max}:null;
   const variances=distinctLodging.map((lodging)=>calculateBudgetVariance(beautifulWeek.target.high,currentTotal-destination.cost.lodging+lodging));
   const budgetVarianceRange=variances.length>1?{min:Math.min(...variances),max:Math.max(...variances)}:null;
   return {
-  id:destination.id,collectionId:"beautiful-week",name:destination.name,destination:destination.name,dates:destination.dates,total:currentTotal,targetHigh:beautifulWeek.target.high,
+  id:destination.id,collectionId:"beautiful-week",name:destination.name,destination:destination.name,dates:destination.dates,total:currentTotal,targetHigh:beautifulWeek.target.high,lodgingRange,totalRange,
   budgetVariance:calculateBudgetVariance(beautifulWeek.target.high,currentTotal),budgetVarianceRange,confidence:normalizeStatus(destination.cost.confidence),availability:destination.monitoring.availability,refundability:destination.monitoring.refundability,
   costs:{...destination.cost,airfare},monitoring:{...destination.monitoring,checkedAt:[lodgingMonitor.checkedAt,manualLodging.checkedAt].sort().at(-1)??lodgingMonitor.checkedAt,summary:lodgingSummary(destination.id)},flight:{origin:destination.flight.origin,destination:destination.flight.destination,cabin:destination.flight.cabin,confidence:normalizeStatus(destination.flight.confidence)},
   liveFare,properties:destination.properties.map((property)=>{const price=lodgingById[lodgingIdByPropertyName[property.name]];const checkedAt=price&&manualLodgingIds.has(price.id)?manualLodging.checkedAt:directLodgingMonitor.results.some(result=>result.id===price?.id)?directLodgingMonitor.checkedAt:lodgingMonitor.checkedAt;return {...property,confidence:normalizeStatus(property.confidence),lodgingPrice:price?{status:lodgingStatus(price,property.confidence),total:price.total,nightly:price.nightly,source:price.source,checkedAt,refundable:price.refundable,official:price.official,room:price.room??null,availability:"availability" in price?price.availability:null,reason:price.reason}:undefined}}),dining:[...destination.dining],experiences:[...destination.experiences],inventory:null,note:null,source:null,
