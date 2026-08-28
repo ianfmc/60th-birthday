@@ -36,18 +36,7 @@ const journeys = [
     diningVerdict: "Potentially lovely, with the vegan arrangements made part of the booking rather than improvised.",
   },
   {
-    number: "04", place: "Moʻorea · French Polynesia", name: "Manava Overwater", image: "/places/atn-manava-premium.jpg",
-    alt: "Overwater bungalow at Hotel Manava Beach Resort and Spa Moorea", idea: "The once-in-a-lifetime version", date: "21–27 October · Six nights",
-    copy: "An overwater bungalow at Manava Moʻorea: turquoise beneath the deck, a quiet reach of lagoon and full resort service close to Maharepa.",
-    moments: ["A private deck over the lagoon", "Snorkeling from the resort", "Breakfast, beach & full resort service"],
-    rhythm: "The journey begins aboard Air Tahiti Nui and ends each day with our feet over the lagoon.",
-    restaurants: [
-      { name: "Ke‘iki", image: "/restaurants/keiki.webp", alt: "The relaxed open-air dining room at Keiki in Maharepa", href: "https://www.tripadvisor.com/Restaurant_Review-g303860-d24000155-Reviews-Ke_iki-Maharepa_Moorea_Society_Islands.html", note: "A more local, authentically Moʻorea evening" },
-    ],
-    diningVerdict: "Confirm a special vegan birthday dinner with Manava in advance, then let Ke‘iki provide a relaxed local counterpoint beyond the resort.",
-  },
-  {
-    number: "05", place: "Hawaiʻi Island · Hawaiʻi", name: "The Westin Hāpuna Beach Resort", image: "/places/waikoloa-beach-villas.jpg",
+    number: "04", place: "Hawaiʻi Island · Hawaiʻi", name: "The Westin Hāpuna Beach Resort", image: "/places/waikoloa-beach-villas.jpg",
     alt: "The sunlit Kohala Coast on Hawaiʻi Island", idea: "The ocean-view celebration, with room to breathe", date: "20–27 October · Seven nights",
     copy: "A Premier Ocean King overlooking Hāpuna Beach: a beautiful room, a private balcony and a full-service resort without paying for more house than two people need.",
     moments: ["Premier ocean view & king bed", "Breakfast included", "A wide, quiet beach below"],
@@ -56,7 +45,7 @@ const journeys = [
     diningVerdict: "Arrange the birthday dinner and vegan breakfast choices with the resort before arrival.",
   },
   {
-    number: "06", place: "Kauaʻi · Hawaiʻi", name: "Koloa Landing Resort", image: "/places/waikoloa-beach-villas.jpg",
+    number: "05", place: "Kauaʻi · Hawaiʻi", name: "Koloa Landing Resort", image: "/places/waikoloa-beach-villas.jpg",
     alt: "A peaceful resort pool and palms in Hawaiʻi", idea: "The graceful fallback if Hāpuna slips away", date: "20–27 October · Seven nights",
     copy: "A polished Poʻipū resort with space, gardens and an easy South Shore location. Not the first choice—but a genuinely good answer if the Westin rate or room disappears.",
     moments: ["Poʻipū’s warm South Shore", "Resort pools & gardens", "A calm, comfortable base"],
@@ -79,12 +68,12 @@ const destinations = [
   },
   {
     id: "moorea", number: "03", name: "Moʻorea", place: "French Polynesia", image: "/places/moorea-villa.jpg",
-    alt: "A private villa opening onto the lagoon in Moorea", date: "21–27 October · Six nights", idea: "Two ways to live at the edge of the lagoon.", journeyIndexes: [2, 3],
+    alt: "A private villa opening onto the lagoon in Moorea", date: "21–27 October · Six nights", idea: "Our own front door into the lagoon.", journeyIndexes: [2],
     travel: "Mānava Premium to Tahiti, one gentle overnight, then the morning ferry reveals Moʻorea in daylight.", cabinImage: "/places/atn-manava-premium.jpg", cabinAlt: "Air Tahiti Nui Manava Premium seats", cabinName: "Mānava Premium",
   },
   {
     id: "hawaii", number: "04", name: "Hawaiʻi", place: "Hāpuna first · Koloa if needed", image: "/places/waikoloa-beach-villas.jpg",
-    alt: "A peaceful resort pool and palms in Hawaiʻi", date: "20–27 October · Seven nights", idea: "One preferred stay. One worthy fallback.", journeyIndexes: [4, 5],
+    alt: "A peaceful resort pool and palms in Hawaiʻi", date: "20–27 October · Seven nights", idea: "One preferred stay. One worthy fallback.", journeyIndexes: [3, 4],
     travel: "Hāpuna is the first choice on Hawaiʻi Island; Koloa Landing on Kauaʻi is the fallback, with the flight repriced only if we need it.",
   },
 ];
@@ -124,8 +113,8 @@ export default function Home() {
       <section className="hero site-section" id="top">
         <div className="hero-glow" />
         <div className="hero-content">
-          <p className="eyebrow">October 2026 · Four destinations · Six beautiful ways</p>
-          <h1>Six beautiful ways<br />to celebrate <em>you.</em></h1>
+          <p className="eyebrow">October 2026 · Four destinations · Five beautiful ways</p>
+          <h1>Five beautiful ways<br />to celebrate <em>you.</em></h1>
           <p className="hero-copy">Not simply a trip. Time set apart—somewhere beautiful, with nowhere more important to be than together.</p>
           <a className="round-link" href="#possibilities" aria-label="Explore the six possibilities">Explore</a>
         </div>

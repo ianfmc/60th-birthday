@@ -5,7 +5,7 @@ import test from "node:test";
 test("builds a complete self-contained S3 page", async () => {
   const html = await readFile(new URL("../dist/celebrating-sixty.html", import.meta.url), "utf8");
 
-  assert.match(html, /Four beautiful ways/);
+  assert.match(html, /Five beautiful ways/);
   assert.match(html, /Calimac Productions/);
   assert.match(html, /celebrate the beautiful person you are/);
   assert.match(html, /For Diane with all my love\./);
@@ -13,7 +13,7 @@ test("builds a complete self-contained S3 page", async () => {
   assert.match(html, /Casa Suhana/);
   assert.match(html, /Casa Rayrae/);
   assert.match(html, /Flora Farms/);
-  assert.match(html, /Manava Overwater/);
+  assert.doesNotMatch(html, /Manava Overwater/);
   assert.doesNotMatch(html, /Hale Naiʻa/);
   assert.match(html, /id="puerto-vallarta"/);
   assert.match(html, /All destinations/);
@@ -52,7 +52,7 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /Casa Rayrae/);
   assert.doesNotMatch(html, /Hale Naiʻa/);
   assert.match(html, /The Lagoon House/);
-  assert.match(html, /Manava Moʻorea · Overwater Bungalow/);
+  assert.doesNotMatch(html, /Manava Moʻorea · Overwater Bungalow/);
   assert.match(html, /More Possibilities/);
   assert.match(html, /Trip planner/);
   assert.match(html, /Budget variance/);

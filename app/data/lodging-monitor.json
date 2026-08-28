@@ -68,27 +68,6 @@
       "reason": "Property not found in Google Hotels"
     },
     {
-      "id": "manava-moorea",
-      "collectionId": "extraordinary",
-      "destinationId": "extraordinary-4",
-      "name": "Hotel Manava Beach Resort & Spa Moorea",
-      "query": "Hotel Manava Beach Resort & Spa Moorea",
-      "checkIn": "2026-10-21",
-      "checkOut": "2026-10-27",
-      "status": "unavailable",
-      "matchedProperty": "Hotel Manava Beach Resort & Spa Moorea",
-      "matchScore": 1,
-      "room": null,
-      "total": null,
-      "nightly": null,
-      "source": null,
-      "official": false,
-      "refundable": null,
-      "cancellationUntil": null,
-      "bookingLink": null,
-      "reason": "No refundable offer with a complete total returned"
-    },
-    {
       "id": "westin-hapuna",
       "collectionId": "extraordinary",
       "destinationId": "extraordinary-5",
