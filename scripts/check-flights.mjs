@@ -10,7 +10,7 @@ const searches = [
   { id: "more-cabo", label: "Los Cabos · More Possibilities", from: "PSP,SAN", to: "SJD", out: "2026-10-13", back: "2026-10-20", cabins: [[4, "First"]], airlines: "UA,AA,AM", stops: 2 },
   { id: "original-cabo", label: "Los Cabos · Original", from: "PSP,SAN", to: "SJD", out: "2026-10-13", back: "2026-10-20", cabins: [[4, "First"]], airlines: "UA,AA,AM", stops: 2 },
   { id: "puerto-vallarta", label: "Puerto Vallarta", from: "PSP,SAN", to: "PVR", out: "2026-10-20", back: "2026-10-27", cabins: [[4, "First"]], airlines: "UA,AA,AM", stops: 2 },
-  { id: "kauai", label: "Kauaʻi · More Possibilities", from: "LAX", to: "LIH", out: "2026-10-20", back: "2026-10-27", cabins: [[3, "First"], [2, "Premium Economy"]], airlines: "AS,UA,AA,HA", stops: 1 },
+  { id: "kauai", label: "Kauaʻi · Original", from: "LAX", to: "LIH", out: "2026-10-21", back: "2026-10-28", cabins: [[3, "First"], [2, "Premium Economy"]], airlines: "AS,UA,AA,HA", stops: 1 },
   { id: "big-island", label: "Big Island · Original", from: "LAX", to: "KOA", out: "2026-10-20", back: "2026-10-27", cabins: [[3, "First"], [2, "Premium Economy"]], airlines: "UA,HA,AA", stops: 1 },
   { id: "tahiti", label: "Tahiti · Original", from: "LAX", to: "PPT", out: "2026-10-21", back: "2026-10-27", cabins: [[2, "Premium Economy"]], airlines: "UA,TN", stops: 1 },
 ];

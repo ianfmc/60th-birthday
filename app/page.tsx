@@ -46,7 +46,7 @@ const journeys = [
   },
   {
     number: "05", place: "Kauaʻi · Hawaiʻi", name: "Koloa Landing Resort", image: "/places/waikoloa-beach-villas.jpg",
-    alt: "A peaceful resort pool and palms in Hawaiʻi", idea: "The graceful fallback if Hāpuna slips away", date: "20–27 October · Seven nights",
+    alt: "A peaceful resort pool and palms in Hawaiʻi", idea: "The graceful fallback if Hāpuna slips away", date: "21–28 October · Seven nights",
     copy: "A one-bedroom king villa at a polished Poʻipū resort we already know and love, with room to settle in, beautiful gardens and an easy South Shore location. Not the first choice—but a genuinely good answer if the Westin rate or room disappears.",
     moments: ["One-bedroom king villa", "Poʻipū’s warm South Shore", "Resort pools & gardens"],
     rhythm: "Fly into Līhuʻe, take the short drive south, and keep the week focused on rest rather than logistics.",
@@ -73,7 +73,7 @@ const destinations = [
   },
   {
     id: "hawaii", number: "04", name: "Hawaiʻi", place: "Hāpuna first · Koloa if needed", image: "/places/waikoloa-beach-villas.jpg",
-    alt: "A peaceful resort pool and palms in Hawaiʻi", date: "20–27 October · Seven nights", idea: "One preferred stay. One worthy fallback.", journeyIndexes: [3, 4],
+    alt: "A peaceful resort pool and palms in Hawaiʻi", date: "Hāpuna 20–27 October · Koloa 21–28 October", idea: "One preferred stay. One worthy fallback.", journeyIndexes: [3, 4],
     travel: "Hāpuna is the first choice on Hawaiʻi Island; Koloa Landing on Kauaʻi is the fallback, with the flight repriced only if we need it.",
   },
 ];

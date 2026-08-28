@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-28T22:16:13.323Z",
+  "checkedAt": "2026-08-28T22:44:29.168Z",
   "source": "Google Flights via SerpApi",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
@@ -231,10 +231,10 @@
     },
     {
       "id": "kauai",
-      "label": "Kauaʻi · More Possibilities",
+      "label": "Kauaʻi · Original",
       "status": "current",
       "best": {
-        "shift": 1,
+        "shift": 0,
         "cabin": "First",
         "outboundDate": "2026-10-21",
         "returnDate": "2026-10-28",
@@ -251,7 +251,7 @@
       "alert": false,
       "alternatives": [
         {
-          "shift": 2,
+          "shift": 1,
           "cabin": "First",
           "outboundDate": "2026-10-22",
           "returnDate": "2026-10-29",
@@ -264,11 +264,11 @@
           "bookingToken": null
         },
         {
-          "shift": -1,
+          "shift": 2,
           "cabin": "First",
-          "outboundDate": "2026-10-19",
-          "returnDate": "2026-10-26",
-          "price": 3757,
+          "outboundDate": "2026-10-23",
+          "returnDate": "2026-10-30",
+          "price": 3477,
           "airline": "Alaska",
           "flights": "AS 963",
           "origin": "LAX",
@@ -279,18 +279,18 @@
         {
           "shift": -2,
           "cabin": "First",
-          "outboundDate": "2026-10-18",
-          "returnDate": "2026-10-25",
-          "price": 4013,
-          "airline": "United",
-          "flights": "UA 1295",
+          "outboundDate": "2026-10-19",
+          "returnDate": "2026-10-26",
+          "price": 4343,
+          "airline": "American",
+          "flights": "AA 119",
           "origin": "LAX",
           "destination": "LIH",
-          "durationMinutes": 365,
+          "durationMinutes": 364,
           "bookingToken": null
         },
         {
-          "shift": 0,
+          "shift": -1,
           "cabin": "First",
           "outboundDate": "2026-10-20",
           "returnDate": "2026-10-27",
