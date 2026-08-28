@@ -12,7 +12,6 @@ const stays = [
   { id: "montecristo", collectionId: "beautiful-week", destinationId: "cabo", name: "Montecristo Estates", query: "Montecristo Estates Los Cabos", checkIn: "2026-10-13", checkOut: "2026-10-20", roomPattern: /((3|three) bedrooms?.*(ocean|view)|(ocean|view).*(3|three) bedrooms?)/i },
   { id: "el-ganzo", collectionId: "beautiful-week", destinationId: "cabo", name: "Hotel El Ganzo", query: "Hotel El Ganzo Los Cabos", checkIn: "2026-10-13", checkOut: "2026-10-20", roomPattern: /(king.*(ocean|view)|(ocean|view).*king)/i },
   { id: "solaz", collectionId: "beautiful-week", destinationId: "cabo", name: "Solaz, a Luxury Collection Resort, Los Cabos", query: "Solaz Luxury Collection Resort Los Cabos", checkIn: "2026-10-13", checkOut: "2026-10-20", roomPattern: /(king.*(ocean|sea|view)|(ocean|sea|view).*king)/i },
-  { id: "casa-velas", collectionId: "beautiful-week", destinationId: "puerto-vallarta", name: "Casa Velas", query: "Casa Velas Puerto Vallarta", checkIn: "2026-10-20", checkOut: "2026-10-27", roomPattern: /(king.*(ocean|water|view)|(ocean|water|view).*king)/i },
   { id: "la-puesta-sayulita", collectionId: "beautiful-week", destinationId: "puerto-vallarta", name: "La Puesta Sayulita", query: "La Puesta Sayulita", checkIn: "2026-10-20", checkOut: "2026-10-27", roomPattern: /(king.*(ocean|water|view|sunset)|(ocean|water|view|sunset).*king)/i },
   { id: "garza-blanca", collectionId: "beautiful-week", destinationId: "puerto-vallarta", name: "Garza Blanca Preserve Resort & Spa", query: "Garza Blanca Preserve Resort Puerto Vallarta", checkIn: "2026-10-20", checkOut: "2026-10-27", roomPattern: /(king.*(ocean|water|view)|(ocean|water|view).*king)/i },
 ];
@@ -51,6 +50,11 @@ function completeOffers(property) {
   return [...propertyLevel, ...simple, ...featured].filter(price => price.free_cancellation === true && numeric(price.total_rate?.extracted_lowest) !== null);
 }
 
+function isAllInclusiveOffer(offer) {
+  const description = [offer.room, offer.rate_name, offer.name, offer.description, offer.package_name, offer.rate_description].filter(Boolean).join(" ");
+  return /all[- ]inclusive|inclusive meal plan|meal package/i.test(description);
+}
+
 let previous = { results: [] };
 try { previous = JSON.parse(await readFile(new URL("../app/data/lodging-monitor.json", import.meta.url), "utf8")); } catch {}
 const previousById = Object.fromEntries((previous.results || []).map(result => [result.id, result]));
@@ -64,10 +68,11 @@ for (const stay of stays) {
     const detailsResponse = match?.property_token && match !== directProperty ? await fetchPropertyDetails(stay, match.property_token) : null;
     const details = detailsResponse?.name ? detailsResponse : match;
     const offers = completeOffers(details);
-    const qualifyingOffers = stay.roomPattern ? offers.filter(offer => stay.roomPattern.test(offer.room || "")) : offers;
+    const roomOnlyOffers = offers.filter(offer => !isAllInclusiveOffer(offer));
+    const qualifyingOffers = stay.roomPattern ? roomOnlyOffers.filter(offer => stay.roomPattern.test(offer.room || "")) : roomOnlyOffers;
     const offer = qualifyingOffers.sort((a, b) => Number(b.official === true) - Number(a.official === true) || (numeric(a.total_rate?.extracted_lowest) ?? Infinity) - (numeric(b.total_rate?.extracted_lowest) ?? Infinity))[0] ?? null;
     const total = numeric(offer?.total_rate?.extracted_lowest);
-    results.push({ ...stay, roomPattern: undefined, status: offer && total ? "current" : "unavailable", matchedProperty: details?.name ?? match?.name ?? null, matchScore: candidates[0]?.score ?? 0, room: offer?.room ?? null, total, nightly: numeric(offer?.rate_per_night?.extracted_lowest), source: offer?.source ?? null, official: offer?.official === true, refundable: offer ? true : null, cancellationUntil: offer?.free_cancellation_until_date ?? null, bookingLink: offer?.link ?? null, reason: body.error || (!match ? "Property not found in Google Hotels" : !offers.length ? "No refundable offer with a complete total returned" : !qualifyingOffers.length ? (stay.id === "koloa-landing" ? "No refundable one-bedroom king villa with a view and complete total returned" : "No refundable king-with-view offer with a complete total returned") : !total ? "Refundable offer did not include a complete total" : null) });
+    results.push({ ...stay, roomPattern: undefined, status: offer && total ? "current" : "unavailable", matchedProperty: details?.name ?? match?.name ?? null, matchScore: candidates[0]?.score ?? 0, room: offer?.room ?? null, total, nightly: numeric(offer?.rate_per_night?.extracted_lowest), source: offer?.source ?? null, official: offer?.official === true, refundable: offer ? true : null, cancellationUntil: offer?.free_cancellation_until_date ?? null, bookingLink: offer?.link ?? null, reason: body.error || (!match ? "Property not found in Google Hotels" : !offers.length ? "No refundable offer with a complete total returned" : !roomOnlyOffers.length ? "Only all-inclusive or meal-package offers returned; excluded" : !qualifyingOffers.length ? (stay.id === "koloa-landing" ? "No refundable one-bedroom king villa with a view and complete total returned" : "No refundable room-only king-with-view offer with a complete total returned") : !total ? "Refundable offer did not include a complete total" : null) });
   } catch (error) {
     const prior = previousById[stay.id];
     results.push(prior?.total ? { ...prior, ...stay, status: "stale", reason: `Refresh failed; prior valid result preserved. ${error instanceof Error ? error.message : "Unknown error"}` } : { ...stay, status: "unavailable", matchedProperty: null, matchScore: 0, total: null, nightly: null, source: null, official: false, refundable: null, bookingLink: null, reason: error instanceof Error ? error.message : "Unknown error" });

@@ -9,7 +9,7 @@ export const beautifulWeek = {
   assumptions: {
     duration: "Approximately seven nights",
     contingency: 300,
-    note: "Planning estimates only. Reprice every component together before booking; no property total is authoritative until taxes, mandatory fees, room category, occupancy and cancellation terms are verified.",
+    note: "Planning estimates only. Room-only lodging rates are required; exclude all-inclusive properties and packages because the included dining is not usable enough to justify its cost. Reprice every component together before booking; no property total is authoritative until taxes, mandatory fees, room category, occupancy and cancellation terms are verified.",
   },
   destinations: [
     {
@@ -19,7 +19,7 @@ export const beautifulWeek = {
       publicCopy: "Once, this place was almost part of our story. We held the possibility for years, but somehow never arrived. Maybe the loveliest thing about going now would be finishing a sentence we began a long time ago.",
       moments: ["A private pool above the Pacific", "Slow mornings and nowhere we have to be", "One long afternoon at Flora Farms"],
       properties: [
-        { name: "Montecristo Estates", role: "primary", inventory: "canonical resort + private-owner inventory", source: "https://www.pueblobonito.com/resorts/montecristo-estates", confidence: "needs verification" as Confidence, vegan: "requires planning" as VeganSupport, note: "Verify whether the quote is room-only or all-inclusive and whether private inventory carries equivalent resort access." },
+        { name: "Montecristo Estates", role: "primary", inventory: "room-only canonical resort or private-owner inventory", source: "https://www.pueblobonito.com/resorts/montecristo-estates", confidence: "needs verification" as Confidence, vegan: "requires planning" as VeganSupport, note: "Room-only rates only. Exclude all-inclusive packages; verify that private inventory carries the required resort access." },
         { name: "Hotel El Ganzo", role: "San José del Cabo candidate", inventory: "canonical hotel inventory", source: "https://be.synxis.com/addons?adult=2&arrive=2026-10-13&chain=32709&child=0&currency=USD&depart=2026-10-20&hotel=46912&level=hotel&locale=en-US&productcurrency=USD&rooms=1&sbe_rc=NjBmYjZmNDctMDQyMi00NzY5LWJlYjYtNTNlYjI1ZmI4MjEz", confidence: "needs verification" as Confidence, vegan: "requires planning" as VeganSupport, note: "Unconfirmed rate for Oct 13–20: $721 per night, or $5,047 for seven nights. Comparable trip estimate: $7,997 with the existing airfare, transport, meals, experiences and contingency assumptions." },
         { name: "Solaz, a Luxury Collection Resort, Los Cabos", role: "San José del Cabo candidate", inventory: "canonical Marriott inventory", source: "https://www.marriott.com/en-us/hotels/sjdlc-solaz-a-luxury-collection-resort-los-cabos/overview/", confidence: "needs verification" as Confidence, vegan: "requires planning" as VeganSupport, note: "Ocean View King and Panoramic Ocean View King categories fit the room brief. Verify an October refundable rate, all taxes and resort fees, Marriott Titanium benefits, and plant-based dining arrangements." },
       ],
@@ -32,16 +32,15 @@ export const beautifulWeek = {
     {
       id: "puerto-vallarta", name: "Puerto Vallarta", dates: "2026-10-20/2026-10-27",
       hero: "/places/casa-suhana.webp", alt: "An infinity pool terrace above the green hills of Puerto Vallarta",
-      eyebrow: "Warmth, without a schedule", title: "Puerto Vallarta", stayName: "Casa Velas",
+      eyebrow: "Warmth, without a schedule", title: "Puerto Vallarta", stayName: "Garza Blanca Preserve",
       publicCopy: "A week of garden mornings, warm evenings and dinners worth dressing for. Close enough to the city to follow our curiosity, quiet enough to let the days unfold on their own.",
       moments: ["A quiet, grown-up place to land", "Beautiful dinners close at hand", "The city whenever we feel like wandering"],
       properties: [
-        { name: "Casa Velas", role: "primary", inventory: "canonical resort inventory", source: "https://www.hotelcasavelas.com/", confidence: "needs verification" as Confidence, vegan: "adequate vegan support" as VeganSupport, note: "Adults-only all-inclusive; request written vegan confirmation and a refundable full tax-and-fee total." },
         { name: "La Puesta Sayulita", role: "excluded unless terms change", inventory: "Prior room availability is stale", source: "https://us2.cloudbeds.com/en/reservation/qs6leV/?currency=usd&checkin=2026-10-20&checkout=2026-10-27", confidence: "stale" as Confidence, vegan: "requires planning" as VeganSupport, note: "The prior quote is no longer treated as current. Recheck direct inventory and cancellation terms; any rate that is nonrefundable remains excluded." },
-        { name: "Garza Blanca Preserve Resort & Spa", role: "candidate", inventory: "canonical resort inventory", source: "https://bookings.puertovallarta.garzablancaresort.com/booking1?language=ENGLISH&numRooms=1&startDate=20/10/2026&endDate=27/10/2026&adultsRoom1=2&namespace=tafer-garza-vallarta", confidence: "needs verification" as Confidence, vegan: "requires planning" as VeganSupport, note: "Compare the monitored live offer with the resort’s direct rate; verify the room category, included taxes and fees, cancellation deadline and meal costs before booking." },
+        { name: "Garza Blanca Preserve Resort & Spa", role: "primary room-only candidate", inventory: "canonical room-only resort inventory", source: "https://bookings.puertovallarta.garzablancaresort.com/booking1?language=ENGLISH&numRooms=1&startDate=20/10/2026&endDate=27/10/2026&adultsRoom1=2&namespace=tafer-garza-vallarta", confidence: "needs verification" as Confidence, vegan: "requires planning" as VeganSupport, note: "Room-only rates only; reject every all-inclusive or meal-plan offer. Verify the room category, complete taxes and fees, cancellation deadline and separate meal budget before booking." },
       ],
       cost: { lodging: 2700, airfare: 850, transport: 180, meals: 1150, experiences: 400, contingency: 300, total: 5580, confidence: "stale" as Confidence },
-      monitoring: { checkedAt: "2026-08-28T15:51:06-07:00", previousTotal: 5580, deltaPercent: 0, alert: true, availability: "No current exact-week refundable lodging price verified", refundability: "No current qualifying cancellation terms verified", summary: "All Puerto Vallarta lodging figures are planning estimates or stale. No property currently has a defensible exact-week refundable, all-fee total; reprice before comparing or booking." },
+      monitoring: { checkedAt: "2026-08-28T15:51:06-07:00", previousTotal: 5580, deltaPercent: 0, alert: true, availability: "No current exact-week refundable room-only lodging price verified", refundability: "No current qualifying room-only cancellation terms verified", summary: "Casa Velas was removed because it is all-inclusive. All remaining Puerto Vallarta lodging figures are planning estimates or stale; no property currently has a defensible exact-week refundable, room-only, all-fee total." },
       flight: { origin: "PSP/SAN", destination: "PVR", cabin: "First class; nonstop preferred, no more than one stop", estimate: 850, confidence: "estimated" as Confidence },
       dining: ["The Green Place — fully plant-based", "Veggitalia — vegan Italian", "Tintoque — arrange a vegan tasting menu ahead"],
       experiences: ["A private sunset sail on Banderas Bay", "A slow gallery-and-dinner evening in Centro"],
