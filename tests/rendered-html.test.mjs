@@ -95,7 +95,8 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /id="collection-extraordinary"/);
   assert.match(html, /id="collection-beautiful-week"/);
   assert.match(html, /View details/);
-  assert.match(html, /Attention needed/);
+  assert.doesNotMatch(html, /Attention needed|Needs Attention/);
+  assert.match(html, /Pricing monitored/);
   assert.match(html, /\.control-shell h1,[^{]+\{[^}]*font-family:inherit/);
   assert.doesNotMatch(html, /island hop/);
   assert.doesNotMatch(html, /Cabo Surf Hotel|Grand Miramar|Pueblo Bonito Pacifica|Pueblo Bonito Sunset Beach|Waikoloa Beach Marriott Resort &amp; Spa/);
