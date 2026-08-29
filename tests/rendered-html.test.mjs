@@ -65,8 +65,7 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /October 15–22/);
   assert.match(html, /\$2,550–\$6,666/);
   assert.match(html, /Estimated total range/);
-  assert.match(html, /Nonrefundable · \$1,852/);
-  assert.match(html, /Before tax · \$2,198/);
+  assert.doesNotMatch(html, /Nonrefundable · \$1,852|Before tax · \$2,198/);
   assert.match(html, /\$1,852–\$2,198/);
   assert.match(html, /Trip planner/);
   assert.match(html, /Budget variance/);
