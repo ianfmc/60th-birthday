@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-28T23:17:41.566Z",
+  "checkedAt": "2026-08-29T12:38:07.543Z",
   "source": "Google Hotels via SerpApi; refundable offers with complete totals",
   "travelers": 2,
   "bookingPolicy": "Refundable rates only; totals must include taxes and mandatory fees when returned",
@@ -14,7 +14,7 @@
       "checkOut": "2026-10-29",
       "status": "unavailable",
       "matchedProperty": null,
-      "matchScore": 0,
+      "matchScore": 0.5,
       "room": null,
       "total": null,
       "nightly": null,
@@ -56,7 +56,7 @@
       "checkOut": "2026-10-27",
       "status": "unavailable",
       "matchedProperty": null,
-      "matchScore": 0.3333333333333333,
+      "matchScore": 0.6666666666666666,
       "room": null,
       "total": null,
       "nightly": null,
@@ -85,7 +85,7 @@
       "official": true,
       "refundable": true,
       "cancellationUntil": "Oct 12",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiflJm-usSWAxXiMwgFHcKxKbYYACICCAEQAxoCbWQ&co=1&gclid=EAIaIQobChMIn5SZvrrElgMV4jMIBR3CsSm2EAoYASADEgKtpPD_BwE&cid=CAASuQHkaDyZvNFTtD1wuhh2A64-bAu0GbWJwDOtM6igNvSu0qYnZsuX4r_hG5JgzcBJHHgKW3WHySaRXJvODzYoWXO5_AG-lvfFAaqyMyW_tJp16vvfhzhrpRg0qNoMZAHNsnCo7Ao8Q80jMAQO6YXX11xoGuVevAS8fn9RMpjXRsHWyTQfhZVmJRNVd6nbLvXW5Gw_vzwP2N8oK4-On7YZUox5G1XwhTeabFGOX33eKz8xqm8K9dAJANqCSg&sig=AOD64_14ukocVoh8aMQIfP2aD8wOtKJFJg&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiopKmy7cWWAxUyWLgHHcpcBbUYACICCAEQAxoCbWQ&co=1&gclid=EAIaIQobChMIqKSpsu3FlgMVMli4Bx3KXAW1EAoYASADEgIB8fD_BwE&cid=CAASugHkaJE45POCOkmOn62P-mLyPm7zw_uY2Dukm_UiiWFhMdP4tTJsZZBGLrS05JtSPEMybu6UuG8sq0egUE7loPbcITAuvEgi2uv2zZR5z4nyx2VcgAT6r_guB9dEJ_FLJj-FrUtKxsq0tZ-QgBZvgKrGIzv5O49FegpSa_9kYeS5rMZysTSRmRScdLrKMaBDj4mwvBIQgybdoyGicl_iwPofP0Fol1o47bdWIt8Vo-ysmGAAz8gBN-4iZkU&sig=AOD64_3jiVxRPcvgbFZ562fsmAwoD_Dhaw&adurl",
       "reason": null
     },
     {
@@ -144,11 +144,11 @@
       "room": "Ocean View King",
       "total": 2550,
       "nightly": 364,
-      "source": "Expedia.com",
+      "source": "Hotels.com",
       "official": false,
       "refundable": true,
       "cancellationUntil": "Oct 8",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwir7ozBusSWAxXTWP8BHXcnLV0YACICCAEQAhoCbWQ&co=1&gclid=EAIaIQobChMIq-6MwbrElgMV01j_AR13Jy1dEAoYAyACEgJCCPD_BwE&cid=CAASuQHkaEXC1NF_A8mkSwM7ORbnHjhUa_kILfRW3b4d6Qx0kcF5eDtTB_ZVVR_0rrV4zw0dHJAQUuvHyVMCA2j5LYPAAhv2QxXKEK2QMRGz9BpwyBMLQALjPS-KxrlmXJYtcIw75c5Nz2SFl7VvIjs2DpdQaotGYrDj2LP8ys2ODnrvJo1sndZzrpgGUZ9x8yMSWVdGF9KdEQWQgRWKMRPCqyNEhEBKqEQLlfFHFtqSNapAUeZJqCiNgtkHSw&sig=AOD64_3D8bFul-c8lqmZg0AQ4F32OKvbpA&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjuhaW17cWWAxWbtloFHZ54MXQYACICCAEQGBoCdnU&co=1&gclid=EAIaIQobChMI7oWlte3FlgMVm7ZaBR2eeDF0EAoYAiACEgLVg_D_BwE&cid=CAAS0gHkaGkSEpx-_vFsKM1DJ1XHmP0ZwJukLk7A67LxdpAHE8xcFll4bIBzhg5KMgYS6iDXGAi9vuFzFdvtJbUazA5tYvtLuwdDFtC16FxQ67UbqQ4h9qqCBwZxondjk0hx72YLeeuZVfAgxVLlv9VKfg4tSXSnV6N9ylfTQEReR-z0z04lXIIoBSZuMAMz2NFXP1zj4exGLz0pjnSBbTW56tEnKiajh8oJpaLgK4rT2t9SvZztztIm8jJp5dMtwzYL3SdSf6WVSqfLvWXdpNqZkZgpZ_g&sig=AOD64_01GcKqTAp2URW4BYTo-ryW0FaaaQ&adurl",
       "reason": null
     },
     {
@@ -169,7 +169,7 @@
       "official": true,
       "refundable": true,
       "cancellationUntil": "Sep 30",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiguI_DusSWAxUKgcIIHcTfFPAYACICCAEQBBoCamY&co=1&gclid=EAIaIQobChMIoLiPw7rElgMVCoHCCB3E3xTwEAoYASAEEgLS7vD_BwE&cid=CAASuQHkaHUDLFKFGFPLtpeI11MzSxEw_lpHVgJGQEBjmiebMgtFG-JopQ814jobpUTDdm7hBOPNNAr_GqGRzKFoi8IbQAmum0Z9u1WQaAWK5dy4VsiMreJadVa3jPF7_yToF51paLNW-jlyMAtezV6MyMFhua-9lCxbHqD_l_meIQNKZDG71sPNLL0cSA9PZ4mntWbTtXMF8QMqQJGAAYYJK4ig-EYlo2933nrvC5oYLqYjma93WqdEc5-iqQ&sig=AOD64_2ARkwte3VIenIMiGWgeB-njglZlw&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwi9s8237cWWAxVLpFoFHeA4KBcYACICCAEQBBoCdnU&co=1&gclid=EAIaIQobChMIvbPNt-3FlgMVS6RaBR3gOCgXEAoYASAEEgJby_D_BwE&cid=CAASugHkaBfYBha1PRvzXljS3uTA1D-3C3xVvO0qYI5waWxuRKKCNO3lOXtLIPn2nO9Ri0QIQvbKNiVzzUhLY9yl7TTKZTnP30JB-rUmzDdrZfa1p-yyiaxSelyrLfg9WrFAnk84yM2R7JAzunZgIzDKOxqoWbsrbXqGr6OZh64bslqaQ-MTHg9z5eijKr17GQUhp55PzMN_YmvIBPQ2I57EEaFt8zw0qhAgQUwrtelZvJ24RhjuIxJFgNc2jtI&sig=AOD64_0xf-WnX6q44g0U3Xf8U6fvzLsJSg&adurl",
       "reason": null
     },
     {

@@ -5,7 +5,7 @@ export const beautifulWeek = {
   id: "beautiful-week",
   label: "Beautiful Week",
   target: { low: 7000, high: 8000, currency: "USD", travelers: 2, ceilingIsHard: true },
-  updatedAt: "2026-08-28",
+  updatedAt: "2026-08-29",
   assumptions: {
     duration: "Approximately seven nights",
     contingency: 300,
@@ -20,7 +20,7 @@ export const beautifulWeek = {
       moments: ["A private pool above the Pacific", "Slow mornings and nowhere we have to be", "One long afternoon at Flora Farms"],
       properties: [
         { name: "Montecristo Estates", role: "primary", inventory: "three-bedroom ocean-view villa with private pool", source: "https://pueblobonito.reservhotel.com/win/owa/ibe5.main?hotel=10304&showcalendar=Y&aDate=11-OCT-26&dDate=18-OCT-26&adults=2&child=0&rooms=1&airportTo=SJD&lang=1", confidence: "needs verification" as Confidence, vegan: "requires planning" as VeganSupport, alternativeQuote: { total: 4417, dates: "October 11–18", label: "$4,417", detail: "Refundable room-only direct quote including taxes and fees; alternate dates" }, note: "The official October 11–18 room-only quote is $4,417 total, including taxes and fees, with free cancellation until one day before arrival. The selected flight week remains October 15–22; that exact lodging week did not return a qualifying total." },
-        { name: "Hotel El Ganzo", role: "San José del Cabo candidate", inventory: "Ocean View King; refundable room-only rate", source: "https://be.synxis.com/addons?adult=2&arrive=2026-10-15&chain=32709&child=0&currency=USD&depart=2026-10-22&hotel=46912&level=hotel&locale=en-US&productcurrency=USD&rooms=1", confidence: "confirmed/current" as Confidence, vegan: "requires planning" as VeganSupport, note: "October 15–22: $2,550 complete total for seven nights in an Ocean View King through Expedia, with free cancellation through October 8. Reconfirm taxes, fees and room-only terms at checkout." },
+        { name: "Hotel El Ganzo", role: "San José del Cabo candidate", inventory: "Ocean View King; refundable room-only rate", source: "https://be.synxis.com/addons?adult=2&arrive=2026-10-15&chain=32709&child=0&currency=USD&depart=2026-10-22&hotel=46912&level=hotel&locale=en-US&productcurrency=USD&rooms=1", confidence: "confirmed/current" as Confidence, vegan: "requires planning" as VeganSupport, note: "October 15–22: $2,550 complete third-party total for seven nights in an Ocean View King, with free cancellation through October 8. Reconfirm taxes, fees and room-only terms at checkout." },
         { name: "Solaz, a Luxury Collection Resort, Los Cabos", role: "San José del Cabo candidate", inventory: "Plunge Pool King, ocean view; refundable room-only rate", source: "https://www.marriott.com/en-us/hotels/sjdlc-solaz-a-luxury-collection-resort-los-cabos/overview/", confidence: "confirmed/current" as Confidence, vegan: "requires planning" as VeganSupport, note: "October 15–22: $6,666 complete official total for seven nights in a Plunge Pool King with ocean view, with free cancellation through September 30. Reconfirm Marriott Titanium benefits and plant-based dining arrangements." },
       ],
       cost: { lodging: 5992, airfare: 900, transport: 250, meals: 1050, experiences: 450, contingency: 300, total: 8942, confidence: "estimated" as Confidence },
@@ -49,7 +49,7 @@ export const beautifulWeek = {
 } as const;
 
 export const extraordinary = {
-  id: "extraordinary", label: "Extraordinary", target: "$10K–$12K", preserved: true, updatedAt: "2026-08-28",
+  id: "extraordinary", label: "Extraordinary", target: "$10K–$12K", preserved: true, updatedAt: "2026-08-29",
   note: "Existing approved collection. Its public presentation and behavior remain unchanged.",
   properties: [
     { destination: "Puerto Vallarta", name: "Casa Suhana", dates: "2026-10-22/2026-10-29", lodging: 7200, airfare: 1200, transport: 250, meals: 1450, experiences: 550, contingency: 500, total: 11150, confidence: "needs verification" as Confidence, inventory: "private villa inventory", dining: "strong vegan support" as VeganSupport, source: "https://agavevillas.com/property/casa-suhana/", note: "October 22–29 is shown available at the published low-season rate of $1,050 nightly ($7,350 for seven nights). Verify staffing, meal inclusions, taxes, service charge, deposit and refundable cancellation terms before using it as a complete qualifying total.", monitoring: { checkedAt: "2026-08-28T16:17:42-07:00", previousTotal: null, deltaPercent: null, alert: false, summary: "The direct calendar shows availability and a $7,350 published-rate total for October 22–29; cancellation and complete fee terms remain unverified." } },

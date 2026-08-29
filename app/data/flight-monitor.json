@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-28T23:17:09.984Z",
+  "checkedAt": "2026-08-29T12:37:31.760Z",
   "source": "Google Flights via SerpApi",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
@@ -171,9 +171,9 @@
         "durationMinutes": 957,
         "bookingToken": null
       },
-      "previousPrice": 2144,
-      "deltaPercent": -15.4,
-      "alert": true,
+      "previousPrice": 1814,
+      "deltaPercent": 0,
+      "alert": false,
       "alternatives": [
         {
           "shift": 0,
@@ -193,12 +193,12 @@
           "cabin": "First",
           "outboundDate": "2026-10-20",
           "returnDate": "2026-10-27",
-          "price": 3914,
-          "airline": "United",
-          "flights": "UA 2025 / UA 1622",
+          "price": 3501,
+          "airline": "American",
+          "flights": "AA 2266 / AA 2639",
           "origin": "SAN",
           "destination": "PVR",
-          "durationMinutes": 1044,
+          "durationMinutes": 884,
           "bookingToken": null
         },
         {
@@ -255,7 +255,7 @@
           "cabin": "First",
           "outboundDate": "2026-10-22",
           "returnDate": "2026-10-29",
-          "price": 2957,
+          "price": 3037,
           "airline": "Alaska",
           "flights": "AS 963",
           "origin": "LAX",
@@ -326,6 +326,19 @@
       "alert": false,
       "alternatives": [
         {
+          "shift": -1,
+          "cabin": "First",
+          "outboundDate": "2026-10-19",
+          "returnDate": "2026-10-26",
+          "price": 3583,
+          "airline": "United",
+          "flights": "UA 2373",
+          "origin": "LAX",
+          "destination": "KOA",
+          "durationMinutes": 346,
+          "bookingToken": null
+        },
+        {
           "shift": 2,
           "cabin": "First",
           "outboundDate": "2026-10-22",
@@ -336,19 +349,6 @@
           "origin": "LAX",
           "destination": "KOA",
           "durationMinutes": 346,
-          "bookingToken": null
-        },
-        {
-          "shift": -1,
-          "cabin": "First",
-          "outboundDate": "2026-10-19",
-          "returnDate": "2026-10-26",
-          "price": 4411,
-          "airline": "American",
-          "flights": "AA 59",
-          "origin": "LAX",
-          "destination": "KOA",
-          "durationMinutes": 345,
           "bookingToken": null
         },
         {

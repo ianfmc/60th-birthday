@@ -77,7 +77,9 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.doesNotMatch(html, /Casa Velas/);
   assert.match(html, /Room-only lodging rates are required/);
   assert.match(html, /Needs refresh/);
-  assert.match(html, /Needs verification/);
+  assert.doesNotMatch(html, />Needs verification</);
+  assert.match(html, /Price found · terms pending/);
+  assert.match(html, /Inventory not confirmed/);
   assert.match(html, /Verified prices are shown individually/);
   assert.match(html, /Previous valid total/);
   assert.match(html, />Flights</);
