@@ -24,8 +24,8 @@ const journeys = [
     diningVerdict: "The most beautiful settings: Acre for the birthday, Flora Farms for a leisurely afternoon.",
   },
   {
-    number: "03", place: "Moʻorea · French Polynesia", name: "The Lagoon House", image: "/places/moorea-villa.jpg",
-    alt: "Private pool and lagoon at a Maharepa villa in Moorea", idea: "Our own front door into the lagoon", date: "21–27 October · Six nights",
+    number: "03", place: "Moʻorea · French Polynesia", name: "The Lagoon House", image: "https://media.villagetaways.com/villas/new%20zealand/4154/54a838c33d19e5095dc33fa3862b3d75_full.jpg",
+    alt: "Villa 1036 and its infinity pool at the edge of the Moorea lagoon", idea: "Our own front door into the lagoon", date: "21–27 October · Six nights",
     copy: "A private villa at the water’s edge in Maharepa. Step from the terrace into the pool, from the little beach into the lagoon, and paddle out together before breakfast.",
     moments: ["Direct lagoon access", "Private infinity pool", "Kayaks, paddleboard & village nearby"],
     rhythm: "Premium economy to Tahiti, one gentle overnight, then the morning ferry reveals Moʻorea in daylight.",
@@ -67,8 +67,8 @@ const destinations = [
     travel: "Domestic First from Palm Springs and a private transfer to the Sea of Cortez.",
   },
   {
-    id: "moorea", number: "03", name: "Moʻorea", place: "French Polynesia", image: "/places/moorea-villa.jpg",
-    alt: "A private villa opening onto the lagoon in Moorea", date: "21–27 October · Six nights", idea: "Our own front door into the lagoon.", journeyIndexes: [2],
+    id: "moorea", number: "03", name: "Moʻorea", place: "French Polynesia", image: "https://media.villagetaways.com/villas/new%20zealand/4154/54a838c33d19e5095dc33fa3862b3d75_full.jpg",
+    alt: "Villa 1036 and its infinity pool at the edge of the Moorea lagoon", date: "21–27 October · Six nights", idea: "Our own front door into the lagoon.", journeyIndexes: [2],
     travel: "Mānava Premium to Tahiti, one gentle overnight, then the morning ferry reveals Moʻorea in daylight.", cabinImage: "/places/atn-manava-premium.jpg", cabinAlt: "Air Tahiti Nui Manava Premium seats", cabinName: "Mānava Premium",
   },
   {
