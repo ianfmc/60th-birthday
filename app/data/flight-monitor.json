@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-29T12:37:31.760Z",
+  "checkedAt": "2026-08-29T13:14:34.456Z",
   "source": "Google Flights via SerpApi",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
@@ -176,19 +176,6 @@
       "alert": false,
       "alternatives": [
         {
-          "shift": 0,
-          "cabin": "First",
-          "outboundDate": "2026-10-22",
-          "returnDate": "2026-10-29",
-          "price": 2144,
-          "airline": "American",
-          "flights": "AA 2266 / AA 2639",
-          "origin": "SAN",
-          "destination": "PVR",
-          "durationMinutes": 884,
-          "bookingToken": null
-        },
-        {
           "shift": -2,
           "cabin": "First",
           "outboundDate": "2026-10-20",
@@ -207,6 +194,19 @@
           "outboundDate": "2026-10-23",
           "returnDate": "2026-10-30",
           "price": 3914,
+          "airline": "United",
+          "flights": "UA 2025 / UA 1622",
+          "origin": "SAN",
+          "destination": "PVR",
+          "durationMinutes": 1044,
+          "bookingToken": null
+        },
+        {
+          "shift": 0,
+          "cabin": "First",
+          "outboundDate": "2026-10-22",
+          "returnDate": "2026-10-29",
+          "price": 4110,
           "airline": "United",
           "flights": "UA 2025 / UA 1622",
           "origin": "SAN",

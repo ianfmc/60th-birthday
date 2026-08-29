@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-29T12:38:07.543Z",
+  "checkedAt": "2026-08-29T13:11:46.194Z",
   "source": "Google Hotels via SerpApi; refundable offers with complete totals",
   "travelers": 2,
   "bookingPolicy": "Refundable rates only; totals must include taxes and mandatory fees when returned",
@@ -56,7 +56,7 @@
       "checkOut": "2026-10-27",
       "status": "unavailable",
       "matchedProperty": null,
-      "matchScore": 0.6666666666666666,
+      "matchScore": 0.3333333333333333,
       "room": null,
       "total": null,
       "nightly": null,
@@ -85,7 +85,7 @@
       "official": true,
       "refundable": true,
       "cancellationUntil": "Oct 12",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiopKmy7cWWAxUyWLgHHcpcBbUYACICCAEQAxoCbWQ&co=1&gclid=EAIaIQobChMIqKSpsu3FlgMVMli4Bx3KXAW1EAoYASADEgIB8fD_BwE&cid=CAASugHkaJE45POCOkmOn62P-mLyPm7zw_uY2Dukm_UiiWFhMdP4tTJsZZBGLrS05JtSPEMybu6UuG8sq0egUE7loPbcITAuvEgi2uv2zZR5z4nyx2VcgAT6r_guB9dEJ_FLJj-FrUtKxsq0tZ-QgBZvgKrGIzv5O49FegpSa_9kYeS5rMZysTSRmRScdLrKMaBDj4mwvBIQgybdoyGicl_iwPofP0Fol1o47bdWIt8Vo-ysmGAAz8gBN-4iZkU&sig=AOD64_3jiVxRPcvgbFZ562fsmAwoD_Dhaw&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjN2vb19MWWAxUpUn8AHf_XNfcYACICCAEQBxoCb2E&co=1&ase=2&gclid=EAIaIQobChMIzdr29fTFlgMVKVJ_AB3_1zX3EAoYASADEgKiZfD_BwE&cid=CAAS0gHkaFIixzCHWxs2d-tdov6mIvgIB-5lAqpbikl0SVHigUo26-dEfw8tRgCvgBxq6fKdnq1F5T2T6MuNGxImznfXJLh4PfGpVYlydJS10_cNSBeBGA_IoGqCRM_ek9JGem6yIOfPjlC73rwsMqmVT6MjWsrFUVazpbbAPerdNsA3v4kbnFEeQRhQ2NZubCEIRuNDAoFLpFLUIp8O161L_asrH5eB9EO94OtMeDwMMyYYT4bwTbSONADyMP_klyO9k9ayb4rA0kZkXDVTFO2FCh30hpc&category=acrcp_v1_48&sig=AOD64_0kVhlergOABFbmNbN_nKj68qLJbg&adurl",
       "reason": null
     },
     {
@@ -142,13 +142,13 @@
       "matchedProperty": "Hotel El Ganzo",
       "matchScore": 1,
       "room": "Ocean View King",
-      "total": 2550,
+      "total": 2549,
       "nightly": 364,
-      "source": "Hotels.com",
+      "source": "Expedia.ca",
       "official": false,
       "refundable": true,
       "cancellationUntil": "Oct 8",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjuhaW17cWWAxWbtloFHZ54MXQYACICCAEQGBoCdnU&co=1&gclid=EAIaIQobChMI7oWlte3FlgMVm7ZaBR2eeDF0EAoYAiACEgLVg_D_BwE&cid=CAAS0gHkaGkSEpx-_vFsKM1DJ1XHmP0ZwJukLk7A67LxdpAHE8xcFll4bIBzhg5KMgYS6iDXGAi9vuFzFdvtJbUazA5tYvtLuwdDFtC16FxQ67UbqQ4h9qqCBwZxondjk0hx72YLeeuZVfAgxVLlv9VKfg4tSXSnV6N9ylfTQEReR-z0z04lXIIoBSZuMAMz2NFXP1zj4exGLz0pjnSBbTW56tEnKiajh8oJpaLgK4rT2t9SvZztztIm8jJp5dMtwzYL3SdSf6WVSqfLvWXdpNqZkZgpZ_g&sig=AOD64_01GcKqTAp2URW4BYTo-ryW0FaaaQ&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiLgaL59MWWAxVFNAgFHTpGLskYACICCAEQAhoCbWQ&co=1&gclid=EAIaIQobChMIi4Gi-fTFlgMVRTQIBR06Ri7JEAoYAyACEgIrPvD_BwE&cid=CAAS0gHkaIkLEeqBOJrYx-G76bhzyzigx3sBdLUYt0BwUFifLcUkyeppsdhgXtR0_upTUAphUPjtdrySymomm7JZ2u5bnjxC-ZYj9c0XMVt_5HtY0TfVnnX6hIHaZHkiiLhihRxRJpXxvb0bwAS7G6PY52e_BbVbsN4DMZLvwrPee3hsK1E2JQxyLo0ZHM-4QYKcz53ahLWLT1Shkm-YUIom4stQzqcP4l_3vwZUJyKf4e8jsmoeJiJIHuNUK8fyZfEIFqne8WYhIqTI5fWbVtvw0jkLqO8&sig=AOD64_2Qq8Wn_Sv3EmJZ1E0ft9JIWlxXeQ&adurl",
       "reason": null
     },
     {
