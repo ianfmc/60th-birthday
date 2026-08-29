@@ -1,0 +1,30 @@
+@media (max-width:520px) {
+  .more-experience { --gutter:20px; overflow-x:hidden; }
+  .more-header { height:72px; padding:0 20px; gap:16px; }
+  .more-header a,.more-header span { font-size:9px; letter-spacing:.12em; white-space:nowrap; }
+  .more-reveal { min-height:560px; }
+  .reveal-copy { padding:72px 24px 0; }
+  .reveal-beat p { font-size:clamp(42px,12vw,54px); }
+  .beat-one { font-size:clamp(52px,16vw,70px); }
+  .beat-three p { font-size:26px; line-height:1.15; }
+  .beat-three strong { font-size:clamp(48px,14vw,64px); }
+  .beat-three a,.more-book-it,.place-next { min-height:48px; padding:14px 20px; align-items:center; }
+  .more-invitation { padding:78px 24px; }
+  .more-invitation h1 { font-size:clamp(48px,14vw,62px); }
+  .more-invitation div>p { margin-top:26px; font-size:18px; }
+  .more-index { padding:0 16px 90px; }
+  .more-card { height:68svh; min-height:540px; }
+  .card-copy { right:24px; bottom:28px; left:24px; }
+  .card-copy strong { font-size:46px; }
+  .more-place { scroll-margin-top:72px; }
+  .place-hero { height:70svh; min-height:500px; }
+  .place-hero div { right:24px; bottom:48px; left:24px; }
+  .place-hero h2 { font-size:clamp(54px,17vw,72px); }
+  .place-story { padding:76px 24px; }
+  .place-story h3 { font-size:46px; }
+  .place-story div>p { font-size:22px; }
+  .place-next { margin-bottom:84px; }
+  .more-closing { min-height:82svh; padding:72px 20px; }
+  .more-closing h2 { font-size:clamp(58px,17vw,76px); }
+  .more-footer { padding:42px 24px; }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { beautifulWeek } from "../data/beautiful-week";
 import "./more.css";
+import "./mobile.css";
 
 export const metadata: Metadata = {
   title: "Calimac Productions - More Possibilities",
