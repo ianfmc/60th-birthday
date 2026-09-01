@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-29T13:11:46.194Z",
+  "checkedAt": "2026-09-01T21:32:37.027Z",
   "source": "Google Hotels via SerpApi; refundable offers with complete totals",
   "travelers": 2,
   "bookingPolicy": "Refundable rates only; totals must include taxes and mandatory fees when returned",
@@ -85,7 +85,7 @@
       "official": true,
       "refundable": true,
       "cancellationUntil": "Oct 12",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjN2vb19MWWAxUpUn8AHf_XNfcYACICCAEQBxoCb2E&co=1&ase=2&gclid=EAIaIQobChMIzdr29fTFlgMVKVJ_AB3_1zX3EAoYASADEgKiZfD_BwE&cid=CAAS0gHkaFIixzCHWxs2d-tdov6mIvgIB-5lAqpbikl0SVHigUo26-dEfw8tRgCvgBxq6fKdnq1F5T2T6MuNGxImznfXJLh4PfGpVYlydJS10_cNSBeBGA_IoGqCRM_ek9JGem6yIOfPjlC73rwsMqmVT6MjWsrFUVazpbbAPerdNsA3v4kbnFEeQRhQ2NZubCEIRuNDAoFLpFLUIp8O161L_asrH5eB9EO94OtMeDwMMyYYT4bwTbSONADyMP_klyO9k9ayb4rA0kZkXDVTFO2FCh30hpc&category=acrcp_v1_48&sig=AOD64_0kVhlergOABFbmNbN_nKj68qLJbg&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwipts62qs6WAxXWEYMDHdWkLesYACICCAEQAxoCc2Y&co=1&gclid=EAIaIQobChMIqbbOtqrOlgMV1hGDAx3VpC3rEAoYASADEgJRMPD_BwE&cid=CAASugHkaMH-juB5gDeeJMxqSXrVdXrrkCC1aWgHUo8wp-7jhtFRBR7BH6UmRM7Gfd2Mar0WKLxesd-3Bc9XaTlVTDbtgWsscSu2kc9P5FdELDc73BRnQPCoxlUXVBnIxZtI7FTQveC0Znq90FnazWRtZbDFzJkV5X20bjlbEJkWl7ncw2rXrQtr9zHy5q4ShCI2ZMtgf5iEm9e_jupgIv3I22Ziq9zJ78NjHNjPjUIC7QcmX3o0JrmhygeKW6I&sig=AOD64_2Ape2r4Zy6fZj3KTsBOCFyOsc6Iw&adurl",
       "reason": null
     },
     {
@@ -141,14 +141,14 @@
       "status": "current",
       "matchedProperty": "Hotel El Ganzo",
       "matchScore": 1,
-      "room": "Ocean View King",
-      "total": 2549,
-      "nightly": 364,
-      "source": "Expedia.ca",
+      "room": "Ocean View King ",
+      "total": 2221,
+      "nightly": 317,
+      "source": "Booking.com",
       "official": false,
       "refundable": true,
-      "cancellationUntil": "Oct 8",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiLgaL59MWWAxVFNAgFHTpGLskYACICCAEQAhoCbWQ&co=1&gclid=EAIaIQobChMIi4Gi-fTFlgMVRTQIBR06Ri7JEAoYAyACEgIrPvD_BwE&cid=CAAS0gHkaIkLEeqBOJrYx-G76bhzyzigx3sBdLUYt0BwUFifLcUkyeppsdhgXtR0_upTUAphUPjtdrySymomm7JZ2u5bnjxC-ZYj9c0XMVt_5HtY0TfVnnX6hIHaZHkiiLhihRxRJpXxvb0bwAS7G6PY52e_BbVbsN4DMZLvwrPee3hsK1E2JQxyLo0ZHM-4QYKcz53ahLWLT1Shkm-YUIom4stQzqcP4l_3vwZUJyKf4e8jsmoeJiJIHuNUK8fyZfEIFqne8WYhIqTI5fWbVtvw0jkLqO8&sig=AOD64_2Qq8Wn_Sv3EmJZ1E0ft9JIWlxXeQ&adurl",
+      "cancellationUntil": "Oct 7",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwip98i5qs6WAxUIk1AGHYXGAy4YACICCAEQHhoCZGc&co=1&gclid=EAIaIQobChMIqffIuarOlgMVCJNQBh2FxgMuEAoYAyADEgL8OvD_BwE&sig=AOD64_2REyLVJJGyVJMicNPBjI3jOG2Iqw&adurl",
       "reason": null
     },
     {
@@ -163,13 +163,13 @@
       "matchedProperty": "Solaz, a Luxury Collection Resort, Los Cabos",
       "matchScore": 1,
       "room": "Plunge Pool Room, Guest room, 1 King, Ocean view, Plunge pool",
-      "total": 6666,
-      "nightly": 952,
+      "total": 6959,
+      "nightly": 994,
       "source": "Solaz, a Luxury Collection Resort, Los Cabos",
       "official": true,
       "refundable": true,
       "cancellationUntil": "Sep 30",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwi9s8237cWWAxVLpFoFHeA4KBcYACICCAEQBBoCdnU&co=1&gclid=EAIaIQobChMIvbPNt-3FlgMVS6RaBR3gOCgXEAoYASAEEgJby_D_BwE&cid=CAASugHkaBfYBha1PRvzXljS3uTA1D-3C3xVvO0qYI5waWxuRKKCNO3lOXtLIPn2nO9Ri0QIQvbKNiVzzUhLY9yl7TTKZTnP30JB-rUmzDdrZfa1p-yyiaxSelyrLfg9WrFAnk84yM2R7JAzunZgIzDKOxqoWbsrbXqGr6OZh64bslqaQ-MTHg9z5eijKr17GQUhp55PzMN_YmvIBPQ2I57EEaFt8zw0qhAgQUwrtelZvJ24RhjuIxJFgNc2jtI&sig=AOD64_0xf-WnX6q44g0U3Xf8U6fvzLsJSg&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjjoIPAqs6WAxVFSUcBHWrVJbMYACICCAEQBBoCcXU&co=1&ase=2&gclid=EAIaIQobChMI46CDwKrOlgMVRUlHAR1q1SWzEAoYASAEEgJZvvD_BwE&cid=CAASugHkaNYEWWHuxbwBI8TZ5aDNjY46IbsCTVCZnEFQbUSvPOUPXysniHqVT-AtExxRHOaDEPk9gW6EXJj6qQXm_0UQ8opmpUHlEDkJzTn8bG-hHSOqSdv59KSeU-XHbonVKdl9O3O5yhGo7UeK05rs0-72X4MlYq6aErZ1BdSXlmTybpt9rGHMihr8h3qa3OGe5bcZFvzUOXwd7WDMsZQ66gnPeHCMas3H018AbRZq2Yncoz3n1iHkgUyDAqw&category=acrcp_v1_48&sig=AOD64_0LHyqaGUbyRTRWJIDsMgf2I7zqdQ&adurl",
       "reason": null
     },
     {
