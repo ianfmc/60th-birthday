@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-01T21:32:37.027Z",
+  "checkedAt": "2026-09-02T13:03:57.946Z",
   "source": "Google Hotels via SerpApi; refundable offers with complete totals",
   "travelers": 2,
   "bookingPolicy": "Refundable rates only; totals must include taxes and mandatory fees when returned",
@@ -14,7 +14,7 @@
       "checkOut": "2026-10-29",
       "status": "unavailable",
       "matchedProperty": null,
-      "matchScore": 0.5,
+      "matchScore": 0,
       "room": null,
       "total": null,
       "nightly": null,
@@ -33,18 +33,18 @@
       "query": "Casa Rayrae Los Cabos",
       "checkIn": "2026-10-15",
       "checkOut": "2026-10-22",
-      "status": "unavailable",
-      "matchedProperty": null,
-      "matchScore": 0.5,
+      "status": "current",
+      "matchedProperty": "Casa Rayrae: 4BR Ocean-View Villa with Infinity Pool & Casita, Cabo Colorado",
+      "matchScore": 1,
       "room": null,
-      "total": null,
-      "nightly": null,
-      "source": null,
+      "total": 11110,
+      "nightly": 1587,
+      "source": "Vrbo.com",
       "official": false,
-      "refundable": null,
-      "cancellationUntil": null,
-      "bookingLink": null,
-      "reason": "Property not found in Google Hotels"
+      "refundable": true,
+      "cancellationUntil": "Jun 14",
+      "bookingLink": "https://www.google.com/travel/lodging/clk?pc=AA80Osxm1mI1jfYHevuqBBYBVMPopBa9fXQO2x-wYI0jx6IgJjnkIZk3N799AuRVEhsPf3BuLMeTr9HYYMqKycSDPC5e2gsillGVfaKVLqW_f692ctU0vbPNFLNULcx91rVU5-Cb-U_A-pKkWrONe6FJ-hNvB9tzmTLLTEEgmhgKTf2jiT_EEYF9MQ&pcurl=https://www.vrbo.com/search?selected%3D106982744%26startDate%3D2026-10-15%26endDate%3D2026-10-22%26adults%3D2%26children%3D%26MDPCID%3DVRBO-US.META.HPA.ORGANIC-desktop.VR%26MDPDTL%3DHTL.106982744.20261015.20261022.DDF.43.CID..AUDID..RRID.vrbo_us_desktop%26mctc%3D10%26ct%3Dhotel%26mpg%3DUSD%26mpf%3D11110.00%26mpj%3D2710.00%26mpr%3D1030.00%26mpl%3DUSD%26langid%3Den%26rateplanid%3D000458498ccbe1e847598a3b096a796dcda0%26mpm%3D103%26mpn%3D106982744%26mpo%3DEC%26mpp%3D1&s=AD1XQnn66mN4IhczkBAU5k6CaKQ8&ap=1",
+      "reason": null
     },
     {
       "id": "lagoon-house",
@@ -85,7 +85,7 @@
       "official": true,
       "refundable": true,
       "cancellationUntil": "Oct 12",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwipts62qs6WAxXWEYMDHdWkLesYACICCAEQAxoCc2Y&co=1&gclid=EAIaIQobChMIqbbOtqrOlgMV1hGDAx3VpC3rEAoYASADEgJRMPD_BwE&cid=CAASugHkaMH-juB5gDeeJMxqSXrVdXrrkCC1aWgHUo8wp-7jhtFRBR7BH6UmRM7Gfd2Mar0WKLxesd-3Bc9XaTlVTDbtgWsscSu2kc9P5FdELDc73BRnQPCoxlUXVBnIxZtI7FTQveC0Znq90FnazWRtZbDFzJkV5X20bjlbEJkWl7ncw2rXrQtr9zHy5q4ShCI2ZMtgf5iEm9e_jupgIv3I22Ziq9zJ78NjHNjPjUIC7QcmX3o0JrmhygeKW6I&sig=AOD64_2Ape2r4Zy6fZj3KTsBOCFyOsc6Iw&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiNrpDQ-s-WAxXXbUcBHVouMc4YACICCAEQBxoCcXU&co=1&ase=2&gclid=EAIaIQobChMIja6Q0PrPlgMV121HAR1aLjHOEAoYASADEgJRA_D_BwE&cid=CAASugHkaBT3dW0y7naGOOqTtxzbHG1H9yBm4uK6cmfLJ4IffVTak4ilpTzvXi_iSjg1EyDpl3FpV16MMXLZFAPP-DHp5IncEPsJgXDm0iUlCzPVDoEBC3Mo6SVtkQFY0Ch0KvNGpRuAWzJXm1ym2jsU6v4-0N_Hdmbw8W2E-fNUXazyfLyEmfbJCNmv4yp0loG5p_sG17mvwIABVYpMASKRisQuOVAZXd8eS6_r9f4DbrO6Am3iJdAuPoNKGo0&category=acrcp_v1_48&sig=AOD64_397N0D-hOMBocYRaglY2d0K6ismA&adurl",
       "reason": null
     },
     {
@@ -148,7 +148,7 @@
       "official": false,
       "refundable": true,
       "cancellationUntil": "Oct 7",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwip98i5qs6WAxUIk1AGHYXGAy4YACICCAEQHhoCZGc&co=1&gclid=EAIaIQobChMIqffIuarOlgMVCJNQBh2FxgMuEAoYAyADEgL8OvD_BwE&sig=AOD64_2REyLVJJGyVJMicNPBjI3jOG2Iqw&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwi21b3U-s-WAxXzjGgJHTUJAcUYACICCAEQDBoCd2Y&co=1&gclid=EAIaIQobChMIttW91PrPlgMV84xoCR01CQHFEAoYAiAFEgJTGPD_BwE&sig=AOD64_1YPXyJPhpXmmb1gcKMpKJN0hrKVA&adurl",
       "reason": null
     },
     {
@@ -163,13 +163,13 @@
       "matchedProperty": "Solaz, a Luxury Collection Resort, Los Cabos",
       "matchScore": 1,
       "room": "Plunge Pool Room, Guest room, 1 King, Ocean view, Plunge pool",
-      "total": 6959,
-      "nightly": 994,
+      "total": 6909,
+      "nightly": 987,
       "source": "Solaz, a Luxury Collection Resort, Los Cabos",
       "official": true,
       "refundable": true,
       "cancellationUntil": "Sep 30",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjjoIPAqs6WAxVFSUcBHWrVJbMYACICCAEQBBoCcXU&co=1&ase=2&gclid=EAIaIQobChMI46CDwKrOlgMVRUlHAR1q1SWzEAoYASAEEgJZvvD_BwE&cid=CAASugHkaNYEWWHuxbwBI8TZ5aDNjY46IbsCTVCZnEFQbUSvPOUPXysniHqVT-AtExxRHOaDEPk9gW6EXJj6qQXm_0UQ8opmpUHlEDkJzTn8bG-hHSOqSdv59KSeU-XHbonVKdl9O3O5yhGo7UeK05rs0-72X4MlYq6aErZ1BdSXlmTybpt9rGHMihr8h3qa3OGe5bcZFvzUOXwd7WDMsZQ66gnPeHCMas3H018AbRZq2Yncoz3n1iHkgUyDAqw&category=acrcp_v1_48&sig=AOD64_0LHyqaGUbyRTRWJIDsMgf2I7zqdQ&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjB4qfW-s-WAxWdVEcBHerjJA8YACICCAEQBBoCcXU&co=1&ase=2&gclid=EAIaIQobChMIweKn1vrPlgMVnVRHAR3q4yQPEAoYASAEEgLxQvD_BwE&cid=CAASugHkaN5wX7mWzgcsfFPebikqBRKHxQI2zOIkTPJebaMKIMyJVGkBZbQo_yW3mLgGeqBEW1wHUiVZYyLlVaH0OOs1JKDjEgJoX9NCXixs1R4HBoJeif7G0HrDqGdQ6uXuLQrdv1f67-pcXvKAc8KFhmRgy1KuyK8Ys9EJ9KOcUD_TM3OX429Gk4ylWuq4t19ONrXtcPWb8Iz5NsTeRgYUbeAtKB1eLmOdGfukIuL4eYLUywrnh8UHeAQ28TI&category=acrcp_v1_48&sig=AOD64_0rnv9stA3R--Agg4I1Lyw4DjvVww&adurl",
       "reason": null
     },
     {

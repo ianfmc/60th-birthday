@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-01T21:33:23.164Z",
+  "checkedAt": "2026-09-02T13:03:14.109Z",
   "source": "Google Flights via SerpApi",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
@@ -13,7 +13,7 @@
         "cabin": "First",
         "outboundDate": "2026-10-15",
         "returnDate": "2026-10-22",
-        "price": 2759,
+        "price": 2593,
         "airline": "American",
         "flights": "AA 2266 / AA 1385",
         "origin": "SAN",
@@ -21,8 +21,8 @@
         "durationMinutes": 1122,
         "bookingToken": null
       },
-      "previousPrice": 2621,
-      "deltaPercent": 5.3,
+      "previousPrice": 2759,
+      "deltaPercent": -6,
       "alert": false,
       "alternatives": [
         {
@@ -30,7 +30,7 @@
           "cabin": "First",
           "outboundDate": "2026-10-13",
           "returnDate": "2026-10-20",
-          "price": 3149,
+          "price": 3019,
           "airline": "American",
           "flights": "AA 2266 / AA 1304",
           "origin": "SAN",
@@ -62,6 +62,81 @@
           "origin": "SAN",
           "destination": "SJD",
           "durationMinutes": 907,
+          "bookingToken": null
+        },
+        {
+          "shift": 2,
+          "cabin": "First",
+          "outboundDate": "2026-10-17",
+          "returnDate": "2026-10-24",
+          "price": 4962,
+          "airline": "American",
+          "flights": "AA 2425 / AA 2372",
+          "origin": "PSP",
+          "destination": "SJD",
+          "durationMinutes": 502,
+          "bookingToken": null
+        }
+      ]
+    },
+    {
+      "id": "original-cabo",
+      "label": "Los Cabos · Original",
+      "status": "current",
+      "best": {
+        "shift": 0,
+        "cabin": "First",
+        "outboundDate": "2026-10-15",
+        "returnDate": "2026-10-22",
+        "price": 2593,
+        "airline": "American",
+        "flights": "AA 2266 / AA 1385",
+        "origin": "SAN",
+        "destination": "SJD",
+        "durationMinutes": 1122,
+        "bookingToken": null
+      },
+      "previousPrice": 2759,
+      "deltaPercent": -6,
+      "alert": false,
+      "alternatives": [
+        {
+          "shift": -2,
+          "cabin": "First",
+          "outboundDate": "2026-10-13",
+          "returnDate": "2026-10-20",
+          "price": 3019,
+          "airline": "American",
+          "flights": "AA 2266 / AA 1304",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 907,
+          "bookingToken": null
+        },
+        {
+          "shift": -1,
+          "cabin": "First",
+          "outboundDate": "2026-10-14",
+          "returnDate": "2026-10-21",
+          "price": 4169,
+          "airline": "American",
+          "flights": "AA 2266 / AA 1304",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 907,
+          "bookingToken": null
+        },
+        {
+          "shift": 1,
+          "cabin": "First",
+          "outboundDate": "2026-10-16",
+          "returnDate": "2026-10-23",
+          "price": 5693,
+          "airline": "United",
+          "flights": "UA 2025 / UA 707",
+          "origin": "SAN",
+          "destination": "SJD",
+          "durationMinutes": 1064,
           "bookingToken": null
         },
         {
@@ -80,81 +155,6 @@
       ]
     },
     {
-      "id": "original-cabo",
-      "label": "Los Cabos · Original",
-      "status": "current",
-      "best": {
-        "shift": 0,
-        "cabin": "First",
-        "outboundDate": "2026-10-15",
-        "returnDate": "2026-10-22",
-        "price": 2759,
-        "airline": "American",
-        "flights": "AA 2266 / AA 1385",
-        "origin": "SAN",
-        "destination": "SJD",
-        "durationMinutes": 1122,
-        "bookingToken": null
-      },
-      "previousPrice": 2621,
-      "deltaPercent": 5.3,
-      "alert": false,
-      "alternatives": [
-        {
-          "shift": -2,
-          "cabin": "First",
-          "outboundDate": "2026-10-13",
-          "returnDate": "2026-10-20",
-          "price": 3149,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        },
-        {
-          "shift": 1,
-          "cabin": "First",
-          "outboundDate": "2026-10-16",
-          "returnDate": "2026-10-23",
-          "price": 3179,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        },
-        {
-          "shift": -1,
-          "cabin": "First",
-          "outboundDate": "2026-10-14",
-          "returnDate": "2026-10-21",
-          "price": 4169,
-          "airline": "American",
-          "flights": "AA 2266 / AA 1304",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 907,
-          "bookingToken": null
-        },
-        {
-          "shift": 2,
-          "cabin": "First",
-          "outboundDate": "2026-10-17",
-          "returnDate": "2026-10-24",
-          "price": 4969,
-          "airline": "American",
-          "flights": "AA 2535 / AA 1385",
-          "origin": "SAN",
-          "destination": "SJD",
-          "durationMinutes": 427,
-          "bookingToken": null
-        }
-      ]
-    },
-    {
       "id": "puerto-vallarta",
       "label": "Puerto Vallarta",
       "status": "current",
@@ -163,7 +163,7 @@
         "cabin": "First",
         "outboundDate": "2026-10-24",
         "returnDate": "2026-10-31",
-        "price": 1851,
+        "price": 1859,
         "airline": "United",
         "flights": "UA 2025 / UA 1106",
         "origin": "SAN",
@@ -171,15 +171,15 @@
         "durationMinutes": 957,
         "bookingToken": null
       },
-      "previousPrice": 1814,
-      "deltaPercent": 2,
+      "previousPrice": 1851,
+      "deltaPercent": 0.4,
       "alert": false,
       "alternatives": [
         {
-          "shift": 1,
+          "shift": -2,
           "cabin": "First",
-          "outboundDate": "2026-10-23",
-          "returnDate": "2026-10-30",
+          "outboundDate": "2026-10-20",
+          "returnDate": "2026-10-27",
           "price": 3917,
           "airline": "United",
           "flights": "UA 2025 / UA 1622",
@@ -189,11 +189,11 @@
           "bookingToken": null
         },
         {
-          "shift": -2,
+          "shift": 1,
           "cabin": "First",
-          "outboundDate": "2026-10-20",
-          "returnDate": "2026-10-27",
-          "price": 3947,
+          "outboundDate": "2026-10-23",
+          "returnDate": "2026-10-30",
+          "price": 3917,
           "airline": "United",
           "flights": "UA 2025 / UA 1622",
           "origin": "SAN",
@@ -238,7 +238,7 @@
         "cabin": "First",
         "outboundDate": "2026-10-21",
         "returnDate": "2026-10-28",
-        "price": 2573,
+        "price": 3079,
         "airline": "United",
         "flights": "UA 1295",
         "origin": "LAX",
@@ -246,9 +246,9 @@
         "durationMinutes": 365,
         "bookingToken": null
       },
-      "previousPrice": 2533,
-      "deltaPercent": 1.6,
-      "alert": false,
+      "previousPrice": 2573,
+      "deltaPercent": 19.7,
+      "alert": true,
       "alternatives": [
         {
           "shift": 1,
@@ -268,12 +268,12 @@
           "cabin": "First",
           "outboundDate": "2026-10-23",
           "returnDate": "2026-10-30",
-          "price": 4257,
-          "airline": "Alaska",
-          "flights": "AS 963",
+          "price": 3599,
+          "airline": "American",
+          "flights": "AA 119",
           "origin": "LAX",
           "destination": "LIH",
-          "durationMinutes": 353,
+          "durationMinutes": 364,
           "bookingToken": null
         },
         {
@@ -321,8 +321,8 @@
         "durationMinutes": 346,
         "bookingToken": null
       },
-      "previousPrice": 3577,
-      "deltaPercent": -1.5,
+      "previousPrice": 3525,
+      "deltaPercent": 0,
       "alert": false,
       "alternatives": [
         {
