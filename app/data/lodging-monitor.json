@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-02T13:03:57.946Z",
+  "checkedAt": "2026-09-03T13:04:42.044Z",
   "source": "Google Hotels via SerpApi; refundable offers with complete totals",
   "travelers": 2,
   "bookingPolicy": "Refundable rates only; totals must include taxes and mandatory fees when returned",
@@ -14,7 +14,7 @@
       "checkOut": "2026-10-29",
       "status": "unavailable",
       "matchedProperty": null,
-      "matchScore": 0,
+      "matchScore": 0.5,
       "room": null,
       "total": null,
       "nightly": null,
@@ -37,13 +37,13 @@
       "matchedProperty": "Casa Rayrae: 4BR Ocean-View Villa with Infinity Pool & Casita, Cabo Colorado",
       "matchScore": 1,
       "room": null,
-      "total": 11110,
-      "nightly": 1587,
+      "total": 11238,
+      "nightly": 1605,
       "source": "Vrbo.com",
       "official": false,
       "refundable": true,
-      "cancellationUntil": "Jun 14",
-      "bookingLink": "https://www.google.com/travel/lodging/clk?pc=AA80Osxm1mI1jfYHevuqBBYBVMPopBa9fXQO2x-wYI0jx6IgJjnkIZk3N799AuRVEhsPf3BuLMeTr9HYYMqKycSDPC5e2gsillGVfaKVLqW_f692ctU0vbPNFLNULcx91rVU5-Cb-U_A-pKkWrONe6FJ-hNvB9tzmTLLTEEgmhgKTf2jiT_EEYF9MQ&pcurl=https://www.vrbo.com/search?selected%3D106982744%26startDate%3D2026-10-15%26endDate%3D2026-10-22%26adults%3D2%26children%3D%26MDPCID%3DVRBO-US.META.HPA.ORGANIC-desktop.VR%26MDPDTL%3DHTL.106982744.20261015.20261022.DDF.43.CID..AUDID..RRID.vrbo_us_desktop%26mctc%3D10%26ct%3Dhotel%26mpg%3DUSD%26mpf%3D11110.00%26mpj%3D2710.00%26mpr%3D1030.00%26mpl%3DUSD%26langid%3Den%26rateplanid%3D000458498ccbe1e847598a3b096a796dcda0%26mpm%3D103%26mpn%3D106982744%26mpo%3DEC%26mpp%3D1&s=AD1XQnn66mN4IhczkBAU5k6CaKQ8&ap=1",
+      "cancellationUntil": "Oct 1",
+      "bookingLink": "https://www.google.com/travel/lodging/clk?pc=AA80Osyppf7uBAOBS4KAooFCZvvdg_sU-ItLk35YAyr4ZKmHX3sbGYCM0yiRYBE77HPfzEwf914MMUKgVj9OAaMAoqdNajOenynupv4ZkWm6HJ9WtyVJjIjyJx_sOznQk_7BGes8qemG6LDKZhkCACRB2bJUqdFvk91CYcpLIegQjHQnypdTQpKxlw&pcurl=https://www.vrbo.com/search?selected%3D106982744%26startDate%3D2026-10-15%26endDate%3D2026-10-22%26adults%3D2%26children%3D%26MDPCID%3DVRBO-US.META.HPA.ORGANIC-desktop.VR%26MDPDTL%3DHTL.106982744.20261015.20261022.DDF.42.CID..AUDID..RRID.vrbo_us_desktop%26mctc%3D10%26ct%3Dhotel%26mpg%3DUSD%26mpf%3D11238.00%26mpj%3D2838.00%26mpr%3D1158.00%26mpl%3DUSD%26langid%3Den%26rateplanid%3D000458498ccbe1e847598a3b096a796dcda0%26mpm%3D103%26mpn%3D106982744%26mpo%3DEC%26mpp%3D1&s=AD1XQnlHmW-rZpSAW1vmWOOLQ2Gt&ap=1",
       "reason": null
     },
     {
@@ -85,7 +85,7 @@
       "official": true,
       "refundable": true,
       "cancellationUntil": "Oct 12",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwiNrpDQ-s-WAxXXbUcBHVouMc4YACICCAEQBxoCcXU&co=1&ase=2&gclid=EAIaIQobChMIja6Q0PrPlgMV121HAR1aLjHOEAoYASADEgJRA_D_BwE&cid=CAASugHkaBT3dW0y7naGOOqTtxzbHG1H9yBm4uK6cmfLJ4IffVTak4ilpTzvXi_iSjg1EyDpl3FpV16MMXLZFAPP-DHp5IncEPsJgXDm0iUlCzPVDoEBC3Mo6SVtkQFY0Ch0KvNGpRuAWzJXm1ym2jsU6v4-0N_Hdmbw8W2E-fNUXazyfLyEmfbJCNmv4yp0loG5p_sG17mvwIABVYpMASKRisQuOVAZXd8eS6_r9f4DbrO6Am3iJdAuPoNKGo0&category=acrcp_v1_48&sig=AOD64_397N0D-hOMBocYRaglY2d0K6ismA&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjBo_XRvNKWAxX6pmgJHfGyKx8YACICCAEQAxoCd2Y&co=1&ase=2&gclid=EAIaIQobChMIwaP10bzSlgMV-qZoCR3xsisfEAoYASADEgIOm_D_BwE&cid=CAASugHkaGVKXbHHlaZFcTSCw_catO-5kuxxePsk-ATAGP2fhUujSqizBoFOTDl1LFGQgpLKx6DQWInRTRZRrE921Vz-Gz1wgbGyDius3elw0r3v1b50Vk2fbv0jv5l_UnxnDqz5GGM1_PPDYYs4bzeCReuTddMg6xvdhXE7Tqp6OQNPw7cXSRHRh18D-TyVpOXjfg_MOk46EBDtAPbFrXaNXox6Ve6HVix2XFpZrdav5Ov9yt8dTqsDdJUESHs&category=acrcp_v1_48&sig=AOD64_2NQSQxYPxgfjHBwvo1PEEIvG8Rig&adurl",
       "reason": null
     },
     {
@@ -148,7 +148,7 @@
       "official": false,
       "refundable": true,
       "cancellationUntil": "Oct 7",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwi21b3U-s-WAxXzjGgJHTUJAcUYACICCAEQDBoCd2Y&co=1&gclid=EAIaIQobChMIttW91PrPlgMV84xoCR01CQHFEAoYAiAFEgJTGPD_BwE&sig=AOD64_1YPXyJPhpXmmb1gcKMpKJN0hrKVA&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwihi7LVvNKWAxX3oVoFHYTaHaYYACICCAEQBRoCdnU&co=1&ase=2&gclid=EAIaIQobChMIoYuy1bzSlgMV96FaBR2E2h2mEAoYBCAFEgL_4fD_BwE&cid=CAASugHkaMB8WrXIwD7K6sqarAwPz1owvVGijZ7-Y5Mf2ns9m6ss_YIF3k2Rx66h0Qtoa4O9lhYCFMTDJbT2jsnfTYOylUyD47rUZmVsYEEszYaqmTOMenPh_66HWsMvD7_5CsNlseM-7zX3dcDq0HFAkWgqAaZ2PwDmRQS9NjWeNbLLZf2mtBM-YYSlmO_BdC5yiEPLLmgZnO-z33f9Y6D6bumnHgvM5l9b0Ysd6cf0VPgo_Ft1XHIqqxB4ouI&category=acrcp_v1_48&sig=AOD64_0ioLH9A7FVc-TjvYCaNCP9P2RULw&adurl",
       "reason": null
     },
     {
@@ -163,13 +163,13 @@
       "matchedProperty": "Solaz, a Luxury Collection Resort, Los Cabos",
       "matchScore": 1,
       "room": "Plunge Pool Room, Guest room, 1 King, Ocean view, Plunge pool",
-      "total": 6909,
-      "nightly": 987,
+      "total": 6878,
+      "nightly": 983,
       "source": "Solaz, a Luxury Collection Resort, Los Cabos",
       "official": true,
       "refundable": true,
       "cancellationUntil": "Sep 30",
-      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjB4qfW-s-WAxWdVEcBHerjJA8YACICCAEQBBoCcXU&co=1&ase=2&gclid=EAIaIQobChMIweKn1vrPlgMVnVRHAR3q4yQPEAoYASAEEgLxQvD_BwE&cid=CAASugHkaN5wX7mWzgcsfFPebikqBRKHxQI2zOIkTPJebaMKIMyJVGkBZbQo_yW3mLgGeqBEW1wHUiVZYyLlVaH0OOs1JKDjEgJoX9NCXixs1R4HBoJeif7G0HrDqGdQ6uXuLQrdv1f67-pcXvKAc8KFhmRgy1KuyK8Ys9EJ9KOcUD_TM3OX429Gk4ylWuq4t19ONrXtcPWb8Iz5NsTeRgYUbeAtKB1eLmOdGfukIuL4eYLUywrnh8UHeAQ28TI&category=acrcp_v1_48&sig=AOD64_0rnv9stA3R--Agg4I1Lyw4DjvVww&adurl",
+      "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjj2ezXvNKWAxXqQf8BHW0gFQYYACICCAEQBBoCbWQ&co=1&gclid=EAIaIQobChMI49ns17zSlgMV6kH_AR1tIBUGEAoYASAEEgKaTvD_BwE&cid=CAASugHkaHY0zvt-hP-wXMmcaG_tG2yEFMjMk_Sbu2Fr3rUZ_C6kh0OTgY4J23uS765KpShjA9iSNfKrIOCn4oP9EKuufBlyRF_jbwo85bE1jF7VcrF7PEa3nq_swCZVl8p-kBHlqjX-IOcYMijZKB6UIoUijrTjCXbqIyjSMWjqoHkOWYkOVbw3srPDezaVCa0gWrQoVilKS0JLe0jMaazw0eWvqqvn1Ag38XakG2IQgNkcmXKd8Ei5Jr4nt6E&sig=AOD64_0WvUb4sDKnSZoserjmX9ors8Zcmw&adurl",
       "reason": null
     },
     {
