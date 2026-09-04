@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-03T13:04:42.044Z",
+  "checkedAt": "2026-09-04T15:51:56.214Z",
   "source": "Google Hotels via SerpApi; refundable offers with complete totals",
   "travelers": 2,
   "bookingPolicy": "Refundable rates only; totals must include taxes and mandatory fees when returned",
@@ -14,16 +14,14 @@
       "checkOut": "2026-10-29",
       "status": "unavailable",
       "matchedProperty": null,
-      "matchScore": 0.5,
-      "room": null,
+      "matchScore": 0,
       "total": null,
       "nightly": null,
       "source": null,
       "official": false,
       "refundable": null,
-      "cancellationUntil": null,
       "bookingLink": null,
-      "reason": "Property not found in Google Hotels"
+      "reason": "SerpApi HTTP 429"
     },
     {
       "id": "casa-rayrae",
@@ -33,7 +31,7 @@
       "query": "Casa Rayrae Los Cabos",
       "checkIn": "2026-10-15",
       "checkOut": "2026-10-22",
-      "status": "current",
+      "status": "stale",
       "matchedProperty": "Casa Rayrae: 4BR Ocean-View Villa with Infinity Pool & Casita, Cabo Colorado",
       "matchScore": 1,
       "room": null,
@@ -44,7 +42,7 @@
       "refundable": true,
       "cancellationUntil": "Oct 1",
       "bookingLink": "https://www.google.com/travel/lodging/clk?pc=AA80Osyppf7uBAOBS4KAooFCZvvdg_sU-ItLk35YAyr4ZKmHX3sbGYCM0yiRYBE77HPfzEwf914MMUKgVj9OAaMAoqdNajOenynupv4ZkWm6HJ9WtyVJjIjyJx_sOznQk_7BGes8qemG6LDKZhkCACRB2bJUqdFvk91CYcpLIegQjHQnypdTQpKxlw&pcurl=https://www.vrbo.com/search?selected%3D106982744%26startDate%3D2026-10-15%26endDate%3D2026-10-22%26adults%3D2%26children%3D%26MDPCID%3DVRBO-US.META.HPA.ORGANIC-desktop.VR%26MDPDTL%3DHTL.106982744.20261015.20261022.DDF.42.CID..AUDID..RRID.vrbo_us_desktop%26mctc%3D10%26ct%3Dhotel%26mpg%3DUSD%26mpf%3D11238.00%26mpj%3D2838.00%26mpr%3D1158.00%26mpl%3DUSD%26langid%3Den%26rateplanid%3D000458498ccbe1e847598a3b096a796dcda0%26mpm%3D103%26mpn%3D106982744%26mpo%3DEC%26mpp%3D1&s=AD1XQnlHmW-rZpSAW1vmWOOLQ2Gt&ap=1",
-      "reason": null
+      "reason": "Refresh failed; prior valid result preserved. SerpApi HTTP 429"
     },
     {
       "id": "lagoon-house",
@@ -56,16 +54,14 @@
       "checkOut": "2026-10-27",
       "status": "unavailable",
       "matchedProperty": null,
-      "matchScore": 0.3333333333333333,
-      "room": null,
+      "matchScore": 0,
       "total": null,
       "nightly": null,
       "source": null,
       "official": false,
       "refundable": null,
-      "cancellationUntil": null,
       "bookingLink": null,
-      "reason": "Property not found in Google Hotels"
+      "reason": "SerpApi HTTP 429"
     },
     {
       "id": "westin-hapuna",
@@ -75,7 +71,7 @@
       "query": "Westin Hapuna Beach Resort",
       "checkIn": "2026-10-20",
       "checkOut": "2026-10-27",
-      "status": "current",
+      "status": "stale",
       "matchedProperty": "The Westin Hapuna Beach Resort",
       "matchScore": 1,
       "room": "Resort View, Guest room, 1 King, Ground floor, Lanai",
@@ -86,7 +82,8 @@
       "refundable": true,
       "cancellationUntil": "Oct 12",
       "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjBo_XRvNKWAxX6pmgJHfGyKx8YACICCAEQAxoCd2Y&co=1&ase=2&gclid=EAIaIQobChMIwaP10bzSlgMV-qZoCR3xsisfEAoYASADEgIOm_D_BwE&cid=CAASugHkaGVKXbHHlaZFcTSCw_catO-5kuxxePsk-ATAGP2fhUujSqizBoFOTDl1LFGQgpLKx6DQWInRTRZRrE921Vz-Gz1wgbGyDius3elw0r3v1b50Vk2fbv0jv5l_UnxnDqz5GGM1_PPDYYs4bzeCReuTddMg6xvdhXE7Tqp6OQNPw7cXSRHRh18D-TyVpOXjfg_MOk46EBDtAPbFrXaNXox6Ve6HVix2XFpZrdav5Ov9yt8dTqsDdJUESHs&category=acrcp_v1_48&sig=AOD64_2NQSQxYPxgfjHBwvo1PEEIvG8Rig&adurl",
-      "reason": null
+      "reason": "Refresh failed; prior valid result preserved. SerpApi HTTP 429",
+      "roomPattern": {}
     },
     {
       "id": "koloa-landing",
@@ -96,18 +93,17 @@
       "query": "Koloa Landing Resort Poipu",
       "checkIn": "2026-10-21",
       "checkOut": "2026-10-28",
+      "roomPattern": {},
       "status": "unavailable",
-      "matchedProperty": "Koloa Landing Resort at Poipu, Autograph Collection",
-      "matchScore": 1,
-      "room": null,
+      "matchedProperty": null,
+      "matchScore": 0,
       "total": null,
       "nightly": null,
       "source": null,
       "official": false,
       "refundable": null,
-      "cancellationUntil": null,
       "bookingLink": null,
-      "reason": "No refundable one-bedroom king villa with a view and complete total returned"
+      "reason": "SerpApi HTTP 429"
     },
     {
       "id": "montecristo",
@@ -117,18 +113,17 @@
       "query": "Montecristo Estates Los Cabos",
       "checkIn": "2026-10-15",
       "checkOut": "2026-10-22",
+      "roomPattern": {},
       "status": "unavailable",
-      "matchedProperty": "Pueblo Bonito Montecristo Estates Luxury Villas",
-      "matchScore": 1,
-      "room": null,
+      "matchedProperty": null,
+      "matchScore": 0,
       "total": null,
       "nightly": null,
       "source": null,
       "official": false,
       "refundable": null,
-      "cancellationUntil": null,
       "bookingLink": null,
-      "reason": "No refundable offer with a complete total returned"
+      "reason": "SerpApi HTTP 429"
     },
     {
       "id": "el-ganzo",
@@ -138,7 +133,7 @@
       "query": "Hotel El Ganzo Los Cabos",
       "checkIn": "2026-10-15",
       "checkOut": "2026-10-22",
-      "status": "current",
+      "status": "stale",
       "matchedProperty": "Hotel El Ganzo",
       "matchScore": 1,
       "room": "Ocean View King ",
@@ -149,7 +144,8 @@
       "refundable": true,
       "cancellationUntil": "Oct 7",
       "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwihi7LVvNKWAxX3oVoFHYTaHaYYACICCAEQBRoCdnU&co=1&ase=2&gclid=EAIaIQobChMIoYuy1bzSlgMV96FaBR2E2h2mEAoYBCAFEgL_4fD_BwE&cid=CAASugHkaMB8WrXIwD7K6sqarAwPz1owvVGijZ7-Y5Mf2ns9m6ss_YIF3k2Rx66h0Qtoa4O9lhYCFMTDJbT2jsnfTYOylUyD47rUZmVsYEEszYaqmTOMenPh_66HWsMvD7_5CsNlseM-7zX3dcDq0HFAkWgqAaZ2PwDmRQS9NjWeNbLLZf2mtBM-YYSlmO_BdC5yiEPLLmgZnO-z33f9Y6D6bumnHgvM5l9b0Ysd6cf0VPgo_Ft1XHIqqxB4ouI&category=acrcp_v1_48&sig=AOD64_0ioLH9A7FVc-TjvYCaNCP9P2RULw&adurl",
-      "reason": null
+      "reason": "Refresh failed; prior valid result preserved. SerpApi HTTP 429",
+      "roomPattern": {}
     },
     {
       "id": "solaz",
@@ -159,7 +155,7 @@
       "query": "Solaz Luxury Collection Resort Los Cabos",
       "checkIn": "2026-10-15",
       "checkOut": "2026-10-22",
-      "status": "current",
+      "status": "stale",
       "matchedProperty": "Solaz, a Luxury Collection Resort, Los Cabos",
       "matchScore": 1,
       "room": "Plunge Pool Room, Guest room, 1 King, Ocean view, Plunge pool",
@@ -170,7 +166,8 @@
       "refundable": true,
       "cancellationUntil": "Sep 30",
       "bookingLink": "https://www.google.com/aclk?sa=l&ai=DChsSEwjj2ezXvNKWAxXqQf8BHW0gFQYYACICCAEQBBoCbWQ&co=1&gclid=EAIaIQobChMI49ns17zSlgMV6kH_AR1tIBUGEAoYASAEEgKaTvD_BwE&cid=CAASugHkaHY0zvt-hP-wXMmcaG_tG2yEFMjMk_Sbu2Fr3rUZ_C6kh0OTgY4J23uS765KpShjA9iSNfKrIOCn4oP9EKuufBlyRF_jbwo85bE1jF7VcrF7PEa3nq_swCZVl8p-kBHlqjX-IOcYMijZKB6UIoUijrTjCXbqIyjSMWjqoHkOWYkOVbw3srPDezaVCa0gWrQoVilKS0JLe0jMaazw0eWvqqvn1Ag38XakG2IQgNkcmXKd8Ei5Jr4nt6E&sig=AOD64_0WvUb4sDKnSZoserjmX9ors8Zcmw&adurl",
-      "reason": null
+      "reason": "Refresh failed; prior valid result preserved. SerpApi HTTP 429",
+      "roomPattern": {}
     },
     {
       "id": "la-puesta-sayulita",
@@ -180,18 +177,17 @@
       "query": "La Puesta Sayulita",
       "checkIn": "2026-10-22",
       "checkOut": "2026-10-29",
+      "roomPattern": {},
       "status": "unavailable",
-      "matchedProperty": "La Puesta Sayulita",
-      "matchScore": 1,
-      "room": null,
+      "matchedProperty": null,
+      "matchScore": 0,
       "total": null,
       "nightly": null,
       "source": null,
       "official": false,
       "refundable": null,
-      "cancellationUntil": null,
       "bookingLink": null,
-      "reason": "No refundable offer with a complete total returned"
+      "reason": "SerpApi HTTP 429"
     },
     {
       "id": "garza-blanca",
@@ -201,18 +197,17 @@
       "query": "Garza Blanca Preserve Resort Puerto Vallarta",
       "checkIn": "2026-10-22",
       "checkOut": "2026-10-29",
+      "roomPattern": {},
       "status": "unavailable",
-      "matchedProperty": "Garza Blanca Preserve Resort & Spa Puerto Vallarta",
-      "matchScore": 1,
-      "room": null,
+      "matchedProperty": null,
+      "matchScore": 0,
       "total": null,
       "nightly": null,
       "source": null,
       "official": false,
       "refundable": null,
-      "cancellationUntil": null,
       "bookingLink": null,
-      "reason": "No refundable room-only king-with-view offer with a complete total returned"
+      "reason": "SerpApi HTTP 429"
     }
   ]
 }

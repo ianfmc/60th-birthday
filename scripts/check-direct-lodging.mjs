@@ -1,7 +1,10 @@
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 const checkedAt = new Date().toISOString();
 const results = [];
+let previous = { results: [] };
+try { previous = JSON.parse(await readFile(new URL("../app/data/direct-lodging-monitor.json", import.meta.url), "utf8")); } catch {}
+const previousById = Object.fromEntries((previous.results || []).map(result => [result.id, result]));
 const nightsBetween = (checkIn, checkOut) => (new Date(`${checkOut}T12:00:00Z`) - new Date(`${checkIn}T12:00:00Z`)) / 86_400_000;
 const compactDate = value => new Date(`${value}T12:00:00Z`).toISOString().slice(0, 10).replaceAll("-", "");
 const base = (value) => ({ collectionId: "extraordinary", official: true, refundable: null, room: null, cancellationUntil: null, ...value });
@@ -59,11 +62,19 @@ async function checkWaikoloa() {
   return { id: "waikoloa-villas", collectionId: "beautiful-week", destinationId: "big-island", name: "Waikoloa Beach Villas", checkIn, checkOut, status: available ? "current" : "unavailable", availability: available, matchedProperty: body.gaEvent?.or_property || "Waikoloa Beach Villas", matchScore: 1, room: "Entire villa", total, nightly: total ? Math.round((total / nightsBetween(checkIn, checkOut)) * 100) / 100 : null, source: "OwnerRez direct booking engine", official: true, refundable: null, cancellationUntil: null, bookingLink: pageUrl, quotedTotal: typeof body.total === "number" ? body.total : null, reason: available ? null : (body.errors || []).join(" ") || "Direct booking engine reports no availability" };
 }
 
-for (const check of [checkCasaSuhana, checkCasaRayrae, checkHaleNaia, checkWaikoloa]) {
+const checks = [
+  { id: "casa-suhana", run: checkCasaSuhana },
+  { id: "casa-rayrae", run: checkCasaRayrae },
+  { id: "hale-naia", run: checkHaleNaia },
+  { id: "waikoloa-villas", run: checkWaikoloa },
+];
+for (const check of checks) {
   try {
-    results.push(await check());
+    results.push(await check.run());
   } catch (error) {
-    results.push({ id: check.name.replace(/^check/, "").toLowerCase(), collectionId: "extraordinary", destinationId: "unknown", name: check.name, status: "unavailable", availability: null, total: null, nightly: null, source: "Direct booking engine", official: true, refundable: null, bookingLink: null, reason: error instanceof Error ? error.message : "Unknown direct-engine error" });
+    const reason = `Refresh failed; prior result preserved. ${error instanceof Error ? error.message : "Unknown direct-engine error"}`;
+    const prior = previousById[check.id];
+    results.push(prior ? { ...prior, status: "stale", reason } : { id: check.id, collectionId: "extraordinary", destinationId: "unknown", name: check.run.name, status: "unavailable", availability: null, total: null, nightly: null, source: "Direct booking engine", official: true, refundable: null, bookingLink: null, reason });
   }
 }
 
