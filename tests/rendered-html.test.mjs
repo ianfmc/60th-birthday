@@ -84,7 +84,7 @@ test("builds both planning collections in one continuous dashboard", async () =>
   assert.match(html, /Previous valid total/);
   assert.match(html, />Flights</);
   assert.match(html, /Planned-date airfare · included in cost breakdown/);
-  assert.match(html, /Lower flexible-date alternative/);
+  assert.match(html, /(?:Lower|Prior) flexible-date alternative/);
   assert.match(html, /Two travelers · matches cost breakdown/);
   const breakdownAirfares = [...html.matchAll(/<dt>Airfare<\/dt><dd>(\$[\d,]+)<\/dd>/g)].map((match) => match[1]);
   const plannedAirfares = [...html.matchAll(/included in cost breakdown · two travelers<\/span><strong>(\$[\d,]+)/g)].map((match) => match[1]);

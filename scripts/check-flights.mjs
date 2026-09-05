@@ -39,7 +39,8 @@ for (const config of searches) {
   const prior = previousById[config.id]?.best ?? null;
   const best = offers[0] ?? prior;
   const deltaPercent = offers[0] && prior ? Number((((offers[0].price - prior.price) / prior.price) * 100).toFixed(1)) : null;
-  results.push({ id: config.id, label: config.label, status: offers.length ? "current" : prior ? "stale" : "unavailable", best, previousPrice: prior?.price ?? null, deltaPercent, alert: deltaPercent !== null && Math.abs(deltaPercent) > 10, alternatives: offers.slice(1, 5) });
+  const alternatives = offers.length ? offers.slice(1, 5) : (previousById[config.id]?.alternatives ?? []);
+  results.push({ id: config.id, label: config.label, status: offers.length ? "current" : prior ? "stale" : "unavailable", best, previousPrice: prior?.price ?? null, deltaPercent, alert: deltaPercent !== null && Math.abs(deltaPercent) > 10, alternatives });
 }
 const output = { checkedAt: new Date().toISOString(), source: "Google Flights via SerpApi", travelers: 2, datePolicy: "Planned dates plus whole-trip shifts of ±1 and ±2 days", results };
 await writeFile(new URL("../app/data/flight-monitor.json", import.meta.url), `${JSON.stringify(output, null, 2)}\n`);

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-04T15:51:45.177Z",
+  "checkedAt": "2026-09-05T13:01:08.639Z",
   "source": "Google Flights via SerpApi",
   "travelers": 2,
   "datePolicy": "Planned dates plus whole-trip shifts of ±1 and ±2 days",
@@ -7,7 +7,7 @@
     {
       "id": "more-cabo",
       "label": "Los Cabos · More Possibilities",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 0,
         "cabin": "First",
@@ -21,8 +21,8 @@
         "durationMinutes": 1122,
         "bookingToken": null
       },
-      "previousPrice": 2593,
-      "deltaPercent": -0.3,
+      "previousPrice": 2584,
+      "deltaPercent": null,
       "alert": false,
       "alternatives": [
         {
@@ -82,7 +82,7 @@
     {
       "id": "original-cabo",
       "label": "Los Cabos · Original",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 0,
         "cabin": "First",
@@ -96,8 +96,8 @@
         "durationMinutes": 1122,
         "bookingToken": null
       },
-      "previousPrice": 2593,
-      "deltaPercent": -0.3,
+      "previousPrice": 2584,
+      "deltaPercent": null,
       "alert": false,
       "alternatives": [
         {
@@ -157,7 +157,7 @@
     {
       "id": "puerto-vallarta",
       "label": "Puerto Vallarta",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 2,
         "cabin": "First",
@@ -171,9 +171,9 @@
         "durationMinutes": 957,
         "bookingToken": null
       },
-      "previousPrice": 1899,
-      "deltaPercent": 13.6,
-      "alert": true,
+      "previousPrice": 2157,
+      "deltaPercent": null,
+      "alert": false,
       "alternatives": [
         {
           "shift": 1,
@@ -232,7 +232,7 @@
     {
       "id": "kauai",
       "label": "Kauaʻi · Original",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 0,
         "cabin": "First",
@@ -246,8 +246,8 @@
         "durationMinutes": 365,
         "bookingToken": null
       },
-      "previousPrice": 3079,
-      "deltaPercent": -0.1,
+      "previousPrice": 3075,
+      "deltaPercent": null,
       "alert": false,
       "alternatives": [
         {
@@ -307,7 +307,7 @@
     {
       "id": "big-island",
       "label": "Big Island · Original",
-      "status": "current",
+      "status": "stale",
       "best": {
         "shift": 0,
         "cabin": "First",
@@ -322,7 +322,7 @@
         "bookingToken": null
       },
       "previousPrice": 3525,
-      "deltaPercent": 0,
+      "deltaPercent": null,
       "alert": false,
       "alternatives": [
         {

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-04T15:52:52.448Z",
+  "checkedAt": "2026-09-05T13:01:16.195Z",
   "source": "Direct villa booking engines",
   "travelers": 2,
   "bookingPolicy": "Direct availability and complete totals when the property engine exposes them",
@@ -15,7 +15,7 @@
       "name": "Casa Suhana",
       "checkIn": "2026-10-22",
       "checkOut": "2026-10-29",
-      "status": "stale",
+      "status": "current",
       "availability": true,
       "matchedProperty": "Casa Suhana",
       "matchScore": 1,
@@ -23,7 +23,7 @@
       "nightly": 1050,
       "source": "Agave Villas direct availability calendar and published rates",
       "bookingLink": "https://agavevillas.com/property/casa-suhana/",
-      "reason": "Refresh failed; prior result preserved. fetch failed"
+      "reason": null
     },
     {
       "collectionId": "extraordinary",
